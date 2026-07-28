@@ -1,0 +1,9 @@
+stage,rows_in,rows_out,rows_affected,note
+Column standardization,8394,8394,0,"Renamed to canonical schema, dropped stray/ghost columns"
+Duplicate removal,8394,8262,132,Removed 132 exact duplicate rows
+Missing dealer_id removal,8262,8173,89,Dropped 89 rows with no dealer code -- cannot attribute to any account
+Orphan dealer_id removal,8173,8116,57,"Dropped 57 rows referencing dealer codes not in the master dealer list (likely typos, e.g. 'D0036X')"
+Date parsing,8116,8116,0,"Parsed mixed formats (DD/MM/YYYY, MM-DD-YYYY, Excel serials, etc.); dropped 0 rows with unparseable invoice/due dates"
+Amount cleaning,8116,8061,55,Stripped currency symbols/commas/suffixes; dropped 55 rows with unparseable or non-positive amounts
+Bounced-flag normalization,8061,8061,0,Mapped Y/Yes/1/TRUE and N/No/0/FALSE variants to boolean; dropped 0 rows with unrecognized values rather than guessing
+Logical consistency check,8061,8061,0,"Dropped 0 rows where due_date preceded invoice_date (impossible, likely entry error)"

@@ -1,0 +1,16 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node
+node_modules/
+.next/
+
+# Environment files (never commit secrets/URLs)
+.env.local
+.env
+
+# OS
+.DS_Store

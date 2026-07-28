@@ -1,0 +1,221 @@
+dealer_id,dealer_name,city,sector,salesman_id,is_salesman_favorite,credit_limit_pkr,credit_score,risk_flag,risk_probability,scoring_method
+D0095,Ph-Gujranwala-0095 Traders,Gujranwala,Pharma,SM005,True,500000,385.0,RED,0.9987328652776749,Statistical
+D0080,Ph-Rawalpindi-0080 Traders,Rawalpindi,Pharma,SM008,True,200000,418.0,RED,0.997745758211257,Statistical
+D0083,Ph-Gujranwala-0083 Traders,Gujranwala,Pharma,SM007,False,350000,422.0,RED,0.9976026655013852,Statistical
+D0181,Ph-Faisalabad-0181 Traders,Faisalabad,Pharma,SM005,False,750000,428.0,RED,0.9973358127775163,Statistical
+D0125,Ph-InteriorSindh-0125 Traders,Interior Sindh,Pharma,SM005,True,500000,439.0,RED,0.9967998200070971,Statistical
+D0052,Ph-Karachi-0052 Traders,Karachi,Pharma,SM007,False,500000,442.0,RED,0.9966184968858763,Statistical
+D0167,FM-Peshawar-0167 Traders,Peshawar,FMCG,SM006,False,200000,442.0,RED,0.9966275616799054,Statistical
+D0215,Te-InteriorPunjab-0215 Traders,Interior Punjab,Textile,SM001,False,500000,453.0,RED,0.9958867380429794,Statistical
+D0030,Ph-InteriorSindh-0030 Traders,Interior Sindh,Pharma,SM001,False,350000,455.0,RED,0.9957513188600644,Statistical
+D0073,FM-Karachi-0073 Traders,Karachi,FMCG,SM003,False,500000,467.0,RED,0.9947543759725095,Statistical
+D0177,Ph-Lahore-0177 Traders,Lahore,Pharma,SM002,True,500000,474.0,RED,0.9941313899200073,Statistical
+D0035,Ph-Karachi-0035 Traders,Karachi,Pharma,SM006,False,500000,476.0,RED,0.9939134524198203,Statistical
+D0025,Te-Peshawar-0025 Traders,Peshawar,Textile,SM006,False,50000,478.0,RED,0.9937024717724202,Statistical
+D0070,Te-Karachi-0070 Traders,Karachi,Textile,SM003,True,350000,479.0,RED,0.9935742899366005,Statistical
+D0103,Te-Faisalabad-0103 Traders,Faisalabad,Textile,SM004,False,100000,481.0,RED,0.9933998605518666,Statistical
+D0037,FM-Multan-0037 Traders,Multan,FMCG,SM001,False,50000,485.0,RED,0.9928788489831099,Statistical
+D0069,FM-InteriorPunjab-0069 Traders,Interior Punjab,FMCG,SM002,False,50000,485.0,RED,0.992860423293389,Statistical
+D0039,Ph-InteriorSindh-0039 Traders,Interior Sindh,Pharma,SM003,False,350000,485.0,RED,0.9929008908128378,Statistical
+D0007,Ph-Karachi-0007 Traders,Karachi,Pharma,SM001,False,750000,485.0,RED,0.9928581656072947,Statistical
+D0119,FM-Peshawar-0119 Traders,Peshawar,FMCG,SM006,False,200000,487.0,RED,0.9926341025838683,Statistical
+D0038,Te-Gujranwala-0038 Traders,Gujranwala,Textile,SM008,False,500000,491.0,RED,0.9921620857872627,Statistical
+D0113,Ph-Lahore-0113 Traders,Lahore,Pharma,SM008,False,100000,504.0,RED,0.9901624784267451,Statistical
+D0028,FM-Karachi-0028 Traders,Karachi,FMCG,SM008,False,50000,506.0,RED,0.9897181173906712,Statistical
+D0099,FM-Karachi-0099 Traders,Karachi,FMCG,SM006,False,350000,507.0,RED,0.989568532488429,Statistical
+D0057,Te-Islamabad-0057 Traders,Islamabad,Textile,SM008,False,50000,509.0,RED,0.9892623321386746,Statistical
+D0086,FM-InteriorSindh-0086 Traders,Interior Sindh,FMCG,SM002,False,100000,519.0,RED,0.9871576103357982,Statistical
+D0212,FM-Peshawar-0212 Traders,Peshawar,FMCG,SM002,False,500000,520.0,RED,0.9869257747797977,Statistical
+D0176,Ph-Karachi-0176 Traders,Karachi,Pharma,SM002,False,100000,521.0,RED,0.9867877503562819,Statistical
+D0058,FM-Karachi-0058 Traders,Karachi,FMCG,SM002,False,350000,522.0,RED,0.9866369951193419,Statistical
+D0193,Te-Peshawar-0193 Traders,Peshawar,Textile,SM001,False,50000,523.0,RED,0.986381714011674,Statistical
+D0195,Ph-Karachi-0195 Traders,Karachi,Pharma,SM008,False,350000,531.0,RED,0.9844311333382336,Statistical
+D0104,Te-Karachi-0104 Traders,Karachi,Textile,SM004,False,350000,532.0,RED,0.9840335459462491,Statistical
+D0034,Ph-InteriorPunjab-0034 Traders,Interior Punjab,Pharma,SM003,False,50000,532.0,RED,0.9841361537433977,Statistical
+D0184,Te-InteriorPunjab-0184 Traders,Interior Punjab,Textile,SM007,False,200000,532.0,RED,0.98416964505272,Statistical
+D0208,Te-Faisalabad-0208 Traders,Faisalabad,Textile,SM006,False,200000,536.0,RED,0.9829138746111821,Statistical
+D0207,Ph-InteriorSindh-0207 Traders,Interior Sindh,Pharma,SM004,False,100000,543.0,RED,0.9809161229081311,Statistical
+D0137,Ph-InteriorSindh-0137 Traders,Interior Sindh,Pharma,SM004,False,500000,632.0,AMBER,0.9163754040822022,Statistical
+D0071,FM-InteriorPunjab-0071 Traders,Interior Punjab,FMCG,SM005,False,350000,665.0,AMBER,0.8603645791911392,Statistical
+D0053,Te-Lahore-0053 Traders,Lahore,Textile,SM008,True,500000,681.0,AMBER,0.8247178941307778,Statistical
+D0165,Te-InteriorPunjab-0165 Traders,Interior Punjab,Textile,SM001,False,500000,694.0,AMBER,0.7895282550165497,Statistical
+D0100,Ph-Lahore-0100 Traders,Lahore,Pharma,SM005,True,750000,696.0,AMBER,0.7832310545725695,Statistical
+D0145,Ph-Lahore-0145 Traders,Lahore,Pharma,SM005,False,500000,696.0,AMBER,0.7819650374797362,Statistical
+D0155,Te-Gujranwala-0155 Traders,Gujranwala,Textile,SM008,False,500000,702.0,GREEN,0.7648977242199138,Statistical
+D0011,Ph-Faisalabad-0011 Traders,Faisalabad,Pharma,SM006,False,750000,704.0,GREEN,0.7565281555834906,Statistical
+D0046,Te-Faisalabad-0046 Traders,Faisalabad,Textile,SM002,False,500000,708.0,GREEN,0.7443347344924185,Statistical
+D0010,Te-InteriorPunjab-0010 Traders,Interior Punjab,Textile,SM006,False,500000,708.0,GREEN,0.7461780653768657,Statistical
+D0012,Te-Faisalabad-0012 Traders,Faisalabad,Textile,SM006,False,750000,712.0,GREEN,0.7318207128996945,Statistical
+D0016,Ph-Rawalpindi-0016 Traders,Rawalpindi,Pharma,SM004,False,750000,718.0,GREEN,0.7109782265184711,Statistical
+D0064,FM-Gujranwala-0064 Traders,Gujranwala,FMCG,SM002,False,350000,723.0,GREEN,0.6937030428229117,Statistical
+D0049,FM-Lahore-0049 Traders,Lahore,FMCG,SM003,False,100000,728.0,GREEN,0.6758794910514276,Statistical
+D0179,FM-Rawalpindi-0179 Traders,Rawalpindi,FMCG,SM007,False,100000,728.0,GREEN,0.6732439150321671,Statistical
+D0206,FM-Faisalabad-0206 Traders,Faisalabad,FMCG,SM003,False,500000,729.0,GREEN,0.6706971651500196,Statistical
+D0160,Te-Rawalpindi-0160 Traders,Rawalpindi,Textile,SM005,False,750000,729.0,GREEN,0.6702309483453492,Statistical
+D0190,Te-Rawalpindi-0190 Traders,Rawalpindi,Textile,SM002,False,100000,729.0,GREEN,0.6683870326683222,Statistical
+D0166,Te-Islamabad-0166 Traders,Islamabad,Textile,SM002,False,200000,732.0,GREEN,0.6585773341537116,Statistical
+D0027,Te-InteriorPunjab-0027 Traders,Interior Punjab,Textile,SM005,False,50000,733.0,GREEN,0.6562871440844623,Statistical
+D0170,Ph-Multan-0170 Traders,Multan,Pharma,SM004,False,200000,733.0,GREEN,0.6552134857568093,Statistical
+D0031,FM-Rawalpindi-0031 Traders,Rawalpindi,FMCG,SM002,False,350000,734.0,GREEN,0.6515054023451327,Statistical
+D0003,FM-Karachi-0003 Traders,Karachi,FMCG,SM001,True,200000,736.0,GREEN,0.6429203449986354,Statistical
+D0121,Ph-InteriorPunjab-0121 Traders,Interior Punjab,Pharma,SM002,True,500000,737.0,GREEN,0.6391704645804475,Statistical
+D0198,Ph-InteriorSindh-0198 Traders,Interior Sindh,Pharma,SM007,False,200000,737.0,GREEN,0.6386073962208635,Statistical
+D0139,Te-Rawalpindi-0139 Traders,Rawalpindi,Textile,SM008,True,200000,740.0,GREEN,0.6276219906255616,Statistical
+D0130,FM-Karachi-0130 Traders,Karachi,FMCG,SM008,False,100000,742.0,GREEN,0.6190789781091217,Statistical
+D0107,Ph-Karachi-0107 Traders,Karachi,Pharma,SM002,False,100000,743.0,GREEN,0.6153543986709165,Statistical
+D0015,FM-Multan-0015 Traders,Multan,FMCG,SM006,False,350000,743.0,GREEN,0.6126922995305039,Statistical
+D0020,FM-InteriorSindh-0020 Traders,Interior Sindh,FMCG,SM003,False,50000,743.0,GREEN,0.6148118039843133,Statistical
+D0077,FM-Multan-0077 Traders,Multan,FMCG,SM008,False,100000,746.0,GREEN,0.602935870964464,Statistical
+D0156,FM-Karachi-0156 Traders,Karachi,FMCG,SM004,False,350000,747.0,GREEN,0.5979486852304297,Statistical
+D0199,Ph-InteriorSindh-0199 Traders,Interior Sindh,Pharma,SM001,False,750000,747.0,GREEN,0.5960270082214224,Statistical
+D0204,Te-InteriorPunjab-0204 Traders,Interior Punjab,Textile,SM002,False,500000,751.0,GREEN,0.5805086719612895,Statistical
+D0122,FM-Peshawar-0122 Traders,Peshawar,FMCG,SM003,True,500000,751.0,GREEN,0.5798510084531978,Statistical
+D0060,FM-Lahore-0060 Traders,Lahore,FMCG,SM006,True,100000,753.0,GREEN,0.5727218542485769,Statistical
+D0066,Ph-Islamabad-0066 Traders,Islamabad,Pharma,SM001,False,50000,756.0,GREEN,0.5585081677430759,Statistical
+D0051,Te-InteriorPunjab-0051 Traders,Interior Punjab,Textile,SM006,False,200000,756.0,GREEN,0.5587368815111258,Statistical
+D0088,Te-Karachi-0088 Traders,Karachi,Textile,SM007,True,50000,757.0,GREEN,0.5572120334001868,Statistical
+D0114,Te-InteriorSindh-0114 Traders,Interior Sindh,Textile,SM008,True,350000,763.0,GREEN,0.5296765106732143,Statistical
+D0109,Ph-InteriorSindh-0109 Traders,Interior Sindh,Pharma,SM003,False,50000,764.0,GREEN,0.523691228769844,Statistical
+D0098,Te-Islamabad-0098 Traders,Islamabad,Textile,SM003,False,200000,764.0,GREEN,0.5268875381367335,Statistical
+D0043,Te-Peshawar-0043 Traders,Peshawar,Textile,SM008,False,50000,767.0,GREEN,0.5141402497078265,Statistical
+D0055,Te-InteriorSindh-0055 Traders,Interior Sindh,Textile,SM002,False,200000,767.0,GREEN,0.5132593164250393,Statistical
+D0106,FM-Lahore-0106 Traders,Lahore,FMCG,SM004,False,750000,769.0,GREEN,0.5048931742631171,Statistical
+D0065,Te-Karachi-0065 Traders,Karachi,Textile,SM006,False,750000,770.0,GREEN,0.49894423657044246,Statistical
+D0203,FM-InteriorSindh-0203 Traders,Interior Sindh,FMCG,SM003,False,200000,771.0,GREEN,0.4974459119955663,Statistical
+D0183,Te-Peshawar-0183 Traders,Peshawar,Textile,SM001,True,100000,778.0,GREEN,0.46616006555237666,Statistical
+D0151,Te-InteriorSindh-0151 Traders,Interior Sindh,Textile,SM003,False,100000,780.0,GREEN,0.457366249998542,Statistical
+D0140,Te-Lahore-0140 Traders,Lahore,Textile,SM005,False,750000,781.0,GREEN,0.45157976948263323,Statistical
+D0174,Te-InteriorSindh-0174 Traders,Interior Sindh,Textile,SM005,True,750000,781.0,GREEN,0.4536459338370683,Statistical
+D0054,FM-Islamabad-0054 Traders,Islamabad,FMCG,SM005,False,500000,781.0,GREEN,0.4503077157428372,Statistical
+D0185,Ph-Islamabad-0185 Traders,Islamabad,Pharma,SM007,False,750000,784.0,GREEN,0.43844857580937746,Statistical
+D0146,Ph-Rawalpindi-0146 Traders,Rawalpindi,Pharma,SM003,False,500000,785.0,GREEN,0.43511076261453907,Statistical
+D0154,Ph-Gujranwala-0154 Traders,Gujranwala,Pharma,SM007,False,750000,788.0,GREEN,0.42068136663368205,Statistical
+D0087,Te-Faisalabad-0087 Traders,Faisalabad,Textile,SM007,False,500000,792.0,GREEN,0.40554518107205045,Statistical
+D0040,FM-Lahore-0040 Traders,Lahore,FMCG,SM006,False,750000,793.0,GREEN,0.4008410233993067,Statistical
+D0127,FM-Rawalpindi-0127 Traders,Rawalpindi,FMCG,SM007,False,500000,794.0,GREEN,0.395662420648986,Statistical
+D0168,Ph-Karachi-0168 Traders,Karachi,Pharma,SM006,False,750000,795.0,GREEN,0.3937940756023109,Statistical
+D0021,Te-Rawalpindi-0021 Traders,Rawalpindi,Textile,SM005,False,50000,795.0,GREEN,0.3948851827758384,Statistical
+D0017,Ph-Lahore-0017 Traders,Lahore,Pharma,SM005,False,750000,796.0,GREEN,0.3908784959971408,Statistical
+D0171,Te-Islamabad-0171 Traders,Islamabad,Textile,SM007,False,500000,801.0,GREEN,0.36783204063272606,Statistical
+D0182,Ph-Lahore-0182 Traders,Lahore,Pharma,SM003,False,750000,801.0,GREEN,0.3669314085099703,Statistical
+D0002,Te-Lahore-0002 Traders,Lahore,Textile,SM007,False,350000,805.0,GREEN,0.35117019633536006,Statistical
+D0072,Te-Lahore-0072 Traders,Lahore,Textile,SM006,False,500000,807.0,GREEN,0.34440047675053553,Statistical
+D0214,Ph-Karachi-0214 Traders,Karachi,Pharma,SM002,False,750000,811.0,GREEN,0.3297665300068876,Statistical
+D0148,FM-Gujranwala-0148 Traders,Gujranwala,FMCG,SM005,False,200000,811.0,GREEN,0.32999869637144624,Statistical
+D0093,Te-Rawalpindi-0093 Traders,Rawalpindi,Textile,SM003,False,350000,811.0,GREEN,0.3310335325964828,Statistical
+D0144,Ph-InteriorSindh-0144 Traders,Interior Sindh,Pharma,SM005,False,500000,811.0,GREEN,0.32844290763582007,Statistical
+D0068,Ph-Rawalpindi-0068 Traders,Rawalpindi,Pharma,SM003,False,750000,813.0,GREEN,0.32087327848181535,Statistical
+D0173,FM-Islamabad-0173 Traders,Islamabad,FMCG,SM005,False,500000,814.0,GREEN,0.317105029961561,Statistical
+D0136,Ph-Karachi-0136 Traders,Karachi,Pharma,SM005,False,500000,814.0,GREEN,0.3194897266776082,Statistical
+D0161,Te-Lahore-0161 Traders,Lahore,Textile,SM002,False,500000,815.0,GREEN,0.3157543560712678,Statistical
+D0019,FM-Faisalabad-0019 Traders,Faisalabad,FMCG,SM006,False,50000,817.0,GREEN,0.30678303387837685,Statistical
+D0076,Te-Karachi-0076 Traders,Karachi,Textile,SM007,True,750000,819.0,GREEN,0.30059081125657366,Statistical
+D0116,Ph-Faisalabad-0116 Traders,Faisalabad,Pharma,SM008,False,200000,819.0,GREEN,0.2992058440408671,Statistical
+D0216,Ph-Rawalpindi-0216 Traders,Rawalpindi,Pharma,SM002,False,500000,820.0,GREEN,0.2965530489035372,Statistical
+D0108,Ph-Lahore-0108 Traders,Lahore,Pharma,SM007,False,350000,821.0,GREEN,0.29128347148876027,Statistical
+D0202,FM-Lahore-0202 Traders,Lahore,FMCG,SM002,True,750000,822.0,GREEN,0.2900495617609975,Statistical
+D0082,Te-Islamabad-0082 Traders,Islamabad,Textile,SM003,False,350000,825.0,GREEN,0.2793375947512351,Statistical
+D0085,Te-Faisalabad-0085 Traders,Faisalabad,Textile,SM002,False,750000,825.0,GREEN,0.27900197016594636,Statistical
+D0042,FM-Multan-0042 Traders,Multan,FMCG,SM002,True,350000,825.0,GREEN,0.27689127851245654,Statistical
+D0123,FM-Multan-0123 Traders,Multan,FMCG,SM004,False,750000,825.0,GREEN,0.278906902041948,Statistical
+D0220,Ph-InteriorSindh-0220 Traders,Interior Sindh,Pharma,SM005,False,500000,826.0,GREEN,0.2736119586438411,Statistical
+D0157,FM-Lahore-0157 Traders,Lahore,FMCG,SM005,False,200000,826.0,GREEN,0.27364556253897665,Statistical
+D0079,FM-InteriorPunjab-0079 Traders,Interior Punjab,FMCG,SM008,False,750000,827.0,GREEN,0.26980033985856916,Statistical
+D0158,FM-Karachi-0158 Traders,Karachi,FMCG,SM007,False,100000,827.0,GREEN,0.2712566714625245,Statistical
+D0014,FM-Karachi-0014 Traders,Karachi,FMCG,SM008,False,750000,829.0,GREEN,0.2642574126579758,Statistical
+D0191,Ph-InteriorSindh-0191 Traders,Interior Sindh,Pharma,SM005,True,350000,830.0,GREEN,0.2610583075309443,Statistical
+D0143,Te-Faisalabad-0143 Traders,Faisalabad,Textile,SM006,False,500000,831.0,GREEN,0.2586693581465395,Statistical
+D0084,FM-Lahore-0084 Traders,Lahore,FMCG,SM003,False,750000,832.0,GREEN,0.25444220918887517,Statistical
+D0061,Te-Karachi-0061 Traders,Karachi,Textile,SM005,False,350000,833.0,GREEN,0.25193060547359536,Statistical
+D0101,Ph-InteriorPunjab-0101 Traders,Interior Punjab,Pharma,SM002,False,500000,833.0,GREEN,0.25133029153151953,Statistical
+D0004,Ph-Rawalpindi-0004 Traders,Rawalpindi,Pharma,SM003,False,100000,834.0,GREEN,0.24723528589840552,Statistical
+D0018,Te-Gujranwala-0018 Traders,Gujranwala,Textile,SM006,False,500000,834.0,GREEN,0.24902445302153237,Statistical
+D0036,Te-Multan-0036 Traders,Multan,Textile,SM005,False,200000,834.0,GREEN,0.2473803737373745,Statistical
+D0180,Ph-Karachi-0180 Traders,Karachi,Pharma,SM005,False,200000,834.0,GREEN,0.24755970247483458,Statistical
+D0078,Ph-Rawalpindi-0078 Traders,Rawalpindi,Pharma,SM007,False,350000,834.0,GREEN,0.24805758743818274,Statistical
+D0147,Ph-Karachi-0147 Traders,Karachi,Pharma,SM004,False,500000,835.0,GREEN,0.24432725559016916,Statistical
+D0132,Te-Rawalpindi-0132 Traders,Rawalpindi,Textile,SM003,False,350000,835.0,GREEN,0.24410465114308583,Statistical
+D0120,Ph-Gujranwala-0120 Traders,Gujranwala,Pharma,SM008,False,350000,835.0,GREEN,0.24373696967558187,Statistical
+D0026,Ph-Lahore-0026 Traders,Lahore,Pharma,SM008,False,350000,836.0,GREEN,0.24070082308456542,Statistical
+D0209,FM-InteriorSindh-0209 Traders,Interior Sindh,FMCG,SM005,False,350000,837.0,GREEN,0.239692815241877,Statistical
+D0118,Ph-Karachi-0118 Traders,Karachi,Pharma,SM002,False,500000,837.0,GREEN,0.2369342686542976,Statistical
+D0128,Ph-Lahore-0128 Traders,Lahore,Pharma,SM002,False,200000,837.0,GREEN,0.23906689073740447,Statistical
+D0129,FM-Lahore-0129 Traders,Lahore,FMCG,SM005,False,100000,838.0,GREEN,0.23409505000790248,Statistical
+D0169,Te-Multan-0169 Traders,Multan,Textile,SM003,True,500000,839.0,GREEN,0.23326143811205052,Statistical
+D0149,Te-Lahore-0149 Traders,Lahore,Textile,SM005,True,100000,840.0,GREEN,0.23028628105161256,Statistical
+D0005,FM-Lahore-0005 Traders,Lahore,FMCG,SM001,True,750000,841.0,GREEN,0.22619954204042164,Statistical
+D0024,FM-Rawalpindi-0024 Traders,Rawalpindi,FMCG,SM008,False,200000,841.0,GREEN,0.22626575527811504,Statistical
+D0172,Te-Peshawar-0172 Traders,Peshawar,Textile,SM001,False,750000,841.0,GREEN,0.22667190490024564,Statistical
+D0094,Ph-Islamabad-0094 Traders,Islamabad,Pharma,SM005,False,100000,841.0,GREEN,0.22512594802107855,Statistical
+D0131,FM-Rawalpindi-0131 Traders,Rawalpindi,FMCG,SM006,False,350000,842.0,GREEN,0.22302533497680302,Statistical
+D0047,Ph-Faisalabad-0047 Traders,Faisalabad,Pharma,SM005,False,350000,842.0,GREEN,0.22286996779009857,Statistical
+D0110,FM-Islamabad-0110 Traders,Islamabad,FMCG,SM004,False,500000,843.0,GREEN,0.22051715889396706,Statistical
+D0056,Ph-InteriorSindh-0056 Traders,Interior Sindh,Pharma,SM006,False,500000,843.0,GREEN,0.22016852879891996,Statistical
+D0218,Ph-Karachi-0218 Traders,Karachi,Pharma,SM007,False,100000,845.0,GREEN,0.21539424355126296,Statistical
+D0189,Ph-Lahore-0189 Traders,Lahore,Pharma,SM005,False,100000,845.0,GREEN,0.21372479976475095,Statistical
+D0111,Ph-Gujranwala-0111 Traders,Gujranwala,Pharma,SM006,False,500000,845.0,GREEN,0.21333749403599567,Statistical
+D0006,Ph-InteriorSindh-0006 Traders,Interior Sindh,Pharma,SM008,False,500000,847.0,GREEN,0.20845854055308022,Statistical
+D0090,FM-Karachi-0090 Traders,Karachi,FMCG,SM001,False,750000,847.0,GREEN,0.20814890581340695,Statistical
+D0032,FM-Islamabad-0032 Traders,Islamabad,FMCG,SM001,False,750000,848.0,GREEN,0.20488932658412198,Statistical
+D0194,FM-Gujranwala-0194 Traders,Gujranwala,FMCG,SM005,True,50000,849.0,GREEN,0.20178012761734695,Statistical
+D0135,Ph-Lahore-0135 Traders,Lahore,Pharma,SM004,False,500000,850.0,GREEN,0.20101021301477434,Statistical
+D0089,FM-InteriorPunjab-0089 Traders,Interior Punjab,FMCG,SM002,False,50000,852.0,GREEN,0.1945231937658746,Statistical
+D0059,Te-Rawalpindi-0059 Traders,Rawalpindi,Textile,SM001,False,50000,853.0,GREEN,0.1929337635360386,Statistical
+D0067,FM-Lahore-0067 Traders,Lahore,FMCG,SM006,False,50000,853.0,GREEN,0.19259405100851368,Statistical
+D0205,Ph-Lahore-0205 Traders,Lahore,Pharma,SM007,True,100000,853.0,GREEN,0.1927985428401353,Statistical
+D0044,Te-InteriorPunjab-0044 Traders,Interior Punjab,Textile,SM001,False,50000,856.0,GREEN,0.18396579188730844,Statistical
+D0186,Ph-InteriorSindh-0186 Traders,Interior Sindh,Pharma,SM006,False,50000,856.0,GREEN,0.18452506132504634,Statistical
+D0164,FM-InteriorSindh-0164 Traders,Interior Sindh,FMCG,SM003,False,500000,856.0,GREEN,0.18443285711579702,Statistical
+D0063,FM-Karachi-0063 Traders,Karachi,FMCG,SM004,False,500000,856.0,GREEN,0.1838650798353159,Statistical
+D0023,FM-Lahore-0023 Traders,Lahore,FMCG,SM006,False,50000,857.0,GREEN,0.18003697469191146,Statistical
+D0081,Ph-Peshawar-0081 Traders,Peshawar,Pharma,SM003,True,350000,857.0,GREEN,0.18020829604598773,Statistical
+D0097,FM-Islamabad-0097 Traders,Islamabad,FMCG,SM001,False,350000,858.0,GREEN,0.17848868896099954,Statistical
+D0192,Te-Multan-0192 Traders,Multan,Textile,SM004,False,500000,858.0,GREEN,0.17852701502515247,Statistical
+D0134,FM-Peshawar-0134 Traders,Peshawar,FMCG,SM008,False,350000,858.0,GREEN,0.17846575735194972,Statistical
+D0163,FM-Gujranwala-0163 Traders,Gujranwala,FMCG,SM006,False,200000,858.0,GREEN,0.17900857624997094,Statistical
+D0013,Te-Faisalabad-0013 Traders,Faisalabad,Textile,SM007,False,100000,858.0,GREEN,0.1791389811700912,Statistical
+D0201,FM-InteriorSindh-0201 Traders,Interior Sindh,FMCG,SM005,False,50000,859.0,GREEN,0.17617424068948592,Statistical
+D0150,FM-Lahore-0150 Traders,Lahore,FMCG,SM001,False,350000,859.0,GREEN,0.17600578727260177,Statistical
+D0142,FM-Rawalpindi-0142 Traders,Rawalpindi,FMCG,SM008,False,50000,860.0,GREEN,0.17428685771039965,Statistical
+D0133,Te-Gujranwala-0133 Traders,Gujranwala,Textile,SM007,False,50000,861.0,GREEN,0.17056499671911163,Statistical
+D0092,FM-Faisalabad-0092 Traders,Faisalabad,FMCG,SM008,False,350000,861.0,GREEN,0.17099767417191283,Statistical
+D0074,FM-Islamabad-0074 Traders,Islamabad,FMCG,SM008,False,50000,861.0,GREEN,0.16987598099065684,Statistical
+D0102,Te-Karachi-0102 Traders,Karachi,Textile,SM006,False,50000,862.0,GREEN,0.16974447126938094,Statistical
+D0112,FM-Karachi-0112 Traders,Karachi,FMCG,SM003,False,350000,862.0,GREEN,0.16969933535421847,Statistical
+D0105,FM-Peshawar-0105 Traders,Peshawar,FMCG,SM004,False,500000,862.0,GREEN,0.1697333337321632,Statistical
+D0062,FM-Lahore-0062 Traders,Lahore,FMCG,SM003,False,100000,863.0,GREEN,0.16564649755779293,Statistical
+D0159,FM-Faisalabad-0159 Traders,Faisalabad,FMCG,SM005,False,50000,864.0,GREEN,0.16440860864181653,Statistical
+D0050,FM-Peshawar-0050 Traders,Peshawar,FMCG,SM006,True,100000,864.0,GREEN,0.16449152910975737,Statistical
+D0045,Ph-Lahore-0045 Traders,Lahore,Pharma,SM008,False,50000,864.0,GREEN,0.1635008530638846,Statistical
+D0187,Te-InteriorSindh-0187 Traders,Interior Sindh,Textile,SM007,False,100000,865.0,GREEN,0.1620560615641501,Statistical
+D0009,Te-InteriorPunjab-0009 Traders,Interior Punjab,Textile,SM002,True,50000,865.0,GREEN,0.16209207924822203,Statistical
+D0219,Ph-Karachi-0219 Traders,Karachi,Pharma,SM003,False,350000,865.0,GREEN,0.16050236959904854,Statistical
+D0213,Te-Faisalabad-0213 Traders,Faisalabad,Textile,SM008,False,50000,867.0,GREEN,0.15567288460770287,Statistical
+D0152,Ph-Islamabad-0152 Traders,Islamabad,Pharma,SM004,False,200000,867.0,GREEN,0.15592707440171608,Statistical
+D0153,Te-Islamabad-0153 Traders,Islamabad,Textile,SM008,False,50000,867.0,GREEN,0.15596503005006118,Statistical
+D0124,Te-Karachi-0124 Traders,Karachi,Textile,SM007,False,100000,868.0,GREEN,0.15484404820003472,Statistical
+D0162,FM-Islamabad-0162 Traders,Islamabad,FMCG,SM008,False,100000,868.0,GREEN,0.15459072429305237,Statistical
+D0178,FM-Karachi-0178 Traders,Karachi,FMCG,SM006,False,50000,869.0,GREEN,0.15131693956344588,Statistical
+D0126,Te-Lahore-0126 Traders,Lahore,Textile,SM001,False,350000,869.0,GREEN,0.1514328697977261,Statistical
+D0211,Ph-Faisalabad-0211 Traders,Faisalabad,Pharma,SM008,False,50000,871.0,GREEN,0.14771197236485117,Statistical
+D0041,Te-Karachi-0041 Traders,Karachi,Textile,SM003,False,200000,871.0,GREEN,0.1489013102180174,Statistical
+D0022,Ph-Lahore-0022 Traders,Lahore,Pharma,SM004,False,200000,872.0,GREEN,0.1467449566406894,Statistical
+D0096,FM-Lahore-0096 Traders,Lahore,FMCG,SM001,False,200000,872.0,GREEN,0.1467025856490253,Statistical
+D0008,FM-Karachi-0008 Traders,Karachi,FMCG,SM003,False,50000,872.0,GREEN,0.14628772595670436,Statistical
+D0175,Ph-Faisalabad-0175 Traders,Faisalabad,Pharma,SM001,False,350000,872.0,GREEN,0.14652083597173537,Statistical
+D0217,Te-Karachi-0217 Traders,Karachi,Textile,SM008,False,100000,873.0,GREEN,0.14375614123215796,Statistical
+D0138,Te-Faisalabad-0138 Traders,Faisalabad,Textile,SM003,False,100000,875.0,GREEN,0.14017683905315895,Statistical
+D0141,Te-Karachi-0141 Traders,Karachi,Textile,SM008,False,50000,875.0,GREEN,0.13888436881798222,Statistical
+D0200,Ph-InteriorPunjab-0200 Traders,Interior Punjab,Pharma,SM008,False,100000,876.0,GREEN,0.13646097985279002,Statistical
+D0033,FM-InteriorPunjab-0033 Traders,Interior Punjab,FMCG,SM003,True,50000,876.0,GREEN,0.13789105668702736,Statistical
+D0075,Te-InteriorPunjab-0075 Traders,Interior Punjab,Textile,SM004,False,200000,876.0,GREEN,0.1376632898977036,Statistical
+D0029,Te-InteriorSindh-0029 Traders,Interior Sindh,Textile,SM001,False,500000,877.0,GREEN,0.13576388827894204,Statistical
+D0197,Ph-Lahore-0197 Traders,Lahore,Pharma,SM001,False,200000,879.0,GREEN,0.13204648128091667,Statistical
+D0115,Te-Karachi-0115 Traders,Karachi,Textile,SM008,False,50000,880.0,GREEN,0.12931351911976577,Statistical
+D0048,Ph-Karachi-0048 Traders,Karachi,Pharma,SM008,False,50000,882.0,GREEN,0.12459914016515342,Statistical
+D0091,Te-Karachi-0091 Traders,Karachi,Textile,SM004,False,50000,884.0,GREEN,0.12193040287811022,Statistical
+D0196,Ph-Karachi-0196 Traders,Karachi,Pharma,SM003,False,100000,884.0,GREEN,0.12227415903964695,Statistical
+D0210,FM-Karachi-0210 Traders,Karachi,FMCG,SM004,False,100000,884.0,GREEN,0.12107135544705754,Statistical
+D0117,Ph-Faisalabad-0117 Traders,Faisalabad,Pharma,SM004,False,50000,891.0,GREEN,0.10934744596616831,Statistical
+D0188,Ph-Peshawar-0188 Traders,Peshawar,Pharma,SM001,False,200000,896.0,GREEN,0.10075881218889714,Statistical
+D0001,FM-Islamabad-0001 Traders,Islamabad,FMCG,SM001,False,50000,900.0,GREEN,0.09430547826344611,Statistical

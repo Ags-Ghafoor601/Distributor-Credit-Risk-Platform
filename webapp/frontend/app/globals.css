@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  /* Midnight Executive palette, warmed with a ledger-paper background */
+  --navy: #1e2761;
+  --navy-deep: #14193f;
+  --ice: #cadcfc;
+  --parchment: #f7f4ee;
+  --parchment-line: #e4ddcf;
+  --ink: #1a1a2e;
+  --grey: #5a5a72;
+  --red: #b3392c;
+  --amber: #a97318;
+  --green: #1e7a44;
+  --gold: #c9a24b;
+  --gold-bright: #e0c477;
+
+  --background: var(--parchment);
+  --foreground: var(--ink);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-ice: var(--ice);
+  --color-parchment: var(--parchment);
+  --color-parchment-line: var(--parchment-line);
+  --color-ink: var(--ink);
+  --color-grey: var(--grey);
+  --color-red: var(--red);
+  --color-amber: var(--amber);
+  --color-green: var(--green);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+/* Ledger-paper ruled-line texture, used sparingly as a background motif */
+.ledger-lines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 35px,
+    var(--parchment-line) 35px,
+    var(--parchment-line) 36px
+  );
+}
+
+:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

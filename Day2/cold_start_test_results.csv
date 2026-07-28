@@ -1,0 +1,16 @@
+dealer_id,salesman_id,territory_risk_tier,sector,provisional_score,provisional_tier,starter_limit_cap_pkr,"true_risk_profile (hidden, validation only)",true_risk_numeric
+D0167,SM006,High,FMCG,519,AMBER (Provisional — Elevated Caution),100000,Risky,2
+D0042,SM002,Medium,FMCG,586,AMBER (Provisional — Standard Caution),100000,Reliable,0
+D0070,SM003,Medium,Textile,575,AMBER (Provisional — Standard Caution),100000,Risky,2
+D0165,SM001,Medium,Textile,521,AMBER (Provisional — Elevated Caution),100000,Moderate,1
+D0047,SM005,Medium,Pharma,607,AMBER (Provisional — Standard Caution),100000,Reliable,0
+D0200,SM008,Medium,Pharma,539,AMBER (Provisional — Elevated Caution),100000,Reliable,0
+D0062,SM003,Low,FMCG,642,AMBER (Provisional — Standard Caution),100000,Reliable,0
+D0078,SM007,Low,Pharma,633,AMBER (Provisional — Standard Caution),100000,Reliable,0
+D0151,SM003,High,Textile,539,AMBER (Provisional — Elevated Caution),100000,Moderate,1
+D0122,SM003,High,FMCG,552,AMBER (Provisional — Elevated Caution),100000,Moderate,1
+D0185,SM007,Low,Pharma,633,AMBER (Provisional — Standard Caution),100000,Reliable,0
+D0213,SM008,Medium,Textile,545,AMBER (Provisional — Elevated Caution),100000,Reliable,0
+D0129,SM005,Low,FMCG,680,AMBER (Provisional — Standard Caution),100000,Reliable,0
+D0182,SM003,Low,Pharma,623,AMBER (Provisional — Standard Caution),100000,Reliable,0
+D0150,SM001,Low,FMCG,588,AMBER (Provisional — Standard Caution),100000,Reliable,0

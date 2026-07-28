@@ -1,0 +1,221 @@
+dealer_id,dealer_name,city,territory_risk_tier,sector,salesman_id,is_salesman_favorite,credit_limit_pkr,onboarding_date,true_risk_profile
+D0001,FM-Islamabad-0001 Traders,Islamabad,Low,FMCG,SM001,False,50000,2021-07-11,Reliable
+D0002,Te-Lahore-0002 Traders,Lahore,Low,Textile,SM007,False,350000,2024-05-17,Reliable
+D0003,FM-Karachi-0003 Traders,Karachi,Medium,FMCG,SM001,True,200000,2024-01-22,Moderate
+D0004,Ph-Rawalpindi-0004 Traders,Rawalpindi,Low,Pharma,SM003,False,100000,2024-04-21,Reliable
+D0005,FM-Lahore-0005 Traders,Lahore,Low,FMCG,SM001,True,750000,2021-11-23,Reliable
+D0006,Ph-InteriorSindh-0006 Traders,Interior Sindh,High,Pharma,SM008,False,500000,2022-07-24,Reliable
+D0007,Ph-Karachi-0007 Traders,Karachi,Medium,Pharma,SM001,False,750000,2021-07-29,Risky
+D0008,FM-Karachi-0008 Traders,Karachi,Medium,FMCG,SM003,False,50000,2023-01-06,Reliable
+D0009,Te-InteriorPunjab-0009 Traders,Interior Punjab,Medium,Textile,SM002,True,50000,2022-06-26,Reliable
+D0010,Te-InteriorPunjab-0010 Traders,Interior Punjab,Medium,Textile,SM006,False,500000,2023-07-30,Moderate
+D0011,Ph-Faisalabad-0011 Traders,Faisalabad,Medium,Pharma,SM006,False,750000,2021-06-11,Moderate
+D0012,Te-Faisalabad-0012 Traders,Faisalabad,Medium,Textile,SM006,False,750000,2023-01-11,Moderate
+D0013,Te-Faisalabad-0013 Traders,Faisalabad,Medium,Textile,SM007,False,100000,2021-05-23,Reliable
+D0014,FM-Karachi-0014 Traders,Karachi,Medium,FMCG,SM008,False,750000,2022-08-16,Reliable
+D0015,FM-Multan-0015 Traders,Multan,Medium,FMCG,SM006,False,350000,2021-07-26,Moderate
+D0016,Ph-Rawalpindi-0016 Traders,Rawalpindi,Low,Pharma,SM004,False,750000,2023-01-18,Moderate
+D0017,Ph-Lahore-0017 Traders,Lahore,Low,Pharma,SM005,False,750000,2022-03-06,Reliable
+D0018,Te-Gujranwala-0018 Traders,Gujranwala,Medium,Textile,SM006,False,500000,2021-05-27,Reliable
+D0019,FM-Faisalabad-0019 Traders,Faisalabad,Medium,FMCG,SM006,False,50000,2023-12-30,Reliable
+D0020,FM-InteriorSindh-0020 Traders,Interior Sindh,High,FMCG,SM003,False,50000,2023-08-05,Moderate
+D0021,Te-Rawalpindi-0021 Traders,Rawalpindi,Low,Textile,SM005,False,50000,2024-02-15,Reliable
+D0022,Ph-Lahore-0022 Traders,Lahore,Low,Pharma,SM004,False,200000,2021-04-25,Reliable
+D0023,FM-Lahore-0023 Traders,Lahore,Low,FMCG,SM006,False,50000,2022-10-09,Reliable
+D0024,FM-Rawalpindi-0024 Traders,Rawalpindi,Low,FMCG,SM008,False,200000,2022-03-09,Reliable
+D0025,Te-Peshawar-0025 Traders,Peshawar,High,Textile,SM006,False,50000,2022-10-07,Risky
+D0026,Ph-Lahore-0026 Traders,Lahore,Low,Pharma,SM008,False,350000,2023-03-22,Reliable
+D0027,Te-InteriorPunjab-0027 Traders,Interior Punjab,Medium,Textile,SM005,False,50000,2023-07-29,Moderate
+D0028,FM-Karachi-0028 Traders,Karachi,Medium,FMCG,SM008,False,50000,2022-05-21,Risky
+D0029,Te-InteriorSindh-0029 Traders,Interior Sindh,High,Textile,SM001,False,500000,2022-06-23,Reliable
+D0030,Ph-InteriorSindh-0030 Traders,Interior Sindh,High,Pharma,SM001,False,350000,2024-04-10,Risky
+D0031,FM-Rawalpindi-0031 Traders,Rawalpindi,Low,FMCG,SM002,False,350000,2021-10-11,Moderate
+D0032,FM-Islamabad-0032 Traders,Islamabad,Low,FMCG,SM001,False,750000,2021-04-07,Reliable
+D0033,FM-InteriorPunjab-0033 Traders,Interior Punjab,Medium,FMCG,SM003,True,50000,2021-11-24,Reliable
+D0034,Ph-InteriorPunjab-0034 Traders,Interior Punjab,Medium,Pharma,SM003,False,50000,2024-05-06,Risky
+D0035,Ph-Karachi-0035 Traders,Karachi,Medium,Pharma,SM006,False,500000,2024-05-05,Risky
+D0036,Te-Multan-0036 Traders,Multan,Medium,Textile,SM005,False,200000,2022-05-30,Reliable
+D0037,FM-Multan-0037 Traders,Multan,Medium,FMCG,SM001,False,50000,2021-08-23,Risky
+D0038,Te-Gujranwala-0038 Traders,Gujranwala,Medium,Textile,SM008,False,500000,2022-07-01,Risky
+D0039,Ph-InteriorSindh-0039 Traders,Interior Sindh,High,Pharma,SM003,False,350000,2021-08-17,Risky
+D0040,FM-Lahore-0040 Traders,Lahore,Low,FMCG,SM006,False,750000,2023-07-19,Reliable
+D0041,Te-Karachi-0041 Traders,Karachi,Medium,Textile,SM003,False,200000,2022-06-24,Reliable
+D0042,FM-Multan-0042 Traders,Multan,Medium,FMCG,SM002,True,350000,2023-11-06,Reliable
+D0043,Te-Peshawar-0043 Traders,Peshawar,High,Textile,SM008,False,50000,2022-09-04,Moderate
+D0044,Te-InteriorPunjab-0044 Traders,Interior Punjab,Medium,Textile,SM001,False,50000,2024-06-01,Reliable
+D0045,Ph-Lahore-0045 Traders,Lahore,Low,Pharma,SM008,False,50000,2021-11-27,Reliable
+D0046,Te-Faisalabad-0046 Traders,Faisalabad,Medium,Textile,SM002,False,500000,2021-01-02,Moderate
+D0047,Ph-Faisalabad-0047 Traders,Faisalabad,Medium,Pharma,SM005,False,350000,2021-02-09,Reliable
+D0048,Ph-Karachi-0048 Traders,Karachi,Medium,Pharma,SM008,False,50000,2022-09-22,Reliable
+D0049,FM-Lahore-0049 Traders,Lahore,Low,FMCG,SM003,False,100000,2024-03-07,Moderate
+D0050,FM-Peshawar-0050 Traders,Peshawar,High,FMCG,SM006,True,100000,2023-09-23,Reliable
+D0051,Te-InteriorPunjab-0051 Traders,Interior Punjab,Medium,Textile,SM006,False,200000,2021-09-15,Moderate
+D0052,Ph-Karachi-0052 Traders,Karachi,Medium,Pharma,SM007,False,500000,2024-01-31,Risky
+D0053,Te-Lahore-0053 Traders,Lahore,Low,Textile,SM008,True,500000,2024-05-27,Moderate
+D0054,FM-Islamabad-0054 Traders,Islamabad,Low,FMCG,SM005,False,500000,2024-01-10,Reliable
+D0055,Te-InteriorSindh-0055 Traders,Interior Sindh,High,Textile,SM002,False,200000,2022-02-16,Moderate
+D0056,Ph-InteriorSindh-0056 Traders,Interior Sindh,High,Pharma,SM006,False,500000,2023-02-04,Reliable
+D0057,Te-Islamabad-0057 Traders,Islamabad,Low,Textile,SM008,False,50000,2023-07-14,Risky
+D0058,FM-Karachi-0058 Traders,Karachi,Medium,FMCG,SM002,False,350000,2021-05-12,Risky
+D0059,Te-Rawalpindi-0059 Traders,Rawalpindi,Low,Textile,SM001,False,50000,2024-02-09,Reliable
+D0060,FM-Lahore-0060 Traders,Lahore,Low,FMCG,SM006,True,100000,2021-01-15,Moderate
+D0061,Te-Karachi-0061 Traders,Karachi,Medium,Textile,SM005,False,350000,2021-05-01,Reliable
+D0062,FM-Lahore-0062 Traders,Lahore,Low,FMCG,SM003,False,100000,2022-11-08,Reliable
+D0063,FM-Karachi-0063 Traders,Karachi,Medium,FMCG,SM004,False,500000,2022-07-25,Reliable
+D0064,FM-Gujranwala-0064 Traders,Gujranwala,Medium,FMCG,SM002,False,350000,2024-01-10,Moderate
+D0065,Te-Karachi-0065 Traders,Karachi,Medium,Textile,SM006,False,750000,2024-03-26,Reliable
+D0066,Ph-Islamabad-0066 Traders,Islamabad,Low,Pharma,SM001,False,50000,2023-04-14,Moderate
+D0067,FM-Lahore-0067 Traders,Lahore,Low,FMCG,SM006,False,50000,2023-06-02,Reliable
+D0068,Ph-Rawalpindi-0068 Traders,Rawalpindi,Low,Pharma,SM003,False,750000,2023-08-15,Reliable
+D0069,FM-InteriorPunjab-0069 Traders,Interior Punjab,Medium,FMCG,SM002,False,50000,2021-07-21,Risky
+D0070,Te-Karachi-0070 Traders,Karachi,Medium,Textile,SM003,True,350000,2022-11-26,Risky
+D0071,FM-InteriorPunjab-0071 Traders,Interior Punjab,Medium,FMCG,SM005,False,350000,2022-05-25,Moderate
+D0072,Te-Lahore-0072 Traders,Lahore,Low,Textile,SM006,False,500000,2023-07-08,Reliable
+D0073,FM-Karachi-0073 Traders,Karachi,Medium,FMCG,SM003,False,500000,2022-07-25,Risky
+D0074,FM-Islamabad-0074 Traders,Islamabad,Low,FMCG,SM008,False,50000,2023-06-27,Reliable
+D0075,Te-InteriorPunjab-0075 Traders,Interior Punjab,Medium,Textile,SM004,False,200000,2021-07-20,Reliable
+D0076,Te-Karachi-0076 Traders,Karachi,Medium,Textile,SM007,True,750000,2021-01-31,Reliable
+D0077,FM-Multan-0077 Traders,Multan,Medium,FMCG,SM008,False,100000,2021-12-07,Moderate
+D0078,Ph-Rawalpindi-0078 Traders,Rawalpindi,Low,Pharma,SM007,False,350000,2022-03-14,Reliable
+D0079,FM-InteriorPunjab-0079 Traders,Interior Punjab,Medium,FMCG,SM008,False,750000,2021-12-04,Reliable
+D0080,Ph-Rawalpindi-0080 Traders,Rawalpindi,Low,Pharma,SM008,True,200000,2022-06-28,Risky
+D0081,Ph-Peshawar-0081 Traders,Peshawar,High,Pharma,SM003,True,350000,2022-08-08,Reliable
+D0082,Te-Islamabad-0082 Traders,Islamabad,Low,Textile,SM003,False,350000,2024-02-13,Reliable
+D0083,Ph-Gujranwala-0083 Traders,Gujranwala,Medium,Pharma,SM007,False,350000,2021-11-14,Risky
+D0084,FM-Lahore-0084 Traders,Lahore,Low,FMCG,SM003,False,750000,2021-04-30,Reliable
+D0085,Te-Faisalabad-0085 Traders,Faisalabad,Medium,Textile,SM002,False,750000,2021-05-05,Reliable
+D0086,FM-InteriorSindh-0086 Traders,Interior Sindh,High,FMCG,SM002,False,100000,2021-04-13,Risky
+D0087,Te-Faisalabad-0087 Traders,Faisalabad,Medium,Textile,SM007,False,500000,2023-12-24,Reliable
+D0088,Te-Karachi-0088 Traders,Karachi,Medium,Textile,SM007,True,50000,2021-06-14,Moderate
+D0089,FM-InteriorPunjab-0089 Traders,Interior Punjab,Medium,FMCG,SM002,False,50000,2024-05-03,Reliable
+D0090,FM-Karachi-0090 Traders,Karachi,Medium,FMCG,SM001,False,750000,2023-04-07,Reliable
+D0091,Te-Karachi-0091 Traders,Karachi,Medium,Textile,SM004,False,50000,2022-05-20,Reliable
+D0092,FM-Faisalabad-0092 Traders,Faisalabad,Medium,FMCG,SM008,False,350000,2021-06-17,Reliable
+D0093,Te-Rawalpindi-0093 Traders,Rawalpindi,Low,Textile,SM003,False,350000,2024-03-03,Reliable
+D0094,Ph-Islamabad-0094 Traders,Islamabad,Low,Pharma,SM005,False,100000,2022-02-23,Reliable
+D0095,Ph-Gujranwala-0095 Traders,Gujranwala,Medium,Pharma,SM005,True,500000,2022-05-04,Risky
+D0096,FM-Lahore-0096 Traders,Lahore,Low,FMCG,SM001,False,200000,2022-09-07,Reliable
+D0097,FM-Islamabad-0097 Traders,Islamabad,Low,FMCG,SM001,False,350000,2021-01-20,Reliable
+D0098,Te-Islamabad-0098 Traders,Islamabad,Low,Textile,SM003,False,200000,2021-07-24,Moderate
+D0099,FM-Karachi-0099 Traders,Karachi,Medium,FMCG,SM006,False,350000,2023-11-03,Risky
+D0100,Ph-Lahore-0100 Traders,Lahore,Low,Pharma,SM005,True,750000,2021-05-21,Moderate
+D0101,Ph-InteriorPunjab-0101 Traders,Interior Punjab,Medium,Pharma,SM002,False,500000,2022-08-07,Reliable
+D0102,Te-Karachi-0102 Traders,Karachi,Medium,Textile,SM006,False,50000,2022-09-12,Reliable
+D0103,Te-Faisalabad-0103 Traders,Faisalabad,Medium,Textile,SM004,False,100000,2023-12-20,Risky
+D0104,Te-Karachi-0104 Traders,Karachi,Medium,Textile,SM004,False,350000,2022-09-06,Risky
+D0105,FM-Peshawar-0105 Traders,Peshawar,High,FMCG,SM004,False,500000,2021-10-03,Reliable
+D0106,FM-Lahore-0106 Traders,Lahore,Low,FMCG,SM004,False,750000,2024-02-08,Reliable
+D0107,Ph-Karachi-0107 Traders,Karachi,Medium,Pharma,SM002,False,100000,2024-05-23,Moderate
+D0108,Ph-Lahore-0108 Traders,Lahore,Low,Pharma,SM007,False,350000,2022-02-21,Reliable
+D0109,Ph-InteriorSindh-0109 Traders,Interior Sindh,High,Pharma,SM003,False,50000,2023-11-02,Moderate
+D0110,FM-Islamabad-0110 Traders,Islamabad,Low,FMCG,SM004,False,500000,2021-07-09,Reliable
+D0111,Ph-Gujranwala-0111 Traders,Gujranwala,Medium,Pharma,SM006,False,500000,2021-04-01,Reliable
+D0112,FM-Karachi-0112 Traders,Karachi,Medium,FMCG,SM003,False,350000,2022-06-21,Reliable
+D0113,Ph-Lahore-0113 Traders,Lahore,Low,Pharma,SM008,False,100000,2024-02-04,Risky
+D0114,Te-InteriorSindh-0114 Traders,Interior Sindh,High,Textile,SM008,True,350000,2021-01-20,Moderate
+D0115,Te-Karachi-0115 Traders,Karachi,Medium,Textile,SM008,False,50000,2021-11-02,Reliable
+D0116,Ph-Faisalabad-0116 Traders,Faisalabad,Medium,Pharma,SM008,False,200000,2024-04-07,Reliable
+D0117,Ph-Faisalabad-0117 Traders,Faisalabad,Medium,Pharma,SM004,False,50000,2021-09-19,Reliable
+D0118,Ph-Karachi-0118 Traders,Karachi,Medium,Pharma,SM002,False,500000,2021-03-23,Reliable
+D0119,FM-Peshawar-0119 Traders,Peshawar,High,FMCG,SM006,False,200000,2022-05-27,Risky
+D0120,Ph-Gujranwala-0120 Traders,Gujranwala,Medium,Pharma,SM008,False,350000,2024-02-21,Reliable
+D0121,Ph-InteriorPunjab-0121 Traders,Interior Punjab,Medium,Pharma,SM002,True,500000,2021-11-13,Moderate
+D0122,FM-Peshawar-0122 Traders,Peshawar,High,FMCG,SM003,True,500000,2021-11-29,Moderate
+D0123,FM-Multan-0123 Traders,Multan,Medium,FMCG,SM004,False,750000,2023-04-25,Reliable
+D0124,Te-Karachi-0124 Traders,Karachi,Medium,Textile,SM007,False,100000,2022-11-12,Reliable
+D0125,Ph-InteriorSindh-0125 Traders,Interior Sindh,High,Pharma,SM005,True,500000,2022-05-24,Risky
+D0126,Te-Lahore-0126 Traders,Lahore,Low,Textile,SM001,False,350000,2021-08-10,Reliable
+D0127,FM-Rawalpindi-0127 Traders,Rawalpindi,Low,FMCG,SM007,False,500000,2023-08-22,Reliable
+D0128,Ph-Lahore-0128 Traders,Lahore,Low,Pharma,SM002,False,200000,2022-12-18,Reliable
+D0129,FM-Lahore-0129 Traders,Lahore,Low,FMCG,SM005,False,100000,2022-04-02,Reliable
+D0130,FM-Karachi-0130 Traders,Karachi,Medium,FMCG,SM008,False,100000,2023-03-28,Moderate
+D0131,FM-Rawalpindi-0131 Traders,Rawalpindi,Low,FMCG,SM006,False,350000,2022-07-26,Reliable
+D0132,Te-Rawalpindi-0132 Traders,Rawalpindi,Low,Textile,SM003,False,350000,2023-03-30,Reliable
+D0133,Te-Gujranwala-0133 Traders,Gujranwala,Medium,Textile,SM007,False,50000,2022-11-10,Reliable
+D0134,FM-Peshawar-0134 Traders,Peshawar,High,FMCG,SM008,False,350000,2022-06-19,Reliable
+D0135,Ph-Lahore-0135 Traders,Lahore,Low,Pharma,SM004,False,500000,2021-03-20,Reliable
+D0136,Ph-Karachi-0136 Traders,Karachi,Medium,Pharma,SM005,False,500000,2022-12-09,Reliable
+D0137,Ph-InteriorSindh-0137 Traders,Interior Sindh,High,Pharma,SM004,False,500000,2023-06-13,Risky
+D0138,Te-Faisalabad-0138 Traders,Faisalabad,Medium,Textile,SM003,False,100000,2021-08-25,Reliable
+D0139,Te-Rawalpindi-0139 Traders,Rawalpindi,Low,Textile,SM008,True,200000,2022-01-25,Moderate
+D0140,Te-Lahore-0140 Traders,Lahore,Low,Textile,SM005,False,750000,2023-06-13,Reliable
+D0141,Te-Karachi-0141 Traders,Karachi,Medium,Textile,SM008,False,50000,2022-02-08,Reliable
+D0142,FM-Rawalpindi-0142 Traders,Rawalpindi,Low,FMCG,SM008,False,50000,2022-11-08,Reliable
+D0143,Te-Faisalabad-0143 Traders,Faisalabad,Medium,Textile,SM006,False,500000,2021-09-13,Reliable
+D0144,Ph-InteriorSindh-0144 Traders,Interior Sindh,High,Pharma,SM005,False,500000,2023-11-05,Reliable
+D0145,Ph-Lahore-0145 Traders,Lahore,Low,Pharma,SM005,False,500000,2022-10-31,Moderate
+D0146,Ph-Rawalpindi-0146 Traders,Rawalpindi,Low,Pharma,SM003,False,500000,2024-02-10,Reliable
+D0147,Ph-Karachi-0147 Traders,Karachi,Medium,Pharma,SM004,False,500000,2023-02-16,Reliable
+D0148,FM-Gujranwala-0148 Traders,Gujranwala,Medium,FMCG,SM005,False,200000,2024-03-11,Reliable
+D0149,Te-Lahore-0149 Traders,Lahore,Low,Textile,SM005,True,100000,2021-01-01,Reliable
+D0150,FM-Lahore-0150 Traders,Lahore,Low,FMCG,SM001,False,350000,2023-05-31,Reliable
+D0151,Te-InteriorSindh-0151 Traders,Interior Sindh,High,Textile,SM003,False,100000,2022-10-22,Moderate
+D0152,Ph-Islamabad-0152 Traders,Islamabad,Low,Pharma,SM004,False,200000,2022-03-14,Reliable
+D0153,Te-Islamabad-0153 Traders,Islamabad,Low,Textile,SM008,False,50000,2021-12-14,Reliable
+D0154,Ph-Gujranwala-0154 Traders,Gujranwala,Medium,Pharma,SM007,False,750000,2023-11-22,Reliable
+D0155,Te-Gujranwala-0155 Traders,Gujranwala,Medium,Textile,SM008,False,500000,2022-11-18,Moderate
+D0156,FM-Karachi-0156 Traders,Karachi,Medium,FMCG,SM004,False,350000,2022-09-28,Moderate
+D0157,FM-Lahore-0157 Traders,Lahore,Low,FMCG,SM005,False,200000,2021-10-29,Reliable
+D0158,FM-Karachi-0158 Traders,Karachi,Medium,FMCG,SM007,False,100000,2023-09-01,Reliable
+D0159,FM-Faisalabad-0159 Traders,Faisalabad,Medium,FMCG,SM005,False,50000,2023-07-22,Reliable
+D0160,Te-Rawalpindi-0160 Traders,Rawalpindi,Low,Textile,SM005,False,750000,2024-03-24,Reliable
+D0161,Te-Lahore-0161 Traders,Lahore,Low,Textile,SM002,False,500000,2023-02-26,Reliable
+D0162,FM-Islamabad-0162 Traders,Islamabad,Low,FMCG,SM008,False,100000,2021-10-30,Reliable
+D0163,FM-Gujranwala-0163 Traders,Gujranwala,Medium,FMCG,SM006,False,200000,2021-08-07,Reliable
+D0164,FM-InteriorSindh-0164 Traders,Interior Sindh,High,FMCG,SM003,False,500000,2021-12-27,Reliable
+D0165,Te-InteriorPunjab-0165 Traders,Interior Punjab,Medium,Textile,SM001,False,500000,2023-11-27,Moderate
+D0166,Te-Islamabad-0166 Traders,Islamabad,Low,Textile,SM002,False,200000,2022-05-26,Moderate
+D0167,FM-Peshawar-0167 Traders,Peshawar,High,FMCG,SM006,False,200000,2023-07-24,Risky
+D0168,Ph-Karachi-0168 Traders,Karachi,Medium,Pharma,SM006,False,750000,2023-12-24,Reliable
+D0169,Te-Multan-0169 Traders,Multan,Medium,Textile,SM003,True,500000,2022-10-12,Reliable
+D0170,Ph-Multan-0170 Traders,Multan,Medium,Pharma,SM004,False,200000,2023-10-31,Moderate
+D0171,Te-Islamabad-0171 Traders,Islamabad,Low,Textile,SM007,False,500000,2023-07-03,Reliable
+D0172,Te-Peshawar-0172 Traders,Peshawar,High,Textile,SM001,False,750000,2023-08-31,Reliable
+D0173,FM-Islamabad-0173 Traders,Islamabad,Low,FMCG,SM005,False,500000,2022-07-22,Reliable
+D0174,Te-InteriorSindh-0174 Traders,Interior Sindh,High,Textile,SM005,True,750000,2023-09-20,Reliable
+D0175,Ph-Faisalabad-0175 Traders,Faisalabad,Medium,Pharma,SM001,False,350000,2023-06-20,Reliable
+D0176,Ph-Karachi-0176 Traders,Karachi,Medium,Pharma,SM002,False,100000,2022-04-26,Risky
+D0177,Ph-Lahore-0177 Traders,Lahore,Low,Pharma,SM002,True,500000,2024-01-12,Risky
+D0178,FM-Karachi-0178 Traders,Karachi,Medium,FMCG,SM006,False,50000,2022-04-19,Reliable
+D0179,FM-Rawalpindi-0179 Traders,Rawalpindi,Low,FMCG,SM007,False,100000,2022-03-15,Moderate
+D0180,Ph-Karachi-0180 Traders,Karachi,Medium,Pharma,SM005,False,200000,2022-11-09,Reliable
+D0181,Ph-Faisalabad-0181 Traders,Faisalabad,Medium,Pharma,SM005,False,750000,2021-05-08,Risky
+D0182,Ph-Lahore-0182 Traders,Lahore,Low,Pharma,SM003,False,750000,2023-03-09,Reliable
+D0183,Te-Peshawar-0183 Traders,Peshawar,High,Textile,SM001,True,100000,2021-02-10,Moderate
+D0184,Te-InteriorPunjab-0184 Traders,Interior Punjab,Medium,Textile,SM007,False,200000,2023-02-19,Risky
+D0185,Ph-Islamabad-0185 Traders,Islamabad,Low,Pharma,SM007,False,750000,2022-09-04,Reliable
+D0186,Ph-InteriorSindh-0186 Traders,Interior Sindh,High,Pharma,SM006,False,50000,2024-01-08,Reliable
+D0187,Te-InteriorSindh-0187 Traders,Interior Sindh,High,Textile,SM007,False,100000,2024-05-20,Reliable
+D0188,Ph-Peshawar-0188 Traders,Peshawar,High,Pharma,SM001,False,200000,2022-03-26,Reliable
+D0189,Ph-Lahore-0189 Traders,Lahore,Low,Pharma,SM005,False,100000,2021-03-01,Reliable
+D0190,Te-Rawalpindi-0190 Traders,Rawalpindi,Low,Textile,SM002,False,100000,2023-04-09,Moderate
+D0191,Ph-InteriorSindh-0191 Traders,Interior Sindh,High,Pharma,SM005,True,350000,2021-09-19,Reliable
+D0192,Te-Multan-0192 Traders,Multan,Medium,Textile,SM004,False,500000,2021-02-25,Reliable
+D0193,Te-Peshawar-0193 Traders,Peshawar,High,Textile,SM001,False,50000,2024-03-01,Risky
+D0194,FM-Gujranwala-0194 Traders,Gujranwala,Medium,FMCG,SM005,True,50000,2023-05-28,Reliable
+D0195,Ph-Karachi-0195 Traders,Karachi,Medium,Pharma,SM008,False,350000,2022-01-08,Risky
+D0196,Ph-Karachi-0196 Traders,Karachi,Medium,Pharma,SM003,False,100000,2022-11-02,Reliable
+D0197,Ph-Lahore-0197 Traders,Lahore,Low,Pharma,SM001,False,200000,2022-11-23,Reliable
+D0198,Ph-InteriorSindh-0198 Traders,Interior Sindh,High,Pharma,SM007,False,200000,2022-07-24,Moderate
+D0199,Ph-InteriorSindh-0199 Traders,Interior Sindh,High,Pharma,SM001,False,750000,2022-06-01,Moderate
+D0200,Ph-InteriorPunjab-0200 Traders,Interior Punjab,Medium,Pharma,SM008,False,100000,2021-02-09,Reliable
+D0201,FM-InteriorSindh-0201 Traders,Interior Sindh,High,FMCG,SM005,False,50000,2022-12-18,Reliable
+D0202,FM-Lahore-0202 Traders,Lahore,Low,FMCG,SM002,True,750000,2021-03-24,Reliable
+D0203,FM-InteriorSindh-0203 Traders,Interior Sindh,High,FMCG,SM003,False,200000,2022-02-13,Moderate
+D0204,Te-InteriorPunjab-0204 Traders,Interior Punjab,Medium,Textile,SM002,False,500000,2021-11-09,Moderate
+D0205,Ph-Lahore-0205 Traders,Lahore,Low,Pharma,SM007,True,100000,2021-08-23,Reliable
+D0206,FM-Faisalabad-0206 Traders,Faisalabad,Medium,FMCG,SM003,False,500000,2023-08-11,Moderate
+D0207,Ph-InteriorSindh-0207 Traders,Interior Sindh,High,Pharma,SM004,False,100000,2021-12-10,Risky
+D0208,Te-Faisalabad-0208 Traders,Faisalabad,Medium,Textile,SM006,False,200000,2021-08-23,Risky
+D0209,FM-InteriorSindh-0209 Traders,Interior Sindh,High,FMCG,SM005,False,350000,2022-09-30,Reliable
+D0210,FM-Karachi-0210 Traders,Karachi,Medium,FMCG,SM004,False,100000,2022-10-01,Reliable
+D0211,Ph-Faisalabad-0211 Traders,Faisalabad,Medium,Pharma,SM008,False,50000,2023-03-24,Reliable
+D0212,FM-Peshawar-0212 Traders,Peshawar,High,FMCG,SM002,False,500000,2021-06-05,Risky
+D0213,Te-Faisalabad-0213 Traders,Faisalabad,Medium,Textile,SM008,False,50000,2022-05-13,Reliable
+D0214,Ph-Karachi-0214 Traders,Karachi,Medium,Pharma,SM002,False,750000,2024-05-14,Reliable
+D0215,Te-InteriorPunjab-0215 Traders,Interior Punjab,Medium,Textile,SM001,False,500000,2021-03-26,Risky
+D0216,Ph-Rawalpindi-0216 Traders,Rawalpindi,Low,Pharma,SM002,False,500000,2023-01-29,Reliable
+D0217,Te-Karachi-0217 Traders,Karachi,Medium,Textile,SM008,False,100000,2022-11-30,Reliable
+D0218,Ph-Karachi-0218 Traders,Karachi,Medium,Pharma,SM007,False,100000,2023-10-01,Reliable
+D0219,Ph-Karachi-0219 Traders,Karachi,Medium,Pharma,SM003,False,350000,2023-07-31,Reliable
+D0220,Ph-InteriorSindh-0220 Traders,Interior Sindh,High,Pharma,SM005,False,500000,2021-12-27,Reliable
