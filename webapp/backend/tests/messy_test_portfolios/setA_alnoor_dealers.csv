@@ -1,0 +1,141 @@
+Customer Code,Shop Name,Area,Sales Officer,Credit Limit,Since
+C-4000,Mehran Medicos,Hyderabad,SO-101,400000,16/05/2022
+C-4001,New Sharif Distributors,Lahore,SO-101,"  250,000 ",44732
+C-4002,Farooq Medicos,Bahawalpur,SO-103,"600,000",2021-03-26
+C-4003,Al-Madina Store,Karachi,SO-102,"75,000",2020-08-26
+C-4004,Al-Madina Brothers,Hyderabad,SO-103,"  120,000 ",05/01/2021
+C-4005,Usman & Co,Multan,SO-106,"250,000",2021-10-26
+C-4006,Anwar Enterprises,Gujrat,SO-102,"Rs. 250,000",16-Mar-21
+C-4007,Shaheen Trading Co,Sukkur,SO-105,"250,000/-",13/01/2022
+C-4008,Mehran Trading Co,Lahore,SO-105,"Rs. 75,000",2022-10-08
+C-4009,Al-Madina Medicos,Sukkur,SO-103,"  250,000 ",2021-07-20
+C-4010,Tahir Trading Co,Sukkur,SO-101,"Rs. 600,000",43985
+C-4011,Usman Enterprises,Sargodha,SO-103,"Rs. 75,000",01-Oct-22
+C-4012,Sabir Distributors,Sukkur,SO-103,"75,000/-",27/02/2022
+C-4013,Ittefaq Enterprises,Sargodha,SO-106,"250,000/-",16-Oct-22
+C-4014,Haji Sons Distributors,Multan,SO-101,120000,02-Nov-21
+C-4015,Siddiqui Brothers,Sargodha,SO-102,120000,27/02/2022
+C-4016,Indus Trading Co,Sargodha,SO-106,"600,000/-",02/06/2022
+C-4017,Shaheen Agency,Gujrat,SO-101,600000,21/04/2021
+C-4018,Bilal & Co,Bahawalpur,SO-105,40000,2020-08-24
+C-4019,Zam Zam Medicos,Hyderabad,SO-102,"  120,000 ",28/11/2020
+C-4020,Usman Corporation,Sargodha,SO-104,"  250,000 ",2020-07-26
+C-4021,Chishtia Store,Sukkur,SO-101,"120,000",2020-05-17
+C-4022,Siddiqui Enterprises,Sukkur,SO-102,"Rs. 600,000",25-Sep-20
+C-4023,New Sharif Trading Co,Multan,SO-106,75000,2020-09-24
+C-4024,Karim Traders,Sukkur,SO-107,"Rs. 600,000",2022-08-30
+C-4025,Naya Store,Multan,SO-101,"75,000/-",01-Jun-20
+C-4026,Anwar Distributors,Sukkur,SO-107,600000,22/08/2022
+C-4027,Tahir Distributors,Karachi,SO-107,600000,44269
+C-4028,Usman Agency,Karachi,SO-105,"Rs. 75,000",17/04/2020
+C-4029,Mehran Mart,Gujrat,SO-102,"  75,000 ",13/12/2020
+C-4030,Indus Distributors,Bahawalpur,SO-105,40000,14-Dec-20
+C-4031,New Sharif Enterprises,Faisalabad,SO-103,"Rs. 600,000",2021-04-29
+C-4032,Ittefaq Agency,Karachi,SO-103,"  40,000 ",08-Feb-22
+C-4033,Iqbal Enterprises,Karachi,SO-105,"  250,000 ",18/08/2022
+C-4034,Naya Distributors,Gujrat,SO-102,"Rs. 75,000",44264
+C-4035,Chishtia Brothers,Hyderabad,SO-103,"  600,000 ",2022-09-05
+C-4036,Chishtia Store,Faisalabad,SO-107,"  250,000 ",27/06/2021
+C-4037,Indus Mart,Gujrat,SO-103,"40,000",18/11/2020
+C-4038,Rehman & Agency,Sukkur,SO-105,400000,24-May-22
+C-4039,Indus Distributors,Hyderabad,SO-101,"600,000",26-Apr-22
+C-4040,Indus Trading Co,Karachi,SO-106,250000,44013
+C-4041,Haji Sons Distributors,Multan,SO-103,"Rs. 400,000",2020-10-21
+C-4042,Chishtia Brothers,Gujrat,SO-105,400000,28-Dec-20
+C-4043,Sabir Trading Co,Sialkot,SO-101,"250,000",23/08/2021
+C-4044,Usman Traders,Hyderabad,SO-102,400000,2020-05-30
+C-4045,Madni Trading Co,Lahore,SO-102,400000,44861
+C-4046,Yousaf Distributors,Sialkot,SO-101,"  75,000 ",11/03/2022
+C-4047,Chishtia Agency,Karachi,SO-107,"400,000",24/05/2021
+C-4048,Mehran Distributors,Sargodha,SO-104,"  250,000 ",2022-09-23
+C-4049,Naya & Co,Sukkur,SO-102,120000,44451
+C-4050,Zam Zam Mart,Gujrat,SO-102,"Rs. 250,000",2021-06-28
+C-4051,Shaheen Store,Sukkur,SO-102,"  250,000 ",44798
+C-4052,Shaheen Mart,Multan,SO-102,40000,24/05/2022
+C-4053,Yousaf Brothers,Bahawalpur,SO-105,75000,02-Mar-22
+C-4054,Iqbal Store,Karachi,SO-104,"400,000/-",43967
+C-4055,Karim Trading Co,Hyderabad,SO-107,"Rs. 40,000",18-Jan-22
+C-4056,Al-Madina & Co,Gujrat,SO-106,"40,000/-",03-Mar-21
+C-4057,Ittefaq Brothers,Gujrat,SO-103,400000,2021-12-13
+C-4058,Madni Mart,Faisalabad,SO-103,"75,000/-",01/02/2022
+C-4059,Yousaf Store,Karachi,SO-103,"  120,000 ",44203
+C-4060,Bilal Trading Co,Sargodha,SO-106,"Rs. 400,000",24/09/2020
+C-4061,Chishtia Brothers,Karachi,SO-106,600000,44710
+C-4062,Madni & Co,Bahawalpur,SO-104,"  400,000 ",30/05/2022
+C-4063,Haji Sons & Co,Sukkur,SO-106,"75,000/-",12/09/2021
+C-4064,Haji Sons Store,Karachi,SO-105,"Rs. 75,000",07/08/2021
+C-4065,Yousaf & Co,Faisalabad,SO-105,"400,000",11-Apr-21
+C-4066,Usman Mart,Lahore,SO-106,"  400,000 ",06-Feb-21
+C-4067,Farooq Store,Karachi,SO-102,600000,27/05/2020
+C-4068,Kausar Traders,Sukkur,SO-105,400000,11-Jul-20
+C-4069,Sabir Traders,Lahore,SO-102,"600,000",17/07/2022
+C-4070,Tahir & Co,Multan,SO-101,"Rs. 120,000",20/04/2022
+C-4071,Haji Sons Corporation,Multan,SO-106,"600,000",20-Aug-22
+C-4072,Zam Zam Traders,Karachi,SO-101,75000,43979
+C-4073,Karim Corporation,Multan,SO-105,40000,06/05/2022
+C-4074,Rehman & & Co,Sialkot,SO-102,"250,000/-",44265
+C-4075,Sabir Store,Sukkur,SO-107,"Rs. 40,000",09/04/2022
+C-4076,Tahir Brothers,Sukkur,SO-101,"40,000/-",26/04/2022
+C-4077,Bismillah Medicos,Bahawalpur,SO-106,"Rs. 75,000",02-Jun-22
+C-4078,Iqbal Agency,Faisalabad,SO-107,"120,000",2020-05-19
+C-4079,Iqbal & Co,Multan,SO-103,"  120,000 ",23-Aug-22
+C-4080,Haji Sons Enterprises,Sialkot,SO-107,"  40,000 ",05/08/2020
+C-4081,Usman Medicos,Lahore,SO-101,40000,2022-04-20
+C-4082,New Sharif Mart,Multan,SO-107,"Rs. 40,000",44845
+C-4083,New Sharif Distributors,Sukkur,SO-107,"40,000",07-Apr-22
+C-4084,Karim Brothers,Gujrat,SO-102,400000,2021-12-05
+C-4085,Siddiqui Brothers,Karachi,SO-105,"40,000/-",09/08/2021
+C-4086,Shaheen Distributors,Multan,SO-106,"  75,000 ",28/04/2021
+C-4087,Al-Habib Corporation,Multan,SO-105,"Rs. 600,000",04-Mar-21
+C-4088,Yousaf Traders,Multan,SO-101,"120,000/-",22/05/2021
+C-4089,Kausar Store,Multan,SO-105,"  120,000 ",2021-11-25
+C-4090,Chishtia Enterprises,Bahawalpur,SO-101,"400,000",44572
+C-4091,Tahir & Co,Multan,SO-103,"  250,000 ",2022-05-28
+C-4092,Bilal Traders,Sialkot,SO-102,"75,000",19-Oct-21
+C-4093,Karim Traders,Karachi,SO-103,"  120,000 ",06-Aug-22
+C-4094,Al-Noor Medicos,Gujrat,SO-107,"Rs. 120,000",03-Sep-21
+C-4095,Yousaf Brothers,Sukkur,SO-105,"400,000",28/02/2022
+C-4096,Bilal Distributors,Multan,SO-103,"Rs. 120,000",22-Mar-21
+C-4097,Indus Trading Co,Sialkot,SO-104,"400,000/-",26-May-22
+C-4098,Iqbal Traders,Gujrat,SO-105,120000,03/05/2021
+C-4099,Mehran Traders,Gujrat,SO-105,120000,07/08/2021
+C-4100,Siddiqui Brothers,Bahawalpur,SO-106,75000,44444
+C-4101,Waheed Mart,Sargodha,SO-107,"250,000/-",06/08/2020
+C-4102,Bismillah Corporation,Gujrat,SO-107,"120,000",2021-10-09
+C-4103,Chishtia Brothers,Multan,SO-106,"Rs. 40,000",44194
+C-4104,Shaheen Mart,Gujrat,SO-105,"120,000",2022-07-28
+C-4105,Farooq Corporation,Sialkot,SO-103,"75,000/-",2022-04-25
+C-4106,Usman Brothers,Multan,SO-103,"Rs. 120,000",21/04/2021
+C-4107,Sabir Distributors,Hyderabad,SO-103,75000,30-Sep-22
+C-4108,Indus Brothers,Karachi,SO-104,"  600,000 ",13-May-20
+C-4109,Al-Madina Store,Faisalabad,SO-107,"Rs. 75,000",31/08/2022
+C-4110,Usman Trading Co,Lahore,SO-105,"250,000",44235
+C-4111,Iqbal Traders,Bahawalpur,SO-103,"75,000/-",19-Sep-21
+C-4112,Bismillah Agency,Sargodha,SO-106,"250,000",21/10/2020
+C-4113,Al-Noor Distributors,Gujrat,SO-106,250000,26/11/2021
+C-4114,Anwar Corporation,Faisalabad,SO-102,"120,000/-",30/04/2020
+C-4115,Al-Habib Brothers,Sargodha,SO-101,"75,000/-",30/01/2021
+C-4116,Bilal Store,Faisalabad,SO-104,"Rs. 400,000",03/09/2022
+C-4117,Chishtia Mart,Bahawalpur,SO-104,75000,16-Aug-22
+C-4118,Haji Sons Mart,Gujrat,SO-101,"120,000/-",01/02/2022
+C-4119,Indus Corporation,Sargodha,SO-104,"Rs. 400,000",08/03/2022
+C-4120,Madni Trading Co,Gujrat,SO-105,"  40,000 ",04-Aug-20
+C-4121,Bismillah Agency,Lahore,SO-106,40000,44223
+C-4122,Bismillah Brothers,Karachi,SO-105,"Rs. 120,000",44117
+C-4123,Farooq Medicos,Karachi,SO-107,"40,000/-",18-May-21
+C-4124,Crescent Enterprises,Sargodha,SO-104,250000,2022-06-27
+C-4125,New Sharif Agency,Lahore,SO-102,"Rs. 40,000",05-Jul-21
+C-4126,Chishtia Enterprises,Bahawalpur,SO-106,"Rs. 75,000",02-Feb-21
+C-4127,Usman Agency,Hyderabad,SO-105,"600,000",08/07/2020
+C-4128,Karim & Co,Bahawalpur,SO-104,"Rs. 250,000",44507
+C-4129,New Sharif Brothers,Sialkot,SO-105,250000,44761
+C-4130,Indus Corporation,Karachi,SO-102,75000,14-Feb-22
+C-4131,Sabir Store,Hyderabad,SO-102,400000,2022-05-03
+C-4132,Al-Noor & Co,Sialkot,SO-103,"40,000",2022-01-07
+C-4133,Madni Store,Sukkur,SO-106,"600,000",20-May-21
+C-4134,Al-Noor Corporation,Lahore,SO-106,"Rs. 40,000",44269
+C-4135,Indus & Co,Gujrat,SO-104,75000,20/05/2021
+C-4136,Crescent Enterprises,Sialkot,SO-102,600000,17-Oct-22
+C-4137,Crescent Store,Karachi,SO-107,600000,43946
+C-4138,Bismillah Trading Co,Lahore,SO-107,"75,000",11/02/2022
+C-4139,Crescent Brothers,Sialkot,SO-102,"  75,000 ",2020-04-28

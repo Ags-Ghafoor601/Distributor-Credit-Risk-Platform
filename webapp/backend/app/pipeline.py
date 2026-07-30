@@ -751,7 +751,8 @@ DEALER_COLUMN_ALIASES = {
 
 SALESMAN_COLUMN_ALIASES = {
     "salesman_id": {"salesman_id", "salesman_code", "salesmanid", "code", "so_code",
-                    "rep_code", "officer_code", "booker_code", "id"},
+                    "rep_code", "officer_code", "booker_code", "booker", "officer",
+                    "rep", "id"},
     "salesman_name": {"salesman_name", "name", "salesman", "rep_name", "officer_name",
                       "booker_name", "full_name", "employee_name"},
 }
@@ -790,6 +791,19 @@ def normalize_dealers(dealers: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
     if missing:
         raise ValueError(
             "dealers file is missing required column(s): " + ", ".join(missing)
+        )
+
+    # Credit limits arrive as strings in real exports -- "Rs. 150,000",
+    # "250,000/-", padded whitespace. The transactions pipeline already parses
+    # these; the dealers file did not, so a real export crashed with a
+    # TypeError deep inside feature computation.
+    df["credit_limit_pkr"] = df["credit_limit_pkr"].apply(parse_messy_amount)
+    if df["credit_limit_pkr"].isna().any():
+        bad = df.loc[df["credit_limit_pkr"].isna(), "dealer_id"].head(5).tolist()
+        raise ValueError(
+            "Could not read the credit limit for some dealers "
+            f"(e.g. {', '.join(map(str, bad))}). Accepted formats include "
+            "150000, 'Rs. 150,000' and '150,000/-'."
         )
 
     if "dealer_name" not in df.columns:
