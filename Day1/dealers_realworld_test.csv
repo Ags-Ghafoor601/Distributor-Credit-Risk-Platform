@@ -1,0 +1,221 @@
+Party Code,Party Name,Town,Booker Code,Credit Limit (Rs),Account Opened,true_risk_profile
+D0001,FM-Islamabad-0001 Traders,Islamabad,SM001,50000,11/07/2021,Reliable
+D0002,Te-Lahore-0002 Traders,Lahore,SM007,350000,17/05/2024,Reliable
+D0003,FM-Karachi-0003 Traders,Karachi,SM001,200000,22/01/2024,Moderate
+D0004,Ph-Rawalpindi-0004 Traders,Rawalpindi,SM003,100000,21/04/2024,Reliable
+D0005,FM-Lahore-0005 Traders,Lahore,SM001,750000,23/11/2021,Reliable
+D0006,Ph-InteriorSindh-0006 Traders,Interior Sindh,SM008,500000,24/07/2022,Reliable
+D0007,Ph-Karachi-0007 Traders,Karachi,SM001,750000,29/07/2021,Risky
+D0008,FM-Karachi-0008 Traders,Karachi,SM003,50000,06/01/2023,Reliable
+D0009,Te-InteriorPunjab-0009 Traders,Interior Punjab,SM002,50000,26/06/2022,Reliable
+D0010,Te-InteriorPunjab-0010 Traders,Interior Punjab,SM006,500000,30/07/2023,Moderate
+D0011,Ph-Faisalabad-0011 Traders,Faisalabad,SM006,750000,11/06/2021,Moderate
+D0012,Te-Faisalabad-0012 Traders,Faisalabad,SM006,750000,11/01/2023,Moderate
+D0013,Te-Faisalabad-0013 Traders,Faisalabad,SM007,100000,23/05/2021,Reliable
+D0014,FM-Karachi-0014 Traders,Karachi,SM008,750000,16/08/2022,Reliable
+D0015,FM-Multan-0015 Traders,Multan,SM006,350000,26/07/2021,Moderate
+D0016,Ph-Rawalpindi-0016 Traders,Rawalpindi,SM004,750000,18/01/2023,Moderate
+D0017,Ph-Lahore-0017 Traders,Lahore,SM005,750000,06/03/2022,Reliable
+D0018,Te-Gujranwala-0018 Traders,Gujranwala,SM006,500000,27/05/2021,Reliable
+D0019,FM-Faisalabad-0019 Traders,Faisalabad,SM006,50000,30/12/2023,Reliable
+D0020,FM-InteriorSindh-0020 Traders,Interior Sindh,SM003,50000,05/08/2023,Moderate
+D0021,Te-Rawalpindi-0021 Traders,Rawalpindi,SM005,50000,15/02/2024,Reliable
+D0022,Ph-Lahore-0022 Traders,Lahore,SM004,200000,25/04/2021,Reliable
+D0023,FM-Lahore-0023 Traders,Lahore,SM006,50000,09/10/2022,Reliable
+D0024,FM-Rawalpindi-0024 Traders,Rawalpindi,SM008,200000,09/03/2022,Reliable
+D0025,Te-Peshawar-0025 Traders,Peshawar,SM006,50000,07/10/2022,Risky
+D0026,Ph-Lahore-0026 Traders,Lahore,SM008,350000,22/03/2023,Reliable
+D0027,Te-InteriorPunjab-0027 Traders,Interior Punjab,SM005,50000,29/07/2023,Moderate
+D0028,FM-Karachi-0028 Traders,Karachi,SM008,50000,21/05/2022,Risky
+D0029,Te-InteriorSindh-0029 Traders,Interior Sindh,SM001,500000,23/06/2022,Reliable
+D0030,Ph-InteriorSindh-0030 Traders,Interior Sindh,SM001,350000,10/04/2024,Risky
+D0031,FM-Rawalpindi-0031 Traders,Rawalpindi,SM002,350000,11/10/2021,Moderate
+D0032,FM-Islamabad-0032 Traders,Islamabad,SM001,750000,07/04/2021,Reliable
+D0033,FM-InteriorPunjab-0033 Traders,Interior Punjab,SM003,50000,24/11/2021,Reliable
+D0034,Ph-InteriorPunjab-0034 Traders,Interior Punjab,SM003,50000,06/05/2024,Risky
+D0035,Ph-Karachi-0035 Traders,Karachi,SM006,500000,05/05/2024,Risky
+D0036,Te-Multan-0036 Traders,Multan,SM005,200000,30/05/2022,Reliable
+D0037,FM-Multan-0037 Traders,Multan,SM001,50000,23/08/2021,Risky
+D0038,Te-Gujranwala-0038 Traders,Gujranwala,SM008,500000,01/07/2022,Risky
+D0039,Ph-InteriorSindh-0039 Traders,Interior Sindh,SM003,350000,17/08/2021,Risky
+D0040,FM-Lahore-0040 Traders,Lahore,SM006,750000,19/07/2023,Reliable
+D0041,Te-Karachi-0041 Traders,Karachi,SM003,200000,24/06/2022,Reliable
+D0042,FM-Multan-0042 Traders,Multan,SM002,350000,06/11/2023,Reliable
+D0043,Te-Peshawar-0043 Traders,Peshawar,SM008,50000,04/09/2022,Moderate
+D0044,Te-InteriorPunjab-0044 Traders,Interior Punjab,SM001,50000,01/06/2024,Reliable
+D0045,Ph-Lahore-0045 Traders,Lahore,SM008,50000,27/11/2021,Reliable
+D0046,Te-Faisalabad-0046 Traders,Faisalabad,SM002,500000,02/01/2021,Moderate
+D0047,Ph-Faisalabad-0047 Traders,Faisalabad,SM005,350000,09/02/2021,Reliable
+D0048,Ph-Karachi-0048 Traders,Karachi,SM008,50000,22/09/2022,Reliable
+D0049,FM-Lahore-0049 Traders,Lahore,SM003,100000,07/03/2024,Moderate
+D0050,FM-Peshawar-0050 Traders,Peshawar,SM006,100000,23/09/2023,Reliable
+D0051,Te-InteriorPunjab-0051 Traders,Interior Punjab,SM006,200000,15/09/2021,Moderate
+D0052,Ph-Karachi-0052 Traders,Karachi,SM007,500000,31/01/2024,Risky
+D0053,Te-Lahore-0053 Traders,Lahore,SM008,500000,27/05/2024,Moderate
+D0054,FM-Islamabad-0054 Traders,Islamabad,SM005,500000,10/01/2024,Reliable
+D0055,Te-InteriorSindh-0055 Traders,Interior Sindh,SM002,200000,16/02/2022,Moderate
+D0056,Ph-InteriorSindh-0056 Traders,Interior Sindh,SM006,500000,04/02/2023,Reliable
+D0057,Te-Islamabad-0057 Traders,Islamabad,SM008,50000,14/07/2023,Risky
+D0058,FM-Karachi-0058 Traders,Karachi,SM002,350000,12/05/2021,Risky
+D0059,Te-Rawalpindi-0059 Traders,Rawalpindi,SM001,50000,09/02/2024,Reliable
+D0060,FM-Lahore-0060 Traders,Lahore,SM006,100000,15/01/2021,Moderate
+D0061,Te-Karachi-0061 Traders,Karachi,SM005,350000,01/05/2021,Reliable
+D0062,FM-Lahore-0062 Traders,Lahore,SM003,100000,08/11/2022,Reliable
+D0063,FM-Karachi-0063 Traders,Karachi,SM004,500000,25/07/2022,Reliable
+D0064,FM-Gujranwala-0064 Traders,Gujranwala,SM002,350000,10/01/2024,Moderate
+D0065,Te-Karachi-0065 Traders,Karachi,SM006,750000,26/03/2024,Reliable
+D0066,Ph-Islamabad-0066 Traders,Islamabad,SM001,50000,14/04/2023,Moderate
+D0067,FM-Lahore-0067 Traders,Lahore,SM006,50000,02/06/2023,Reliable
+D0068,Ph-Rawalpindi-0068 Traders,Rawalpindi,SM003,750000,15/08/2023,Reliable
+D0069,FM-InteriorPunjab-0069 Traders,Interior Punjab,SM002,50000,21/07/2021,Risky
+D0070,Te-Karachi-0070 Traders,Karachi,SM003,350000,26/11/2022,Risky
+D0071,FM-InteriorPunjab-0071 Traders,Interior Punjab,SM005,350000,25/05/2022,Moderate
+D0072,Te-Lahore-0072 Traders,Lahore,SM006,500000,08/07/2023,Reliable
+D0073,FM-Karachi-0073 Traders,Karachi,SM003,500000,25/07/2022,Risky
+D0074,FM-Islamabad-0074 Traders,Islamabad,SM008,50000,27/06/2023,Reliable
+D0075,Te-InteriorPunjab-0075 Traders,Interior Punjab,SM004,200000,20/07/2021,Reliable
+D0076,Te-Karachi-0076 Traders,Karachi,SM007,750000,31/01/2021,Reliable
+D0077,FM-Multan-0077 Traders,Multan,SM008,100000,07/12/2021,Moderate
+D0078,Ph-Rawalpindi-0078 Traders,Rawalpindi,SM007,350000,14/03/2022,Reliable
+D0079,FM-InteriorPunjab-0079 Traders,Interior Punjab,SM008,750000,04/12/2021,Reliable
+D0080,Ph-Rawalpindi-0080 Traders,Rawalpindi,SM008,200000,28/06/2022,Risky
+D0081,Ph-Peshawar-0081 Traders,Peshawar,SM003,350000,08/08/2022,Reliable
+D0082,Te-Islamabad-0082 Traders,Islamabad,SM003,350000,13/02/2024,Reliable
+D0083,Ph-Gujranwala-0083 Traders,Gujranwala,SM007,350000,14/11/2021,Risky
+D0084,FM-Lahore-0084 Traders,Lahore,SM003,750000,30/04/2021,Reliable
+D0085,Te-Faisalabad-0085 Traders,Faisalabad,SM002,750000,05/05/2021,Reliable
+D0086,FM-InteriorSindh-0086 Traders,Interior Sindh,SM002,100000,13/04/2021,Risky
+D0087,Te-Faisalabad-0087 Traders,Faisalabad,SM007,500000,24/12/2023,Reliable
+D0088,Te-Karachi-0088 Traders,Karachi,SM007,50000,14/06/2021,Moderate
+D0089,FM-InteriorPunjab-0089 Traders,Interior Punjab,SM002,50000,03/05/2024,Reliable
+D0090,FM-Karachi-0090 Traders,Karachi,SM001,750000,07/04/2023,Reliable
+D0091,Te-Karachi-0091 Traders,Karachi,SM004,50000,20/05/2022,Reliable
+D0092,FM-Faisalabad-0092 Traders,Faisalabad,SM008,350000,17/06/2021,Reliable
+D0093,Te-Rawalpindi-0093 Traders,Rawalpindi,SM003,350000,03/03/2024,Reliable
+D0094,Ph-Islamabad-0094 Traders,Islamabad,SM005,100000,23/02/2022,Reliable
+D0095,Ph-Gujranwala-0095 Traders,Gujranwala,SM005,500000,04/05/2022,Risky
+D0096,FM-Lahore-0096 Traders,Lahore,SM001,200000,07/09/2022,Reliable
+D0097,FM-Islamabad-0097 Traders,Islamabad,SM001,350000,20/01/2021,Reliable
+D0098,Te-Islamabad-0098 Traders,Islamabad,SM003,200000,24/07/2021,Moderate
+D0099,FM-Karachi-0099 Traders,Karachi,SM006,350000,03/11/2023,Risky
+D0100,Ph-Lahore-0100 Traders,Lahore,SM005,750000,21/05/2021,Moderate
+D0101,Ph-InteriorPunjab-0101 Traders,Interior Punjab,SM002,500000,07/08/2022,Reliable
+D0102,Te-Karachi-0102 Traders,Karachi,SM006,50000,12/09/2022,Reliable
+D0103,Te-Faisalabad-0103 Traders,Faisalabad,SM004,100000,20/12/2023,Risky
+D0104,Te-Karachi-0104 Traders,Karachi,SM004,350000,06/09/2022,Risky
+D0105,FM-Peshawar-0105 Traders,Peshawar,SM004,500000,03/10/2021,Reliable
+D0106,FM-Lahore-0106 Traders,Lahore,SM004,750000,08/02/2024,Reliable
+D0107,Ph-Karachi-0107 Traders,Karachi,SM002,100000,23/05/2024,Moderate
+D0108,Ph-Lahore-0108 Traders,Lahore,SM007,350000,21/02/2022,Reliable
+D0109,Ph-InteriorSindh-0109 Traders,Interior Sindh,SM003,50000,02/11/2023,Moderate
+D0110,FM-Islamabad-0110 Traders,Islamabad,SM004,500000,09/07/2021,Reliable
+D0111,Ph-Gujranwala-0111 Traders,Gujranwala,SM006,500000,01/04/2021,Reliable
+D0112,FM-Karachi-0112 Traders,Karachi,SM003,350000,21/06/2022,Reliable
+D0113,Ph-Lahore-0113 Traders,Lahore,SM008,100000,04/02/2024,Risky
+D0114,Te-InteriorSindh-0114 Traders,Interior Sindh,SM008,350000,20/01/2021,Moderate
+D0115,Te-Karachi-0115 Traders,Karachi,SM008,50000,02/11/2021,Reliable
+D0116,Ph-Faisalabad-0116 Traders,Faisalabad,SM008,200000,07/04/2024,Reliable
+D0117,Ph-Faisalabad-0117 Traders,Faisalabad,SM004,50000,19/09/2021,Reliable
+D0118,Ph-Karachi-0118 Traders,Karachi,SM002,500000,23/03/2021,Reliable
+D0119,FM-Peshawar-0119 Traders,Peshawar,SM006,200000,27/05/2022,Risky
+D0120,Ph-Gujranwala-0120 Traders,Gujranwala,SM008,350000,21/02/2024,Reliable
+D0121,Ph-InteriorPunjab-0121 Traders,Interior Punjab,SM002,500000,13/11/2021,Moderate
+D0122,FM-Peshawar-0122 Traders,Peshawar,SM003,500000,29/11/2021,Moderate
+D0123,FM-Multan-0123 Traders,Multan,SM004,750000,25/04/2023,Reliable
+D0124,Te-Karachi-0124 Traders,Karachi,SM007,100000,12/11/2022,Reliable
+D0125,Ph-InteriorSindh-0125 Traders,Interior Sindh,SM005,500000,24/05/2022,Risky
+D0126,Te-Lahore-0126 Traders,Lahore,SM001,350000,10/08/2021,Reliable
+D0127,FM-Rawalpindi-0127 Traders,Rawalpindi,SM007,500000,22/08/2023,Reliable
+D0128,Ph-Lahore-0128 Traders,Lahore,SM002,200000,18/12/2022,Reliable
+D0129,FM-Lahore-0129 Traders,Lahore,SM005,100000,02/04/2022,Reliable
+D0130,FM-Karachi-0130 Traders,Karachi,SM008,100000,28/03/2023,Moderate
+D0131,FM-Rawalpindi-0131 Traders,Rawalpindi,SM006,350000,26/07/2022,Reliable
+D0132,Te-Rawalpindi-0132 Traders,Rawalpindi,SM003,350000,30/03/2023,Reliable
+D0133,Te-Gujranwala-0133 Traders,Gujranwala,SM007,50000,10/11/2022,Reliable
+D0134,FM-Peshawar-0134 Traders,Peshawar,SM008,350000,19/06/2022,Reliable
+D0135,Ph-Lahore-0135 Traders,Lahore,SM004,500000,20/03/2021,Reliable
+D0136,Ph-Karachi-0136 Traders,Karachi,SM005,500000,09/12/2022,Reliable
+D0137,Ph-InteriorSindh-0137 Traders,Interior Sindh,SM004,500000,13/06/2023,Risky
+D0138,Te-Faisalabad-0138 Traders,Faisalabad,SM003,100000,25/08/2021,Reliable
+D0139,Te-Rawalpindi-0139 Traders,Rawalpindi,SM008,200000,25/01/2022,Moderate
+D0140,Te-Lahore-0140 Traders,Lahore,SM005,750000,13/06/2023,Reliable
+D0141,Te-Karachi-0141 Traders,Karachi,SM008,50000,08/02/2022,Reliable
+D0142,FM-Rawalpindi-0142 Traders,Rawalpindi,SM008,50000,08/11/2022,Reliable
+D0143,Te-Faisalabad-0143 Traders,Faisalabad,SM006,500000,13/09/2021,Reliable
+D0144,Ph-InteriorSindh-0144 Traders,Interior Sindh,SM005,500000,05/11/2023,Reliable
+D0145,Ph-Lahore-0145 Traders,Lahore,SM005,500000,31/10/2022,Moderate
+D0146,Ph-Rawalpindi-0146 Traders,Rawalpindi,SM003,500000,10/02/2024,Reliable
+D0147,Ph-Karachi-0147 Traders,Karachi,SM004,500000,16/02/2023,Reliable
+D0148,FM-Gujranwala-0148 Traders,Gujranwala,SM005,200000,11/03/2024,Reliable
+D0149,Te-Lahore-0149 Traders,Lahore,SM005,100000,01/01/2021,Reliable
+D0150,FM-Lahore-0150 Traders,Lahore,SM001,350000,31/05/2023,Reliable
+D0151,Te-InteriorSindh-0151 Traders,Interior Sindh,SM003,100000,22/10/2022,Moderate
+D0152,Ph-Islamabad-0152 Traders,Islamabad,SM004,200000,14/03/2022,Reliable
+D0153,Te-Islamabad-0153 Traders,Islamabad,SM008,50000,14/12/2021,Reliable
+D0154,Ph-Gujranwala-0154 Traders,Gujranwala,SM007,750000,22/11/2023,Reliable
+D0155,Te-Gujranwala-0155 Traders,Gujranwala,SM008,500000,18/11/2022,Moderate
+D0156,FM-Karachi-0156 Traders,Karachi,SM004,350000,28/09/2022,Moderate
+D0157,FM-Lahore-0157 Traders,Lahore,SM005,200000,29/10/2021,Reliable
+D0158,FM-Karachi-0158 Traders,Karachi,SM007,100000,01/09/2023,Reliable
+D0159,FM-Faisalabad-0159 Traders,Faisalabad,SM005,50000,22/07/2023,Reliable
+D0160,Te-Rawalpindi-0160 Traders,Rawalpindi,SM005,750000,24/03/2024,Reliable
+D0161,Te-Lahore-0161 Traders,Lahore,SM002,500000,26/02/2023,Reliable
+D0162,FM-Islamabad-0162 Traders,Islamabad,SM008,100000,30/10/2021,Reliable
+D0163,FM-Gujranwala-0163 Traders,Gujranwala,SM006,200000,07/08/2021,Reliable
+D0164,FM-InteriorSindh-0164 Traders,Interior Sindh,SM003,500000,27/12/2021,Reliable
+D0165,Te-InteriorPunjab-0165 Traders,Interior Punjab,SM001,500000,27/11/2023,Moderate
+D0166,Te-Islamabad-0166 Traders,Islamabad,SM002,200000,26/05/2022,Moderate
+D0167,FM-Peshawar-0167 Traders,Peshawar,SM006,200000,24/07/2023,Risky
+D0168,Ph-Karachi-0168 Traders,Karachi,SM006,750000,24/12/2023,Reliable
+D0169,Te-Multan-0169 Traders,Multan,SM003,500000,12/10/2022,Reliable
+D0170,Ph-Multan-0170 Traders,Multan,SM004,200000,31/10/2023,Moderate
+D0171,Te-Islamabad-0171 Traders,Islamabad,SM007,500000,03/07/2023,Reliable
+D0172,Te-Peshawar-0172 Traders,Peshawar,SM001,750000,31/08/2023,Reliable
+D0173,FM-Islamabad-0173 Traders,Islamabad,SM005,500000,22/07/2022,Reliable
+D0174,Te-InteriorSindh-0174 Traders,Interior Sindh,SM005,750000,20/09/2023,Reliable
+D0175,Ph-Faisalabad-0175 Traders,Faisalabad,SM001,350000,20/06/2023,Reliable
+D0176,Ph-Karachi-0176 Traders,Karachi,SM002,100000,26/04/2022,Risky
+D0177,Ph-Lahore-0177 Traders,Lahore,SM002,500000,12/01/2024,Risky
+D0178,FM-Karachi-0178 Traders,Karachi,SM006,50000,19/04/2022,Reliable
+D0179,FM-Rawalpindi-0179 Traders,Rawalpindi,SM007,100000,15/03/2022,Moderate
+D0180,Ph-Karachi-0180 Traders,Karachi,SM005,200000,09/11/2022,Reliable
+D0181,Ph-Faisalabad-0181 Traders,Faisalabad,SM005,750000,08/05/2021,Risky
+D0182,Ph-Lahore-0182 Traders,Lahore,SM003,750000,09/03/2023,Reliable
+D0183,Te-Peshawar-0183 Traders,Peshawar,SM001,100000,10/02/2021,Moderate
+D0184,Te-InteriorPunjab-0184 Traders,Interior Punjab,SM007,200000,19/02/2023,Risky
+D0185,Ph-Islamabad-0185 Traders,Islamabad,SM007,750000,04/09/2022,Reliable
+D0186,Ph-InteriorSindh-0186 Traders,Interior Sindh,SM006,50000,08/01/2024,Reliable
+D0187,Te-InteriorSindh-0187 Traders,Interior Sindh,SM007,100000,20/05/2024,Reliable
+D0188,Ph-Peshawar-0188 Traders,Peshawar,SM001,200000,26/03/2022,Reliable
+D0189,Ph-Lahore-0189 Traders,Lahore,SM005,100000,01/03/2021,Reliable
+D0190,Te-Rawalpindi-0190 Traders,Rawalpindi,SM002,100000,09/04/2023,Moderate
+D0191,Ph-InteriorSindh-0191 Traders,Interior Sindh,SM005,350000,19/09/2021,Reliable
+D0192,Te-Multan-0192 Traders,Multan,SM004,500000,25/02/2021,Reliable
+D0193,Te-Peshawar-0193 Traders,Peshawar,SM001,50000,01/03/2024,Risky
+D0194,FM-Gujranwala-0194 Traders,Gujranwala,SM005,50000,28/05/2023,Reliable
+D0195,Ph-Karachi-0195 Traders,Karachi,SM008,350000,08/01/2022,Risky
+D0196,Ph-Karachi-0196 Traders,Karachi,SM003,100000,02/11/2022,Reliable
+D0197,Ph-Lahore-0197 Traders,Lahore,SM001,200000,23/11/2022,Reliable
+D0198,Ph-InteriorSindh-0198 Traders,Interior Sindh,SM007,200000,24/07/2022,Moderate
+D0199,Ph-InteriorSindh-0199 Traders,Interior Sindh,SM001,750000,01/06/2022,Moderate
+D0200,Ph-InteriorPunjab-0200 Traders,Interior Punjab,SM008,100000,09/02/2021,Reliable
+D0201,FM-InteriorSindh-0201 Traders,Interior Sindh,SM005,50000,18/12/2022,Reliable
+D0202,FM-Lahore-0202 Traders,Lahore,SM002,750000,24/03/2021,Reliable
+D0203,FM-InteriorSindh-0203 Traders,Interior Sindh,SM003,200000,13/02/2022,Moderate
+D0204,Te-InteriorPunjab-0204 Traders,Interior Punjab,SM002,500000,09/11/2021,Moderate
+D0205,Ph-Lahore-0205 Traders,Lahore,SM007,100000,23/08/2021,Reliable
+D0206,FM-Faisalabad-0206 Traders,Faisalabad,SM003,500000,11/08/2023,Moderate
+D0207,Ph-InteriorSindh-0207 Traders,Interior Sindh,SM004,100000,10/12/2021,Risky
+D0208,Te-Faisalabad-0208 Traders,Faisalabad,SM006,200000,23/08/2021,Risky
+D0209,FM-InteriorSindh-0209 Traders,Interior Sindh,SM005,350000,30/09/2022,Reliable
+D0210,FM-Karachi-0210 Traders,Karachi,SM004,100000,01/10/2022,Reliable
+D0211,Ph-Faisalabad-0211 Traders,Faisalabad,SM008,50000,24/03/2023,Reliable
+D0212,FM-Peshawar-0212 Traders,Peshawar,SM002,500000,05/06/2021,Risky
+D0213,Te-Faisalabad-0213 Traders,Faisalabad,SM008,50000,13/05/2022,Reliable
+D0214,Ph-Karachi-0214 Traders,Karachi,SM002,750000,14/05/2024,Reliable
+D0215,Te-InteriorPunjab-0215 Traders,Interior Punjab,SM001,500000,26/03/2021,Risky
+D0216,Ph-Rawalpindi-0216 Traders,Rawalpindi,SM002,500000,29/01/2023,Reliable
+D0217,Te-Karachi-0217 Traders,Karachi,SM008,100000,30/11/2022,Reliable
+D0218,Ph-Karachi-0218 Traders,Karachi,SM007,100000,01/10/2023,Reliable
+D0219,Ph-Karachi-0219 Traders,Karachi,SM003,350000,31/07/2023,Reliable
+D0220,Ph-InteriorSindh-0220 Traders,Interior Sindh,SM005,500000,27/12/2021,Reliable

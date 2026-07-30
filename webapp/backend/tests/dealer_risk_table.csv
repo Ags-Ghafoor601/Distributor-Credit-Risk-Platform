@@ -1,0 +1,221 @@
+dealer_id,dealer_name,city,sector,salesman_id,salesman_name,is_salesman_favorite,credit_limit_pkr,credit_score,risk_flag,risk_probability,scoring_method
+D0095,Ph-Gujranwala-0095 Traders,Gujranwala,Unspecified,SM005,Kamran Shahid,False,500000,384.0,RED,0.9987654807892197,Statistical
+D0080,Ph-Rawalpindi-0080 Traders,Rawalpindi,Unspecified,SM008,Rizwan Malik,False,200000,417.0,RED,0.9978042314959292,Statistical
+D0083,Ph-Gujranwala-0083 Traders,Gujranwala,Unspecified,SM007,Imran Yousaf,False,350000,421.0,RED,0.9976368583752624,Statistical
+D0181,Ph-Faisalabad-0181 Traders,Faisalabad,Unspecified,SM005,Kamran Shahid,False,750000,425.0,RED,0.9974751037735098,Statistical
+D0125,Ph-InteriorSindh-0125 Traders,Interior Sindh,Unspecified,SM005,Kamran Shahid,False,500000,438.0,RED,0.9968448758682131,Statistical
+D0167,FM-Peshawar-0167 Traders,Peshawar,Unspecified,SM006,Waqas Ahmed,False,200000,441.0,RED,0.9966718348911037,Statistical
+D0052,Ph-Karachi-0052 Traders,Karachi,Unspecified,SM007,Imran Yousaf,False,500000,442.0,RED,0.9965779033043861,Statistical
+D0215,Te-InteriorPunjab-0215 Traders,Interior Punjab,Unspecified,SM001,Tariq Mehmood,False,500000,449.0,RED,0.9961772463012544,Statistical
+D0030,Ph-InteriorSindh-0030 Traders,Interior Sindh,Unspecified,SM001,Tariq Mehmood,False,350000,455.0,RED,0.9957800787027394,Statistical
+D0073,FM-Karachi-0073 Traders,Karachi,Unspecified,SM003,Bilal Aslam,False,500000,468.0,RED,0.9947021943746167,Statistical
+D0177,Ph-Lahore-0177 Traders,Lahore,Unspecified,SM002,Aamir Sohail,False,500000,474.0,RED,0.9941472443519292,Statistical
+D0035,Ph-Karachi-0035 Traders,Karachi,Unspecified,SM006,Waqas Ahmed,False,500000,477.0,RED,0.9938367156343617,Statistical
+D0103,Te-Faisalabad-0103 Traders,Faisalabad,Unspecified,SM004,Nasir Iqbal,False,100000,477.0,RED,0.9937407068340477,Statistical
+D0025,Te-Peshawar-0025 Traders,Peshawar,Unspecified,SM006,Waqas Ahmed,False,50000,478.0,RED,0.9937002081465773,Statistical
+D0037,FM-Multan-0037 Traders,Multan,Unspecified,SM001,Tariq Mehmood,False,50000,479.0,RED,0.9936277412623031,Statistical
+D0070,Te-Karachi-0070 Traders,Karachi,Unspecified,SM003,Bilal Aslam,False,350000,479.0,RED,0.9935614277757927,Statistical
+D0069,FM-InteriorPunjab-0069 Traders,Interior Punjab,Unspecified,SM002,Aamir Sohail,False,50000,483.0,RED,0.9930941193300287,Statistical
+D0039,Ph-InteriorSindh-0039 Traders,Interior Sindh,Unspecified,SM003,Bilal Aslam,False,350000,484.0,RED,0.993030270301916,Statistical
+D0007,Ph-Karachi-0007 Traders,Karachi,Unspecified,SM001,Tariq Mehmood,False,750000,485.0,RED,0.9928683608937299,Statistical
+D0119,FM-Peshawar-0119 Traders,Peshawar,Unspecified,SM006,Waqas Ahmed,False,200000,486.0,RED,0.9927592737792932,Statistical
+D0038,Te-Gujranwala-0038 Traders,Gujranwala,Unspecified,SM008,Rizwan Malik,False,500000,491.0,RED,0.9921595081592925,Statistical
+D0113,Ph-Lahore-0113 Traders,Lahore,Unspecified,SM008,Rizwan Malik,False,100000,503.0,RED,0.9902631661358597,Statistical
+D0028,FM-Karachi-0028 Traders,Karachi,Unspecified,SM008,Rizwan Malik,False,50000,506.0,RED,0.989784753725009,Statistical
+D0057,Te-Islamabad-0057 Traders,Islamabad,Unspecified,SM008,Rizwan Malik,False,50000,507.0,RED,0.989608931283412,Statistical
+D0099,FM-Karachi-0099 Traders,Karachi,Unspecified,SM006,Waqas Ahmed,False,350000,508.0,RED,0.989391252675152,Statistical
+D0086,FM-InteriorSindh-0086 Traders,Interior Sindh,Unspecified,SM002,Aamir Sohail,False,100000,519.0,RED,0.9872087865326974,Statistical
+D0212,FM-Peshawar-0212 Traders,Peshawar,Unspecified,SM002,Aamir Sohail,False,500000,520.0,RED,0.9870906595490866,Statistical
+D0193,Te-Peshawar-0193 Traders,Peshawar,Unspecified,SM001,Tariq Mehmood,False,50000,521.0,RED,0.9868996492925325,Statistical
+D0176,Ph-Karachi-0176 Traders,Karachi,Unspecified,SM002,Aamir Sohail,False,100000,522.0,RED,0.9866738208862463,Statistical
+D0058,FM-Karachi-0058 Traders,Karachi,Unspecified,SM002,Aamir Sohail,False,350000,523.0,RED,0.9864105788356969,Statistical
+D0184,Te-InteriorPunjab-0184 Traders,Interior Punjab,Unspecified,SM007,Imran Yousaf,False,200000,528.0,RED,0.9850715430698367,Statistical
+D0034,Ph-InteriorPunjab-0034 Traders,Interior Punjab,Unspecified,SM003,Bilal Aslam,False,50000,528.0,RED,0.9851220014592031,Statistical
+D0195,Ph-Karachi-0195 Traders,Karachi,Unspecified,SM008,Rizwan Malik,False,350000,531.0,RED,0.9844594508420859,Statistical
+D0104,Te-Karachi-0104 Traders,Karachi,Unspecified,SM004,Nasir Iqbal,False,350000,532.0,RED,0.9840837117153448,Statistical
+D0208,Te-Faisalabad-0208 Traders,Faisalabad,Unspecified,SM006,Waqas Ahmed,False,200000,533.0,RED,0.9838960999672323,Statistical
+D0207,Ph-InteriorSindh-0207 Traders,Interior Sindh,Unspecified,SM004,Nasir Iqbal,False,100000,542.0,RED,0.9811141897980901,Statistical
+D0137,Ph-InteriorSindh-0137 Traders,Interior Sindh,Unspecified,SM004,Nasir Iqbal,False,500000,631.0,AMBER,0.9170844728269821,Statistical
+D0071,FM-InteriorPunjab-0071 Traders,Interior Punjab,Unspecified,SM005,Kamran Shahid,False,350000,663.0,AMBER,0.8640331210213743,Statistical
+D0053,Te-Lahore-0053 Traders,Lahore,Unspecified,SM008,Rizwan Malik,False,500000,680.0,AMBER,0.8251109141126174,Statistical
+D0165,Te-InteriorPunjab-0165 Traders,Interior Punjab,Unspecified,SM001,Tariq Mehmood,False,500000,692.0,AMBER,0.7943982903163556,Statistical
+D0100,Ph-Lahore-0100 Traders,Lahore,Unspecified,SM005,Kamran Shahid,False,750000,696.0,AMBER,0.7836926989843968,Statistical
+D0145,Ph-Lahore-0145 Traders,Lahore,Unspecified,SM005,Kamran Shahid,False,500000,696.0,AMBER,0.7837312112007387,Statistical
+D0011,Ph-Faisalabad-0011 Traders,Faisalabad,Unspecified,SM006,Waqas Ahmed,False,750000,702.0,GREEN,0.763231476340054,Statistical
+D0155,Te-Gujranwala-0155 Traders,Gujranwala,Unspecified,SM008,Rizwan Malik,False,500000,705.0,GREEN,0.7536193833488984,Statistical
+D0046,Te-Faisalabad-0046 Traders,Faisalabad,Unspecified,SM002,Aamir Sohail,False,500000,705.0,GREEN,0.7545826407982389,Statistical
+D0010,Te-InteriorPunjab-0010 Traders,Interior Punjab,Unspecified,SM006,Waqas Ahmed,False,500000,707.0,GREEN,0.7495144486448304,Statistical
+D0012,Te-Faisalabad-0012 Traders,Faisalabad,Unspecified,SM006,Waqas Ahmed,False,750000,709.0,GREEN,0.7404047052291011,Statistical
+D0016,Ph-Rawalpindi-0016 Traders,Rawalpindi,Unspecified,SM004,Nasir Iqbal,False,750000,716.0,GREEN,0.7174922086738754,Statistical
+D0064,FM-Gujranwala-0064 Traders,Gujranwala,Unspecified,SM002,Aamir Sohail,False,350000,724.0,GREEN,0.6895596481271774,Statistical
+D0206,FM-Faisalabad-0206 Traders,Faisalabad,Unspecified,SM003,Bilal Aslam,False,500000,725.0,GREEN,0.6868312439838632,Statistical
+D0179,FM-Rawalpindi-0179 Traders,Rawalpindi,Unspecified,SM007,Imran Yousaf,False,100000,727.0,GREEN,0.6765762806921753,Statistical
+D0049,FM-Lahore-0049 Traders,Lahore,Unspecified,SM003,Bilal Aslam,False,100000,727.0,GREEN,0.677672919890058,Statistical
+D0160,Te-Rawalpindi-0160 Traders,Rawalpindi,Unspecified,SM005,Kamran Shahid,False,750000,728.0,GREEN,0.6735791432001319,Statistical
+D0190,Te-Rawalpindi-0190 Traders,Rawalpindi,Unspecified,SM002,Aamir Sohail,False,100000,729.0,GREEN,0.671744779927316,Statistical
+D0031,FM-Rawalpindi-0031 Traders,Rawalpindi,Unspecified,SM002,Aamir Sohail,False,350000,732.0,GREEN,0.6587163661803418,Statistical
+D0027,Te-InteriorPunjab-0027 Traders,Interior Punjab,Unspecified,SM005,Kamran Shahid,False,50000,732.0,GREEN,0.6602671363971053,Statistical
+D0170,Ph-Multan-0170 Traders,Multan,Unspecified,SM004,Nasir Iqbal,False,200000,733.0,GREEN,0.655466801069045,Statistical
+D0166,Te-Islamabad-0166 Traders,Islamabad,Unspecified,SM002,Aamir Sohail,False,200000,734.0,GREEN,0.6510477065155122,Statistical
+D0121,Ph-InteriorPunjab-0121 Traders,Interior Punjab,Unspecified,SM002,Aamir Sohail,False,500000,736.0,GREEN,0.6432409154367904,Statistical
+D0198,Ph-InteriorSindh-0198 Traders,Interior Sindh,Unspecified,SM007,Imran Yousaf,False,200000,737.0,GREEN,0.6405048804058683,Statistical
+D0003,FM-Karachi-0003 Traders,Karachi,Unspecified,SM001,Tariq Mehmood,False,200000,737.0,GREEN,0.6390010093285186,Statistical
+D0139,Te-Rawalpindi-0139 Traders,Rawalpindi,Unspecified,SM008,Rizwan Malik,False,200000,739.0,GREEN,0.6311647278851817,Statistical
+D0130,FM-Karachi-0130 Traders,Karachi,Unspecified,SM008,Rizwan Malik,False,100000,742.0,GREEN,0.6187729656975444,Statistical
+D0020,FM-InteriorSindh-0020 Traders,Interior Sindh,Unspecified,SM003,Bilal Aslam,False,50000,743.0,GREEN,0.6154042405409494,Statistical
+D0107,Ph-Karachi-0107 Traders,Karachi,Unspecified,SM002,Aamir Sohail,False,100000,743.0,GREEN,0.6125163829014911,Statistical
+D0015,FM-Multan-0015 Traders,Multan,Unspecified,SM006,Waqas Ahmed,False,350000,745.0,GREEN,0.6050937086440324,Statistical
+D0199,Ph-InteriorSindh-0199 Traders,Interior Sindh,Unspecified,SM001,Tariq Mehmood,False,750000,747.0,GREEN,0.5971156755081188,Statistical
+D0156,FM-Karachi-0156 Traders,Karachi,Unspecified,SM004,Nasir Iqbal,False,350000,747.0,GREEN,0.5959803772930565,Statistical
+D0077,FM-Multan-0077 Traders,Multan,Unspecified,SM008,Rizwan Malik,False,100000,749.0,GREEN,0.5877007051671767,Statistical
+D0204,Te-InteriorPunjab-0204 Traders,Interior Punjab,Unspecified,SM002,Aamir Sohail,False,500000,750.0,GREEN,0.5848110177098406,Statistical
+D0060,FM-Lahore-0060 Traders,Lahore,Unspecified,SM006,Waqas Ahmed,False,100000,753.0,GREEN,0.5733876234671903,Statistical
+D0122,FM-Peshawar-0122 Traders,Peshawar,Unspecified,SM003,Bilal Aslam,False,500000,753.0,GREEN,0.5733077022049227,Statistical
+D0051,Te-InteriorPunjab-0051 Traders,Interior Punjab,Unspecified,SM006,Waqas Ahmed,False,200000,755.0,GREEN,0.5650397959601043,Statistical
+D0066,Ph-Islamabad-0066 Traders,Islamabad,Unspecified,SM001,Tariq Mehmood,False,50000,757.0,GREEN,0.5574647903737746,Statistical
+D0088,Te-Karachi-0088 Traders,Karachi,Unspecified,SM007,Imran Yousaf,False,50000,757.0,GREEN,0.5540995919943541,Statistical
+D0114,Te-InteriorSindh-0114 Traders,Interior Sindh,Unspecified,SM008,Rizwan Malik,False,350000,763.0,GREEN,0.5312078076860943,Statistical
+D0109,Ph-InteriorSindh-0109 Traders,Interior Sindh,Unspecified,SM003,Bilal Aslam,False,50000,764.0,GREEN,0.5235459591728481,Statistical
+D0098,Te-Islamabad-0098 Traders,Islamabad,Unspecified,SM003,Bilal Aslam,False,200000,766.0,GREEN,0.5185766830376779,Statistical
+D0055,Te-InteriorSindh-0055 Traders,Interior Sindh,Unspecified,SM002,Aamir Sohail,False,200000,766.0,GREEN,0.5152895327615045,Statistical
+D0043,Te-Peshawar-0043 Traders,Peshawar,Unspecified,SM008,Rizwan Malik,False,50000,767.0,GREEN,0.5112187905020232,Statistical
+D0106,FM-Lahore-0106 Traders,Lahore,Unspecified,SM004,Nasir Iqbal,False,750000,769.0,GREEN,0.5055733918244582,Statistical
+D0203,FM-InteriorSindh-0203 Traders,Interior Sindh,Unspecified,SM003,Bilal Aslam,False,200000,770.0,GREEN,0.49814159896367166,Statistical
+D0065,Te-Karachi-0065 Traders,Karachi,Unspecified,SM006,Waqas Ahmed,False,750000,771.0,GREEN,0.49468666385648247,Statistical
+D0151,Te-InteriorSindh-0151 Traders,Interior Sindh,Unspecified,SM003,Bilal Aslam,False,100000,779.0,GREEN,0.4587532012816611,Statistical
+D0183,Te-Peshawar-0183 Traders,Peshawar,Unspecified,SM001,Tariq Mehmood,False,100000,779.0,GREEN,0.46184277517039496,Statistical
+D0140,Te-Lahore-0140 Traders,Lahore,Unspecified,SM005,Kamran Shahid,False,750000,781.0,GREEN,0.45225377023333474,Statistical
+D0174,Te-InteriorSindh-0174 Traders,Interior Sindh,Unspecified,SM005,Kamran Shahid,False,750000,781.0,GREEN,0.4535015946221728,Statistical
+D0054,FM-Islamabad-0054 Traders,Islamabad,Unspecified,SM005,Kamran Shahid,False,500000,783.0,GREEN,0.44207610138662107,Statistical
+D0146,Ph-Rawalpindi-0146 Traders,Rawalpindi,Unspecified,SM003,Bilal Aslam,False,500000,784.0,GREEN,0.43884747006197783,Statistical
+D0185,Ph-Islamabad-0185 Traders,Islamabad,Unspecified,SM007,Imran Yousaf,False,750000,786.0,GREEN,0.43026406093742287,Statistical
+D0087,Te-Faisalabad-0087 Traders,Faisalabad,Unspecified,SM007,Imran Yousaf,False,500000,790.0,GREEN,0.41262463108320574,Statistical
+D0154,Ph-Gujranwala-0154 Traders,Gujranwala,Unspecified,SM007,Imran Yousaf,False,750000,792.0,GREEN,0.40571970191181406,Statistical
+D0040,FM-Lahore-0040 Traders,Lahore,Unspecified,SM006,Waqas Ahmed,False,750000,793.0,GREEN,0.40149473567856503,Statistical
+D0127,FM-Rawalpindi-0127 Traders,Rawalpindi,Unspecified,SM007,Imran Yousaf,False,500000,793.0,GREEN,0.39929981939446146,Statistical
+D0021,Te-Rawalpindi-0021 Traders,Rawalpindi,Unspecified,SM005,Kamran Shahid,False,50000,794.0,GREEN,0.39852014807025243,Statistical
+D0017,Ph-Lahore-0017 Traders,Lahore,Unspecified,SM005,Kamran Shahid,False,750000,795.0,GREEN,0.39152657790477974,Statistical
+D0168,Ph-Karachi-0168 Traders,Karachi,Unspecified,SM006,Waqas Ahmed,False,750000,796.0,GREEN,0.38973584855935717,Statistical
+D0182,Ph-Lahore-0182 Traders,Lahore,Unspecified,SM003,Bilal Aslam,False,750000,801.0,GREEN,0.3680732018770815,Statistical
+D0171,Te-Islamabad-0171 Traders,Islamabad,Unspecified,SM007,Imran Yousaf,False,500000,803.0,GREEN,0.36012036942834535,Statistical
+D0002,Te-Lahore-0002 Traders,Lahore,Unspecified,SM007,Imran Yousaf,False,350000,805.0,GREEN,0.35179046461434677,Statistical
+D0072,Te-Lahore-0072 Traders,Lahore,Unspecified,SM006,Waqas Ahmed,False,500000,807.0,GREEN,0.3459784944743448,Statistical
+D0093,Te-Rawalpindi-0093 Traders,Rawalpindi,Unspecified,SM003,Bilal Aslam,False,350000,810.0,GREEN,0.33440555169669883,Statistical
+D0144,Ph-InteriorSindh-0144 Traders,Interior Sindh,Unspecified,SM005,Kamran Shahid,False,500000,811.0,GREEN,0.32831446645189544,Statistical
+D0214,Ph-Karachi-0214 Traders,Karachi,Unspecified,SM002,Aamir Sohail,False,750000,812.0,GREEN,0.32601328240658717,Statistical
+D0068,Ph-Rawalpindi-0068 Traders,Rawalpindi,Unspecified,SM003,Bilal Aslam,False,750000,812.0,GREEN,0.3241919575332782,Statistical
+D0161,Te-Lahore-0161 Traders,Lahore,Unspecified,SM002,Aamir Sohail,False,500000,814.0,GREEN,0.31634256876895955,Statistical
+D0148,FM-Gujranwala-0148 Traders,Gujranwala,Unspecified,SM005,Kamran Shahid,False,200000,814.0,GREEN,0.31650018314246253,Statistical
+D0136,Ph-Karachi-0136 Traders,Karachi,Unspecified,SM005,Kamran Shahid,False,500000,815.0,GREEN,0.31579833329858753,Statistical
+D0019,FM-Faisalabad-0019 Traders,Faisalabad,Unspecified,SM006,Waqas Ahmed,False,50000,815.0,GREEN,0.3130463354936955,Statistical
+D0173,FM-Islamabad-0173 Traders,Islamabad,Unspecified,SM005,Kamran Shahid,False,500000,816.0,GREEN,0.3099354533642548,Statistical
+D0116,Ph-Faisalabad-0116 Traders,Faisalabad,Unspecified,SM008,Rizwan Malik,False,200000,817.0,GREEN,0.3053825976106367,Statistical
+D0216,Ph-Rawalpindi-0216 Traders,Rawalpindi,Unspecified,SM002,Aamir Sohail,False,500000,819.0,GREEN,0.29973120711231116,Statistical
+D0076,Te-Karachi-0076 Traders,Karachi,Unspecified,SM007,Imran Yousaf,False,750000,820.0,GREEN,0.29702246945435046,Statistical
+D0108,Ph-Lahore-0108 Traders,Lahore,Unspecified,SM007,Imran Yousaf,False,350000,821.0,GREEN,0.29234104619556067,Statistical
+D0202,FM-Lahore-0202 Traders,Lahore,Unspecified,SM002,Aamir Sohail,False,750000,821.0,GREEN,0.29061022701505806,Statistical
+D0085,Te-Faisalabad-0085 Traders,Faisalabad,Unspecified,SM002,Aamir Sohail,False,750000,823.0,GREEN,0.28493121838211827,Statistical
+D0157,FM-Lahore-0157 Traders,Lahore,Unspecified,SM005,Kamran Shahid,False,200000,826.0,GREEN,0.2741867650449973,Statistical
+D0220,Ph-InteriorSindh-0220 Traders,Interior Sindh,Unspecified,SM005,Kamran Shahid,False,500000,826.0,GREEN,0.2734962272013957,Statistical
+D0079,FM-InteriorPunjab-0079 Traders,Interior Punjab,Unspecified,SM008,Rizwan Malik,False,750000,826.0,GREEN,0.27330018091003194,Statistical
+D0082,Te-Islamabad-0082 Traders,Islamabad,Unspecified,SM003,Bilal Aslam,False,350000,827.0,GREEN,0.27268095565346323,Statistical
+D0123,FM-Multan-0123 Traders,Multan,Unspecified,SM004,Nasir Iqbal,False,750000,828.0,GREEN,0.2663667812460507,Statistical
+D0158,FM-Karachi-0158 Traders,Karachi,Unspecified,SM007,Imran Yousaf,False,100000,828.0,GREEN,0.26790317187792223,Statistical
+D0143,Te-Faisalabad-0143 Traders,Faisalabad,Unspecified,SM006,Waqas Ahmed,False,500000,829.0,GREEN,0.2643249176421344,Statistical
+D0042,FM-Multan-0042 Traders,Multan,Unspecified,SM002,Aamir Sohail,False,350000,829.0,GREEN,0.26440855308570377,Statistical
+D0014,FM-Karachi-0014 Traders,Karachi,Unspecified,SM008,Rizwan Malik,False,750000,830.0,GREEN,0.2609594575056772,Statistical
+D0191,Ph-InteriorSindh-0191 Traders,Interior Sindh,Unspecified,SM005,Kamran Shahid,False,350000,830.0,GREEN,0.2614751281708439,Statistical
+D0101,Ph-InteriorPunjab-0101 Traders,Interior Punjab,Unspecified,SM002,Aamir Sohail,False,500000,832.0,GREEN,0.2546741033057977,Statistical
+D0084,FM-Lahore-0084 Traders,Lahore,Unspecified,SM003,Bilal Aslam,False,750000,832.0,GREEN,0.25587022865793113,Statistical
+D0078,Ph-Rawalpindi-0078 Traders,Rawalpindi,Unspecified,SM007,Imran Yousaf,False,350000,833.0,GREEN,0.25090139268829875,Statistical
+D0004,Ph-Rawalpindi-0004 Traders,Rawalpindi,Unspecified,SM003,Bilal Aslam,False,100000,833.0,GREEN,0.2500727992058135,Statistical
+D0132,Te-Rawalpindi-0132 Traders,Rawalpindi,Unspecified,SM003,Bilal Aslam,False,350000,834.0,GREEN,0.24795633606483475,Statistical
+D0061,Te-Karachi-0061 Traders,Karachi,Unspecified,SM005,Kamran Shahid,False,350000,834.0,GREEN,0.24873448095931075,Statistical
+D0180,Ph-Karachi-0180 Traders,Karachi,Unspecified,SM005,Kamran Shahid,False,200000,835.0,GREEN,0.2444009130172977,Statistical
+D0018,Te-Gujranwala-0018 Traders,Gujranwala,Unspecified,SM006,Waqas Ahmed,False,500000,836.0,GREEN,0.24004898987800147,Statistical
+D0147,Ph-Karachi-0147 Traders,Karachi,Unspecified,SM004,Nasir Iqbal,False,500000,836.0,GREEN,0.24215765282901314,Statistical
+D0026,Ph-Lahore-0026 Traders,Lahore,Unspecified,SM008,Rizwan Malik,False,350000,836.0,GREEN,0.24119850545717886,Statistical
+D0036,Te-Multan-0036 Traders,Multan,Unspecified,SM005,Kamran Shahid,False,200000,837.0,GREEN,0.23951379377614962,Statistical
+D0128,Ph-Lahore-0128 Traders,Lahore,Unspecified,SM002,Aamir Sohail,False,200000,837.0,GREEN,0.23956226062253702,Statistical
+D0209,FM-InteriorSindh-0209 Traders,Interior Sindh,Unspecified,SM005,Kamran Shahid,False,350000,837.0,GREEN,0.2395866986878547,Statistical
+D0129,FM-Lahore-0129 Traders,Lahore,Unspecified,SM005,Kamran Shahid,False,100000,838.0,GREEN,0.23458329373631082,Statistical
+D0118,Ph-Karachi-0118 Traders,Karachi,Unspecified,SM002,Aamir Sohail,False,500000,838.0,GREEN,0.2338689172747698,Statistical
+D0149,Te-Lahore-0149 Traders,Lahore,Unspecified,SM005,Kamran Shahid,False,100000,839.0,GREEN,0.230768974455923,Statistical
+D0120,Ph-Gujranwala-0120 Traders,Gujranwala,Unspecified,SM008,Rizwan Malik,False,350000,839.0,GREEN,0.23254230309721913,Statistical
+D0005,FM-Lahore-0005 Traders,Lahore,Unspecified,SM001,Tariq Mehmood,False,750000,840.0,GREEN,0.22767344984380666,Statistical
+D0047,Ph-Faisalabad-0047 Traders,Faisalabad,Unspecified,SM005,Kamran Shahid,False,350000,840.0,GREEN,0.22798351965450855,Statistical
+D0024,FM-Rawalpindi-0024 Traders,Rawalpindi,Unspecified,SM008,Rizwan Malik,False,200000,840.0,GREEN,0.22893579497635008,Statistical
+D0131,FM-Rawalpindi-0131 Traders,Rawalpindi,Unspecified,SM006,Waqas Ahmed,False,350000,841.0,GREEN,0.2267330018493143,Statistical
+D0172,Te-Peshawar-0172 Traders,Peshawar,Unspecified,SM001,Tariq Mehmood,False,750000,842.0,GREEN,0.22409089234597085,Statistical
+D0169,Te-Multan-0169 Traders,Multan,Unspecified,SM003,Bilal Aslam,False,500000,842.0,GREEN,0.2221413791915733,Statistical
+D0056,Ph-InteriorSindh-0056 Traders,Interior Sindh,Unspecified,SM006,Waqas Ahmed,False,500000,843.0,GREEN,0.2208637746427207,Statistical
+D0094,Ph-Islamabad-0094 Traders,Islamabad,Unspecified,SM005,Kamran Shahid,False,100000,843.0,GREEN,0.2193679355203349,Statistical
+D0189,Ph-Lahore-0189 Traders,Lahore,Unspecified,SM005,Kamran Shahid,False,100000,845.0,GREEN,0.2141824388982872,Statistical
+D0218,Ph-Karachi-0218 Traders,Karachi,Unspecified,SM007,Imran Yousaf,False,100000,845.0,GREEN,0.21252995055725984,Statistical
+D0110,FM-Islamabad-0110 Traders,Islamabad,Unspecified,SM004,Nasir Iqbal,False,500000,845.0,GREEN,0.2148443413400352,Statistical
+D0006,Ph-InteriorSindh-0006 Traders,Interior Sindh,Unspecified,SM008,Rizwan Malik,False,500000,847.0,GREEN,0.20836246243467682,Statistical
+D0090,FM-Karachi-0090 Traders,Karachi,Unspecified,SM001,Tariq Mehmood,False,750000,848.0,GREEN,0.20566818169954176,Statistical
+D0111,Ph-Gujranwala-0111 Traders,Gujranwala,Unspecified,SM006,Waqas Ahmed,False,500000,848.0,GREEN,0.20509601000840622,Statistical
+D0135,Ph-Lahore-0135 Traders,Lahore,Unspecified,SM004,Nasir Iqbal,False,500000,849.0,GREEN,0.20144760220713318,Statistical
+D0032,FM-Islamabad-0032 Traders,Islamabad,Unspecified,SM001,Tariq Mehmood,False,750000,850.0,GREEN,0.19951563357398122,Statistical
+D0089,FM-InteriorPunjab-0089 Traders,Interior Punjab,Unspecified,SM002,Aamir Sohail,False,50000,851.0,GREEN,0.19731040447185427,Statistical
+D0205,Ph-Lahore-0205 Traders,Lahore,Unspecified,SM007,Imran Yousaf,False,100000,852.0,GREEN,0.19322238494011432,Statistical
+D0059,Te-Rawalpindi-0059 Traders,Rawalpindi,Unspecified,SM001,Tariq Mehmood,False,50000,852.0,GREEN,0.19530975741700812,Statistical
+D0067,FM-Lahore-0067 Traders,Lahore,Unspecified,SM006,Waqas Ahmed,False,50000,852.0,GREEN,0.193017551055964,Statistical
+D0194,FM-Gujranwala-0194 Traders,Gujranwala,Unspecified,SM005,Kamran Shahid,False,50000,853.0,GREEN,0.19202321114994664,Statistical
+D0186,Ph-InteriorSindh-0186 Traders,Interior Sindh,Unspecified,SM006,Waqas Ahmed,False,50000,855.0,GREEN,0.18555366742320833,Statistical
+D0044,Te-InteriorPunjab-0044 Traders,Interior Punjab,Unspecified,SM001,Tariq Mehmood,False,50000,855.0,GREEN,0.18663678260736483,Statistical
+D0164,FM-InteriorSindh-0164 Traders,Interior Sindh,Unspecified,SM003,Bilal Aslam,False,500000,855.0,GREEN,0.18535941528208827,Statistical
+D0013,Te-Faisalabad-0013 Traders,Faisalabad,Unspecified,SM007,Imran Yousaf,False,100000,856.0,GREEN,0.1834860672809199,Statistical
+D0023,FM-Lahore-0023 Traders,Lahore,Unspecified,SM006,Waqas Ahmed,False,50000,857.0,GREEN,0.180439033405066,Statistical
+D0063,FM-Karachi-0063 Traders,Karachi,Unspecified,SM004,Nasir Iqbal,False,500000,857.0,GREEN,0.18132316462356526,Statistical
+D0092,FM-Faisalabad-0092 Traders,Faisalabad,Unspecified,SM008,Rizwan Malik,False,350000,859.0,GREEN,0.1751893626621331,Statistical
+D0150,FM-Lahore-0150 Traders,Lahore,Unspecified,SM001,Tariq Mehmood,False,350000,859.0,GREEN,0.1764007802555483,Statistical
+D0201,FM-InteriorSindh-0201 Traders,Interior Sindh,Unspecified,SM005,Kamran Shahid,False,50000,859.0,GREEN,0.1760897321218583,Statistical
+D0142,FM-Rawalpindi-0142 Traders,Rawalpindi,Unspecified,SM008,Rizwan Malik,False,50000,859.0,GREEN,0.17648342913178813,Statistical
+D0081,Ph-Peshawar-0081 Traders,Peshawar,Unspecified,SM003,Bilal Aslam,False,350000,859.0,GREEN,0.1762825784146025,Statistical
+D0097,FM-Islamabad-0097 Traders,Islamabad,Unspecified,SM001,Tariq Mehmood,False,350000,860.0,GREEN,0.17365618584508732,Statistical
+D0134,FM-Peshawar-0134 Traders,Peshawar,Unspecified,SM008,Rizwan Malik,False,350000,860.0,GREEN,0.17456991639219446,Statistical
+D0163,FM-Gujranwala-0163 Traders,Gujranwala,Unspecified,SM006,Waqas Ahmed,False,200000,861.0,GREEN,0.17011809142113804,Statistical
+D0192,Te-Multan-0192 Traders,Multan,Unspecified,SM004,Nasir Iqbal,False,500000,861.0,GREEN,0.17159892361931972,Statistical
+D0159,FM-Faisalabad-0159 Traders,Faisalabad,Unspecified,SM005,Kamran Shahid,False,50000,862.0,GREEN,0.16847160265862213,Statistical
+D0074,FM-Islamabad-0074 Traders,Islamabad,Unspecified,SM008,Rizwan Malik,False,50000,863.0,GREEN,0.16522976284276786,Statistical
+D0105,FM-Peshawar-0105 Traders,Peshawar,Unspecified,SM004,Nasir Iqbal,False,500000,863.0,GREEN,0.16695509880569112,Statistical
+D0062,FM-Lahore-0062 Traders,Lahore,Unspecified,SM003,Bilal Aslam,False,100000,863.0,GREEN,0.1660229263855034,Statistical
+D0102,Te-Karachi-0102 Traders,Karachi,Unspecified,SM006,Waqas Ahmed,False,50000,863.0,GREEN,0.16735774073027437,Statistical
+D0112,FM-Karachi-0112 Traders,Karachi,Unspecified,SM003,Bilal Aslam,False,350000,863.0,GREEN,0.16731311156543707,Statistical
+D0009,Te-InteriorPunjab-0009 Traders,Interior Punjab,Unspecified,SM002,Aamir Sohail,False,50000,863.0,GREEN,0.16643739238520314,Statistical
+D0045,Ph-Lahore-0045 Traders,Lahore,Unspecified,SM008,Rizwan Malik,False,50000,864.0,GREEN,0.16387336362295452,Statistical
+D0050,FM-Peshawar-0050 Traders,Peshawar,Unspecified,SM006,Waqas Ahmed,False,100000,865.0,GREEN,0.1608410168379409,Statistical
+D0213,Te-Faisalabad-0213 Traders,Faisalabad,Unspecified,SM008,Rizwan Malik,False,50000,865.0,GREEN,0.1603401425968142,Statistical
+D0133,Te-Gujranwala-0133 Traders,Gujranwala,Unspecified,SM007,Imran Yousaf,False,50000,865.0,GREEN,0.1620111102733056,Statistical
+D0187,Te-InteriorSindh-0187 Traders,Interior Sindh,Unspecified,SM007,Imran Yousaf,False,100000,865.0,GREEN,0.16197699376713343,Statistical
+D0219,Ph-Karachi-0219 Traders,Karachi,Unspecified,SM003,Bilal Aslam,False,350000,866.0,GREEN,0.15822082517572877,Statistical
+D0211,Ph-Faisalabad-0211 Traders,Faisalabad,Unspecified,SM008,Rizwan Malik,False,50000,869.0,GREEN,0.1514371266707875,Statistical
+D0152,Ph-Islamabad-0152 Traders,Islamabad,Unspecified,SM004,Nasir Iqbal,False,200000,869.0,GREEN,0.1515926983236317,Statistical
+D0153,Te-Islamabad-0153 Traders,Islamabad,Unspecified,SM008,Rizwan Malik,False,50000,869.0,GREEN,0.1516297884350127,Statistical
+D0126,Te-Lahore-0126 Traders,Lahore,Unspecified,SM001,Tariq Mehmood,False,350000,869.0,GREEN,0.15228985344487367,Statistical
+D0175,Ph-Faisalabad-0175 Traders,Faisalabad,Unspecified,SM001,Tariq Mehmood,False,350000,869.0,GREEN,0.15228205207988696,Statistical
+D0124,Te-Karachi-0124 Traders,Karachi,Unspecified,SM007,Imran Yousaf,False,100000,869.0,GREEN,0.15262831345000713,Statistical
+D0162,FM-Islamabad-0162 Traders,Islamabad,Unspecified,SM008,Rizwan Malik,False,100000,870.0,GREEN,0.1502868813151818,Statistical
+D0178,FM-Karachi-0178 Traders,Karachi,Unspecified,SM006,Waqas Ahmed,False,50000,870.0,GREEN,0.1491427693267081,Statistical
+D0096,FM-Lahore-0096 Traders,Lahore,Unspecified,SM001,Tariq Mehmood,False,200000,871.0,GREEN,0.14704355169317723,Statistical
+D0041,Te-Karachi-0041 Traders,Karachi,Unspecified,SM003,Bilal Aslam,False,200000,871.0,GREEN,0.1470331146117651,Statistical
+D0022,Ph-Lahore-0022 Traders,Lahore,Unspecified,SM004,Nasir Iqbal,False,200000,871.0,GREEN,0.14733934347981864,Statistical
+D0008,FM-Karachi-0008 Traders,Karachi,Unspecified,SM003,Bilal Aslam,False,50000,872.0,GREEN,0.14468818588746848,Statistical
+D0138,Te-Faisalabad-0138 Traders,Faisalabad,Unspecified,SM003,Bilal Aslam,False,100000,873.0,GREEN,0.14374401414268365,Statistical
+D0217,Te-Karachi-0217 Traders,Karachi,Unspecified,SM008,Rizwan Malik,False,100000,874.0,GREEN,0.1416724721324565,Statistical
+D0075,Te-InteriorPunjab-0075 Traders,Interior Punjab,Unspecified,SM004,Nasir Iqbal,False,200000,875.0,GREEN,0.13977716773825075,Statistical
+D0033,FM-InteriorPunjab-0033 Traders,Interior Punjab,Unspecified,SM003,Bilal Aslam,False,50000,875.0,GREEN,0.14000786414038366,Statistical
+D0200,Ph-InteriorPunjab-0200 Traders,Interior Punjab,Unspecified,SM008,Rizwan Malik,False,100000,875.0,GREEN,0.1385593621671002,Statistical
+D0141,Te-Karachi-0141 Traders,Karachi,Unspecified,SM008,Rizwan Malik,False,50000,876.0,GREEN,0.13686002673904243,Statistical
+D0029,Te-InteriorSindh-0029 Traders,Interior Sindh,Unspecified,SM001,Tariq Mehmood,False,500000,877.0,GREEN,0.1356955711788562,Statistical
+D0197,Ph-Lahore-0197 Traders,Lahore,Unspecified,SM001,Tariq Mehmood,False,200000,878.0,GREEN,0.1323586673873794,Statistical
+D0115,Te-Karachi-0115 Traders,Karachi,Unspecified,SM008,Rizwan Malik,False,50000,881.0,GREEN,0.12740803891387123,Statistical
+D0048,Ph-Karachi-0048 Traders,Karachi,Unspecified,SM008,Rizwan Malik,False,50000,883.0,GREEN,0.12275333407327975,Statistical
+D0091,Te-Karachi-0091 Traders,Karachi,Unspecified,SM004,Nasir Iqbal,False,50000,885.0,GREEN,0.12011870658106377,Statistical
+D0196,Ph-Karachi-0196 Traders,Karachi,Unspecified,SM003,Bilal Aslam,False,100000,885.0,GREEN,0.12045805575812038,Statistical
+D0210,FM-Karachi-0210 Traders,Karachi,Unspecified,SM004,Nasir Iqbal,False,100000,885.0,GREEN,0.119270689474489,Statistical
+D0117,Ph-Faisalabad-0117 Traders,Faisalabad,Unspecified,SM004,Nasir Iqbal,False,50000,889.0,GREEN,0.11223248992028012,Statistical
+D0188,Ph-Peshawar-0188 Traders,Peshawar,Unspecified,SM001,Tariq Mehmood,False,200000,898.0,GREEN,0.09835619783294536,Statistical
+D0001,FM-Islamabad-0001 Traders,Islamabad,Unspecified,SM001,Tariq Mehmood,False,50000,900.0,GREEN,0.09149834320396923,Statistical
