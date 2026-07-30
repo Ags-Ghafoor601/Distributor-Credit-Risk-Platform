@@ -348,7 +348,18 @@ def compute_features(dealers: pd.DataFrame, salesmen: pd.DataFrame, txns: pd.Dat
     if cutoff_date is None:
         cutoff_date, _ = resolve_cutoff_date(txns)
     dealers = dealers.copy()
-    dealers["onboarding_date"] = pd.to_datetime(dealers["onboarding_date"])
+    # Dealer dates get the same tolerant parsing the transactions file already
+    # receives. A bare pd.to_datetime() infers a format from the first row and
+    # then crashes on the first value that contradicts it -- which is exactly
+    # what a DD/MM/YYYY export does, and DD/MM/YYYY is the norm in Pakistan.
+    dealers["onboarding_date"] = dealers["onboarding_date"].apply(parse_messy_date)
+    if dealers["onboarding_date"].isna().any():
+        bad = dealers.loc[dealers["onboarding_date"].isna(), "dealer_id"].head(5).tolist()
+        raise ValueError(
+            "Could not read the onboarding date for some dealers "
+            f"(e.g. {', '.join(map(str, bad))}). Accepted formats include "
+            "YYYY-MM-DD, DD/MM/YYYY, MM-DD-YYYY and Excel serial numbers."
+        )
     feature_window = txns[txns["due_date"] < cutoff_date]
 
     feat_rows, insufficient = [], []

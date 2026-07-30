@@ -132,6 +132,19 @@ async def read_upload_with_limit(file: UploadFile, label: str) -> bytes:
         )
     return data
 
+@app.exception_handler(Exception)
+async def unhandled_exception_handler(request: Request, exc: Exception):
+    """Starlette's default 500 bypasses the CORS middleware, so any crash
+    reaches the browser as a misleading 'No Access-Control-Allow-Origin'
+    error. Returning the response ourselves keeps the CORS headers attached
+    and lets the frontend show what actually went wrong."""
+    origin = request.headers.get("origin", "")
+    headers = {"Access-Control-Allow-Origin": origin} if origin in ALLOWED_ORIGINS else {}
+    return JSONResponse(
+        status_code=500,
+        content={"detail": f"{type(exc).__name__}: {exc}"},
+        headers=headers,
+    )
 
 @app.get("/api/health")
 def health():
@@ -198,7 +211,11 @@ async def score_portfolio(
         )
 
     cutoff_date, cutoff_info = resolve_cutoff_date(cleaned_txns)
-    feat_df, insufficient = compute_features(dealers, salesmen, cleaned_txns, cutoff_date=cutoff_date)
+    try:
+        feat_df, insufficient = compute_features(dealers, salesmen, cleaned_txns,
+                                                 cutoff_date=cutoff_date)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
     if len(feat_df) == 0:
         raise HTTPException(
             422,
