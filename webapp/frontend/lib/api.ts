@@ -39,11 +39,59 @@ export interface Summary {
   salesman_favorite_red_count: number;
 }
 
+export interface DistributionShift {
+  severity: "low" | "moderate" | "high";
+  max_displacement_sds: number;
+  per_feature_displacement_sds: Record<string, number>;
+}
+
+export interface ScoreSaturation {
+  severity: "low" | "high";
+  clipped_at_floor: number;
+  clipped_at_ceiling: number;
+  pct_clipped: number;
+}
+
+export interface TrainingReport {
+  attempted: boolean;
+  trained: boolean;
+  reason: string;
+  training_pool_size?: number;
+  base_rate?: number;
+  cv_auc_mean?: number;
+  cv_auc_std?: number;
+  cv_ks_mean?: number;
+  feature_window_ends?: string;
+  outcome_window_months?: number;
+  history_span_months?: number;
+}
+
+export interface Reliability {
+  verdict: "scores_reliable" | "scores_indicative" | "use_ranking_only";
+  guidance: string;
+  distribution_shift: DistributionShift;
+  score_saturation: ScoreSaturation;
+  model_source?: "pretrained" | "trained_on_your_data";
+  training_report?: TrainingReport;
+  pretrained_fit_check?: DistributionShift;
+}
+
+export interface CutoffInfo {
+  cutoff_date: string;
+  strategy: string;
+  data_range?: string;
+}
+
 export interface ScoreResponse {
   session_id: string;
   summary: Summary;
   quality_report: QualityReport;
   dealers: Dealer[];
+  // Optional: an older backend deployment won't send these. Everything
+  // downstream must tolerate them being absent.
+  reliability?: Reliability;
+  cutoff_info?: CutoffInfo;
+  input_notes?: string[];
 }
 
 function resolveApiUrl(): string {

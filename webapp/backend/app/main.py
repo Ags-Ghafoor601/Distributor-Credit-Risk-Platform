@@ -24,7 +24,7 @@ from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 
-from app.pipeline import compute_features, score_with_model, cold_start_score, clean_transactions, build_risk_card_docx
+from app.pipeline import compute_features, score_with_model, cold_start_score, clean_transactions, build_risk_card_docx, resolve_cutoff_date, normalize_dealers, normalize_salesmen, build_reliability_report, assess_distribution_shift, try_train_on_uploaded_data
 
 app = FastAPI(title="Distributor Credit Risk API")
 
@@ -160,14 +160,12 @@ async def score_portfolio(
     except Exception as e:
         raise HTTPException(400, f"Could not parse dealers/salesmen file: {e}")
 
-    for col in ["dealer_id", "dealer_name", "city", "sector", "salesman_id",
-                "is_salesman_favorite", "credit_limit_pkr", "onboarding_date", "territory_risk_tier"]:
-        if col not in dealers.columns:
-            raise HTTPException(400, f"dealers file is missing required column: {col}")
-
-    for col in REQUIRED_SALESMAN_COLUMNS:
-        if col not in salesmen.columns:
-            raise HTTPException(400, f"salesmen file is missing required column: {col}")
+    try:
+        dealers, dealer_notes = normalize_dealers(dealers)
+        salesmen, salesmen_notes = normalize_salesmen(salesmen)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    input_notes = dealer_notes + salesmen_notes
 
     valid_dealer_ids = set(dealers["dealer_id"])
     txn_bytes = await read_upload_with_limit(transactions_file, "transactions")
@@ -199,11 +197,35 @@ async def score_portfolio(
             f"refusing to score on mostly-discarded data. Check file format."
         )
 
-    feat_df, insufficient = compute_features(dealers, salesmen, cleaned_txns)
+    cutoff_date, cutoff_info = resolve_cutoff_date(cleaned_txns)
+    feat_df, insufficient = compute_features(dealers, salesmen, cleaned_txns, cutoff_date=cutoff_date)
     if len(feat_df) == 0:
-        raise HTTPException(422, "No dealers had sufficient transaction history to score.")
+        raise HTTPException(
+            422,
+            f"No dealers had sufficient transaction history to score. The feature "
+            f"window ended {cutoff_info['cutoff_date']} ({cutoff_info['strategy']}). "
+            f"Each dealer needs at least 3 invoices dated before that."
+        )
 
-    scored = score_with_model(feat_df, MODEL_ARTIFACT)
+    # Decide which model to score with. "auto" only retrains when the
+    # pretrained model is a demonstrably poor fit for this portfolio, so
+    # familiar data keeps scoring exactly as before.
+    training_mode = os.environ.get("RUNTIME_TRAINING_MODE", "auto").lower()
+    pre_shift = assess_distribution_shift(feat_df, MODEL_ARTIFACT)
+
+    active_artifact = MODEL_ARTIFACT
+    training_report = {"attempted": False, "trained": False,
+                       "reason": f"not attempted (mode={training_mode}, "
+                                 f"distribution shift={pre_shift['severity']})"}
+
+    if training_mode == "always" or (training_mode == "auto"
+                                     and pre_shift["severity"] == "high"):
+        candidate, training_report = try_train_on_uploaded_data(
+            dealers, salesmen, cleaned_txns, MODEL_ARTIFACT)
+        if candidate is not None:
+            active_artifact = candidate
+
+    scored = score_with_model(feat_df, active_artifact)
     cold = cold_start_score(dealers, cleaned_txns, insufficient)
 
     combined_cols = ["dealer_id", "dealer_name", "city", "sector", "salesman_id", "salesman_name",
@@ -212,6 +234,12 @@ async def score_portfolio(
     scored_out = scored.rename(columns={"risk_probability": "risk_probability"})[combined_cols]
     all_scored = pd.concat([scored_out, cold[combined_cols]], ignore_index=True)
     all_scored = all_scored.sort_values("credit_score").reset_index(drop=True)
+
+    reliability = build_reliability_report(feat_df, all_scored, active_artifact)
+    reliability["model_source"] = (
+        "trained_on_your_data" if training_report.get("trained") else "pretrained")
+    reliability["training_report"] = training_report
+    reliability["pretrained_fit_check"] = pre_shift
 
     session_id = str(uuid.uuid4())
     cleanup_expired_sessions()
@@ -235,6 +263,9 @@ async def score_portfolio(
         "session_id": session_id,
         "summary": summary,
         "quality_report": quality_report,
+        "cutoff_info": cutoff_info,
+        "input_notes": input_notes,
+        "reliability": reliability,
         "dealers": json.loads(all_scored.to_json(orient="records")),
     }
 

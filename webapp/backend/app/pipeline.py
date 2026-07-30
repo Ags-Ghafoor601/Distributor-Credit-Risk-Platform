@@ -13,7 +13,11 @@ before this module was considered correct. See verify_against_cli.py.
 """
 
 import io
-from datetime import date
+import os
+import re
+import math
+from datetime import date, timedelta
+from functools import lru_cache
 import numpy as np
 import pandas as pd
 from docx import Document
@@ -22,8 +26,58 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-CUTOFF_DATE = pd.Timestamp("2025-01-01")
-ANNUAL_PKR_EROSION = 0.18
+# The model was trained on features computed from history ending at this date.
+# Kept as the default so the original dataset scores identically -- but it is
+# only meaningful FOR that dataset, which is why resolve_cutoff_date() below
+# falls back to a data-derived cutoff for any other distributor's upload.
+DEFAULT_CUTOFF_DATE = pd.Timestamp(os.environ.get("FEATURE_CUTOFF_DATE", "2025-01-01"))
+
+
+def resolve_cutoff_date(txns: pd.DataFrame) -> tuple[pd.Timestamp, dict]:
+    """
+    Decides which date separates 'payment history used for features' from
+    everything after it.
+
+    A fixed calendar date breaks on any data that sits entirely after it --
+    the feature window comes back empty and the caller sees a confusing
+    "no dealers could be scored" error with no indication why.
+
+    Rule:
+      - If the default falls strictly INSIDE the uploaded data's date range,
+        use it. (For the original dataset this provably routes to the same
+        code path as before, so existing scores are unchanged.)
+      - Otherwise derive it from the data: one day after the latest
+        transaction, so the entire uploaded history counts as features.
+
+    Returns (cutoff_date, info) -- info is surfaced in the API response so
+    the caller can see which rule fired instead of guessing.
+    """
+    valid = txns["due_date"].dropna()
+    if valid.empty:
+        return DEFAULT_CUTOFF_DATE, {
+            "cutoff_date": str(DEFAULT_CUTOFF_DATE.date()),
+            "strategy": "default (no valid dates found in upload)",
+        }
+
+    data_min, data_max = valid.min(), valid.max()
+
+    if data_min < DEFAULT_CUTOFF_DATE < data_max:
+        return DEFAULT_CUTOFF_DATE, {
+            "cutoff_date": str(DEFAULT_CUTOFF_DATE.date()),
+            "strategy": "configured default (falls within uploaded data range)",
+            "data_range": f"{data_min.date()} to {data_max.date()}",
+        }
+
+    derived = data_max + pd.Timedelta(days=1)
+    return derived, {
+        "cutoff_date": str(derived.date()),
+        "strategy": "derived from uploaded data (default cutoff falls outside data range)",
+        "data_range": f"{data_min.date()} to {data_max.date()}",
+    }
+# Currency erosion used for inflation-adjusted exposure. The 0.18 default
+# reflects recent PKR conditions -- it is wrong outside Pakistan and drifts
+# wrong within it as inflation changes, so it is configurable.
+ANNUAL_PKR_EROSION = float(os.environ.get("ANNUAL_CURRENCY_EROSION", 0.18))
 MIN_INVOICES = 3
 
 REASON_LABELS = {
@@ -38,21 +92,101 @@ REASON_LABELS = {
 TRUE_SET = {"y", "yes", "1", "true", "bounced"}
 FALSE_SET = {"n", "no", "0", "false", "", "ok", "nan"}
 
-# EXACT seasonal windows from robust_ingestion.py -- must stay identical to
-# the validated CLI pipeline. If these ever need to change, change them
-# in BOTH places, or better, extract to a shared constants file.
-SEASONAL_WINDOWS = [
+# --- Eid / Ramzan seasonal windows -----------------------------------------
+# The original hardcoded table only covered Mar 2023 - Jun 2025. Any newer
+# data silently got NOTHING flagged as seasonal -- no error, the feature just
+# stopped working. These explicit windows are preserved verbatim so the
+# original dataset scores identically; every OTHER year is computed from the
+# Islamic calendar at runtime.
+#
+# Uses the tabular (arithmetic) Islamic calendar -- no external dependency,
+# so there is nothing extra to install or fail at deploy time. Validated
+# against 9 real observed Ramadan/Eid dates (2023-2025): max deviation 1 day,
+# which is immaterial against +/- 2 week windows. Note that observed dates
+# depend on local moon sighting and Pakistan often differs from Saudi Arabia
+# by a day; the window padding absorbs that.
+
+_EXPLICIT_SEASONAL_WINDOWS = [
     (date(2023, 3, 10), date(2023, 5, 5)), (date(2023, 6, 15), date(2023, 7, 10)),
     (date(2024, 2, 28), date(2024, 4, 25)), (date(2024, 6, 5), date(2024, 6, 30)),
     (date(2025, 2, 15), date(2025, 4, 15)), (date(2025, 5, 25), date(2025, 6, 20)),
 ]
+_EXPLICIT_YEARS = {2023, 2024, 2025}
+
+RAMADAN_LEAD_DAYS = 14      # window opens before Ramadan (stock-up period)
+EID_FITR_TAIL_DAYS = 15     # window closes after Eid-ul-Fitr (collection lag)
+EID_AZHA_PAD_DAYS = 13      # symmetric padding around Eid-ul-Azha
+
+
+def _gregorian_to_jdn(y, m, d):
+    a = (14 - m) // 12
+    y2 = y + 4800 - a
+    m2 = m + 12 * a - 3
+    return d + (153 * m2 + 2) // 5 + 365 * y2 + y2 // 4 - y2 // 100 + y2 // 400 - 32045
+
+
+def _jdn_to_gregorian(jdn):
+    a = jdn + 32044
+    b = (4 * a + 3) // 146097
+    c = a - (146097 * b) // 4
+    d2 = (4 * c + 3) // 1461
+    e = c - (1461 * d2) // 4
+    m2 = (5 * e + 2) // 153
+    day = e - (153 * m2 + 2) // 5 + 1
+    month = m2 + 3 - 12 * (m2 // 10)
+    year = 100 * b + d2 - 4800 + m2 // 10
+    return date(year, month, day)
+
+
+def _hijri_to_jdn(y, m, d):
+    return (d + math.ceil(29.5 * (m - 1)) + (y - 1) * 354
+            + math.floor((3 + 11 * y) / 30) + 1948440 - 1)
+
+
+def _hijri_to_date(y, m, d):
+    return _jdn_to_gregorian(_hijri_to_jdn(y, m, d))
+
+
+def _hijri_year_of(g: date) -> int:
+    jdn = _gregorian_to_jdn(g.year, g.month, g.day)
+    return int(math.floor((30 * (jdn - 1948440) + 10646) / 10631))
+
+
+@lru_cache(maxsize=256)
+def _computed_windows_for_hijri_year(h_year):
+    """Ramadan/Eid-ul-Fitr window and Eid-ul-Azha window for one Hijri year."""
+    ramadan_start = _hijri_to_date(h_year, 9, 1)    # 1 Ramadan
+    eid_fitr      = _hijri_to_date(h_year, 10, 1)   # 1 Shawwal
+    eid_azha      = _hijri_to_date(h_year, 12, 10)  # 10 Dhu al-Hijjah
+    return (
+        (ramadan_start - timedelta(days=RAMADAN_LEAD_DAYS),
+         eid_fitr + timedelta(days=EID_FITR_TAIL_DAYS)),
+        (eid_azha - timedelta(days=EID_AZHA_PAD_DAYS),
+         eid_azha + timedelta(days=EID_AZHA_PAD_DAYS)),
+    )
 
 
 def is_seasonal(d):
     if pd.isna(d):
         return False
     d = d.date() if hasattr(d, "date") else d
-    return any(s <= d <= e for s, e in SEASONAL_WINDOWS)
+
+    # Explicit table wins for the years it covers -- guarantees the original
+    # dataset produces byte-identical seasonal flags.
+    for start, end in _EXPLICIT_SEASONAL_WINDOWS:
+        if start <= d <= end:
+            return True
+    if d.year in _EXPLICIT_YEARS:
+        return False
+
+    # Ramadan drifts ~11 days earlier each Gregorian year, so a window can
+    # straddle a year boundary -- check the neighbouring Hijri years too.
+    hy = _hijri_year_of(d)
+    for y in (hy - 1, hy, hy + 1):
+        for start, end in _computed_windows_for_hijri_year(y):
+            if start <= d <= end:
+                return True
+    return False
 
 
 # ---------------------------------------------------------------------------
@@ -184,17 +318,38 @@ def clean_transactions(raw_bytes: bytes, valid_dealer_ids: set) -> tuple[pd.Data
 # ---------------------------------------------------------------------------
 # FEATURE ENGINEERING + SCORING (ported from score_dealers.py)
 # ---------------------------------------------------------------------------
+def _safe_zscore(s: pd.Series) -> pd.Series:
+    """Z-score that degrades to 0 when a series has no spread.
+
+    A single-dealer portfolio, or one where every dealer behaves identically,
+    has zero (or undefined) variance. Dividing by it yields NaN, which travels
+    silently through StandardScaler and then makes predict_proba raise
+    'Input X contains NaN' -- surfacing as an unexplained 500. Zero is the
+    correct answer here: with no spread, nobody deviates from the average.
+    """
+    std = s.std()
+    if not np.isfinite(std) or std == 0:
+        return pd.Series(0.0, index=s.index)
+    return (s - s.mean()) / std
+
 def loo_group_rate(df, group_col, rate_col):
     s = df.groupby(group_col)[rate_col].transform("sum")
     c = df.groupby(group_col)[rate_col].transform("count")
     return ((s - df[rate_col]) / (c - 1).replace(0, np.nan)).fillna(df[rate_col].mean())
 
 
-def compute_features(dealers: pd.DataFrame, salesmen: pd.DataFrame, txns: pd.DataFrame):
-    """Returns (feat_df, insufficient_history_dealer_ids)."""
+def compute_features(dealers: pd.DataFrame, salesmen: pd.DataFrame, txns: pd.DataFrame,
+                     cutoff_date: pd.Timestamp | None = None):
+    """Returns (feat_df, insufficient_history_dealer_ids).
+
+    cutoff_date is optional -- when omitted it is resolved from the data, so
+    existing callers (regression tests, verify_against_cli.py) keep working
+    unchanged."""
+    if cutoff_date is None:
+        cutoff_date, _ = resolve_cutoff_date(txns)
     dealers = dealers.copy()
     dealers["onboarding_date"] = pd.to_datetime(dealers["onboarding_date"])
-    feature_window = txns[txns["due_date"] < CUTOFF_DATE]
+    feature_window = txns[txns["due_date"] < cutoff_date]
 
     feat_rows, insufficient = [], []
     for dealer_id, dealer_row in dealers.set_index("dealer_id").iterrows():
@@ -208,7 +363,7 @@ def compute_features(dealers: pd.DataFrame, salesmen: pd.DataFrame, txns: pd.Dat
         nonseasonal = non_bounced[non_bounced.get("is_eid_ramzan_period", False) == False]
         avg_days_late_nonseasonal = nonseasonal["days_late"].mean() if len(nonseasonal) else avg_days_late
         payment_volatility = non_bounced["days_late"].std() if len(non_bounced) > 1 else 0
-        years_active = max((CUTOFF_DATE.date() - dealer_row["onboarding_date"].date()).days / 365.25, 0)
+        years_active = max((cutoff_date.date() - dealer_row["onboarding_date"].date()).days / 365.25, 0)
         real_exposure_pkr = dealer_row["credit_limit_pkr"] * ((1 - ANNUAL_PKR_EROSION) ** years_active)
         mid = feature_window["invoice_date"].median()
         early = dgrp[dgrp["invoice_date"] < mid]
@@ -233,10 +388,24 @@ def compute_features(dealers: pd.DataFrame, salesmen: pd.DataFrame, txns: pd.Dat
 
     feat_df["salesman_default_rate_loo"] = loo_group_rate(feat_df, "salesman_id", "bounce_rate_lifetime")
     feat_df["territory_default_rate_loo"] = loo_group_rate(feat_df, "territory_risk_tier", "bounce_rate_lifetime")
-    z_late = (feat_df["avg_days_late_nonseasonal"] - feat_df["avg_days_late_nonseasonal"].mean()) / feat_df["avg_days_late_nonseasonal"].std()
-    z_vol = (feat_df["payment_volatility"] - feat_df["payment_volatility"].mean()) / feat_df["payment_volatility"].std()
-    feat_df["payment_delay_severity"] = (z_late + z_vol) / 2
+    feat_df["payment_delay_severity"] = (
+        _safe_zscore(feat_df["avg_days_late_nonseasonal"])
+        + _safe_zscore(feat_df["payment_volatility"])
+    ) / 2
     feat_df = feat_df.merge(salesmen[["salesman_id", "salesman_name"]], on="salesman_id", how="left")
+
+    # Final safety net. Any residual NaN/inf -- e.g. a dealer whose payments
+    # all have a missing payment_date -- would otherwise reach predict_proba
+    # and raise an opaque "Input X contains NaN" 500. Zero is the neutral
+    # value: on a z-scored feature it means "at the portfolio average", on a
+    # rate feature it means "no observed events".
+    _model_cols = ["payment_delay_severity", "bounce_rate_lifetime",
+                   "real_exposure_pkr", "order_frequency_trend",
+                   "salesman_default_rate_loo", "territory_default_rate_loo"]
+    _present = [c for c in _model_cols if c in feat_df.columns]
+    feat_df[_present] = (feat_df[_present]
+                         .replace([np.inf, -np.inf], np.nan)
+                         .fillna(0.0))
 
     return feat_df, insufficient
 
@@ -524,3 +693,379 @@ def build_risk_card_docx(dealer: dict) -> bytes:
     fix_zoom_element(doc)
     doc.save(buf)
     return buf.getvalue()
+
+# --- Input normalization ---------------------------------------------------
+# The synthetic dataset carries columns a real distributor's export never
+# would: territory_risk_tier is a risk grade this project assigned, and
+# is_salesman_favorite is an annotation only the distributor can supply.
+# Hard-requiring them meant real data was rejected outright. These helpers
+# fill sensible substitutes and report what they did, so nothing is silent.
+
+# --- Column aliasing -------------------------------------------------------
+# The transactions file already accepted real-world headers, but dealers and
+# salesmen demanded exact canonical names -- so an export saying "Dealer Code"
+# was accepted in one file and rejected in another. That asymmetry was the
+# single biggest barrier to a real distributor using this at all.
+
+def _canon(col) -> str:
+    """Collapses casing, spacing and punctuation so 'Credit Limit (Rs)' and
+    'credit_limit_rs' compare equal."""
+    s = re.sub(r"[\s\-\.]+", "_", str(col).strip().lower())
+    s = re.sub(r"[^a-z0-9_]", "", s)
+    return re.sub(r"_+", "_", s).strip("_")
+
+
+DEALER_COLUMN_ALIASES = {
+    "dealer_id": {"dealer_id", "dealer_code", "dealerid", "dealer_no", "customer_code",
+                  "customer_id", "account_code", "account_no", "party_code", "party_id",
+                  "code", "dealer"},
+    "dealer_name": {"dealer_name", "customer_name", "party_name", "shop_name",
+                    "account_name", "business_name", "firm_name", "name"},
+    "city": {"city", "town", "location", "area", "station"},
+    "sector": {"sector", "category", "industry", "business_type", "segment",
+               "product_category"},
+    "salesman_id": {"salesman_id", "salesman_code", "salesmanid", "salesman", "sales_rep",
+                    "rep_code", "so_code", "sales_officer", "officer_code", "booker",
+                    "booker_code"},
+    "credit_limit_pkr": {"credit_limit_pkr", "credit_limit_rs", "credit_limit",
+                         "creditlimit", "limit", "credit_limit_amount", "approved_limit"},
+    "onboarding_date": {"onboarding_date", "date_added", "created", "created_on", "since",
+                        "start_date", "registration_date", "account_opened",
+                        "opening_date", "first_invoice_date"},
+    "is_salesman_favorite": {"is_salesman_favorite", "favorite", "favourite", "trusted",
+                             "preferred", "trusted_account", "key_account"},
+    "territory_risk_tier": {"territory_risk_tier", "territory_risk", "risk_tier",
+                            "zone_risk", "risk_grade"},
+}
+
+SALESMAN_COLUMN_ALIASES = {
+    "salesman_id": {"salesman_id", "salesman_code", "salesmanid", "code", "so_code",
+                    "rep_code", "officer_code", "booker_code", "id"},
+    "salesman_name": {"salesman_name", "name", "salesman", "rep_name", "officer_name",
+                      "booker_name", "full_name", "employee_name"},
+}
+
+
+def apply_column_aliases(df: pd.DataFrame, alias_map: dict, label: str):
+    """Renames recognised header variants to canonical names. A column that
+    already carries the canonical name is never clobbered by an alias."""
+    canon_to_actual = {}
+    for actual in df.columns:
+        canon_to_actual.setdefault(_canon(actual), actual)
+
+    rename, notes = {}, []
+    for target, variants in alias_map.items():
+        if target in df.columns:
+            continue
+        for v in variants:
+            actual = canon_to_actual.get(v)
+            if actual is None or actual in rename:
+                continue
+            rename[actual] = target
+            if _canon(actual) != target:
+                notes.append(f"{label}: read column '{actual}' as '{target}'")
+            break
+    return df.rename(columns=rename), notes
+
+ESSENTIAL_DEALER_COLUMNS = ["dealer_id", "salesman_id", "credit_limit_pkr", "onboarding_date"]
+
+
+def normalize_dealers(dealers: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
+    """Returns (normalized_dealers, notes). Raises ValueError if a genuinely
+    un-substitutable column is missing."""
+    df, notes = apply_column_aliases(dealers.copy(), DEALER_COLUMN_ALIASES, "dealers")
+
+    missing = [c for c in ESSENTIAL_DEALER_COLUMNS if c not in df.columns]
+    if missing:
+        raise ValueError(
+            "dealers file is missing required column(s): " + ", ".join(missing)
+        )
+
+    if "dealer_name" not in df.columns:
+        df["dealer_name"] = df["dealer_id"].astype(str)
+        notes.append("dealer_name not provided — using dealer_id")
+    if "city" not in df.columns:
+        df["city"] = "Unknown"
+        notes.append("city not provided — defaulted to 'Unknown'")
+    if "sector" not in df.columns:
+        df["sector"] = "Unspecified"
+        notes.append("sector not provided — defaulted to 'Unspecified'")
+
+    if "is_salesman_favorite" not in df.columns:
+        df["is_salesman_favorite"] = False
+        notes.append(
+            "is_salesman_favorite not provided — defaulted to False. The "
+            "trusted-but-risky contradiction flag needs this judgement from "
+            "the distributor and will not fire."
+        )
+    else:
+        # A real export may use Yes/No or 1/0 rather than True/False.
+        df["is_salesman_favorite"] = (
+            df["is_salesman_favorite"].astype(str).str.strip().str.lower()
+            .isin({"true", "yes", "y", "1"})
+        )
+
+    if "territory_risk_tier" not in df.columns:
+        df["territory_risk_tier"] = df["city"]
+        notes.append(
+            "territory_risk_tier not provided — grouping territory risk by "
+            "city instead (real granularity rather than an invented grade)"
+        )
+
+    return df, notes
+
+
+def normalize_salesmen(salesmen: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
+    """salesman_name is display-only; only salesman_id is truly required."""
+    df, notes = apply_column_aliases(salesmen.copy(), SALESMAN_COLUMN_ALIASES, "salesmen")
+
+    if "salesman_id" not in df.columns:
+        raise ValueError("salesmen file is missing required column: salesman_id")
+    if "salesman_name" not in df.columns:
+        df["salesman_name"] = df["salesman_id"].astype(str)
+        notes.append("salesman_name not provided — using salesman_id")
+
+    return df, notes
+
+# --- Model applicability diagnostics ---------------------------------------
+# The model's scaler was fit on one distributor's portfolio. On a very
+# different portfolio the scores still RANK correctly but can compress toward
+# the 300/900 bounds, losing discrimination -- silently. These checks make
+# that visible. Both are READ-ONLY: they observe scores, never alter them.
+#
+# Thresholds are heuristic, chosen so a portfolio resembling the training data
+# reads "low" and a clearly divergent one reads "high". Tune if needed.
+
+SHIFT_MODERATE_SDS = 1.0
+SHIFT_HIGH_SDS = 2.5
+SATURATION_WARN_PCT = 0.10
+
+
+def assess_distribution_shift(feat_df: pd.DataFrame, artifact: dict) -> dict:
+    """How far this portfolio's feature means sit from the model's training
+    distribution, measured in training standard deviations."""
+    scaler = artifact["scaler"]
+    cols = artifact["feature_columns"]
+    per_feature, max_shift = {}, 0.0
+
+    for i, c in enumerate(cols):
+        if c not in feat_df.columns:
+            continue
+        std = float(scaler.scale_[i]) or 1e-9
+        disp = abs(float(feat_df[c].mean()) - float(scaler.mean_[i])) / std
+        per_feature[c] = round(disp, 2)
+        max_shift = max(max_shift, disp)
+
+    if max_shift < SHIFT_MODERATE_SDS:
+        severity = "low"
+    elif max_shift < SHIFT_HIGH_SDS:
+        severity = "moderate"
+    else:
+        severity = "high"
+
+    return {
+        "severity": severity,
+        "max_displacement_sds": round(max_shift, 2),
+        "per_feature_displacement_sds": per_feature,
+    }
+
+
+def assess_score_saturation(scored_df: pd.DataFrame) -> dict:
+    """Fraction of dealers pinned at the 300/900 bounds. A high value means
+    the model cannot tell those dealers apart -- the concrete symptom of an
+    out-of-distribution portfolio."""
+    n = len(scored_df)
+    if n == 0:
+        return {"severity": "low", "clipped_at_floor": 0,
+                "clipped_at_ceiling": 0, "pct_clipped": 0.0}
+
+    floor = int((scored_df["credit_score"] <= 300).sum())
+    ceiling = int((scored_df["credit_score"] >= 900).sum())
+    pct = (floor + ceiling) / n
+
+    return {
+        "severity": "high" if pct > SATURATION_WARN_PCT else "low",
+        "clipped_at_floor": floor,
+        "clipped_at_ceiling": ceiling,
+        "pct_clipped": round(pct, 4),
+    }
+
+
+def build_reliability_report(feat_df: pd.DataFrame, scored_df: pd.DataFrame,
+                             artifact: dict) -> dict:
+    """Combines both checks into one verdict with plain-language guidance."""
+    shift = assess_distribution_shift(feat_df, artifact)
+    saturation = assess_score_saturation(scored_df)
+
+    if shift["severity"] == "high" or saturation["severity"] == "high":
+        verdict = "use_ranking_only"
+        guidance = (
+            "This portfolio differs substantially from the data the model was "
+            "trained on. The RED / AMBER / GREEN ranking remains meaningful, but "
+            "the numeric scores should not be read as absolute risk levels. For "
+            "accurate absolute scoring, retrain the model on this distributor's "
+            "own payment history."
+        )
+    elif shift["severity"] == "moderate":
+        verdict = "scores_indicative"
+        guidance = (
+            "This portfolio differs somewhat from the model's training data. "
+            "Rankings are reliable; treat exact score values as indicative."
+        )
+    else:
+        verdict = "scores_reliable"
+        guidance = (
+            "This portfolio sits within the range the model was trained on. "
+            "Scores and rankings can both be used as intended."
+        )
+
+    return {
+        "verdict": verdict,
+        "guidance": guidance,
+        "distribution_shift": shift,
+        "score_saturation": saturation,
+    }
+
+# --- Runtime training on the uploaded portfolio ----------------------------
+# A model trained on one distributor cannot be perfectly accurate for another.
+# When the uploaded portfolio genuinely differs, the better answer is to train
+# on THAT portfolio -- but only when the data actually supports it. Thin data,
+# or a portfolio where nobody defaulted, will train "successfully" and produce
+# confident nonsense, which is worse than an honest warning. Every gate below
+# exists to prevent that, and the resulting model is cross-validated before
+# it is ever allowed to score anything.
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import StratifiedKFold
+from sklearn.metrics import roc_auc_score
+
+MIN_TRAINING_DEALERS = 50
+MIN_MINORITY_CLASS = 10
+MIN_SPAN_MONTHS = 18
+MIN_ACCEPTABLE_CV_AUC = 0.65
+# What counts as "paid late" when deriving training labels. A distributor on
+# 60-day terms has entirely different norms than one on 15-day terms, so this
+# cannot be a universal constant.
+LATE_LABEL_THRESHOLD_DAYS = int(os.environ.get("LATE_PAYMENT_THRESHOLD_DAYS", 15))
+
+
+def _resolve_training_windows(txns: pd.DataFrame):
+    """Splits the uploaded history into a feature window and a later outcome
+    window, so labels (who actually defaulted) can be derived."""
+    d = txns["due_date"].dropna()
+    if d.empty:
+        return None, "no valid transaction dates"
+    lo, hi = d.min(), d.max()
+    span_months = (hi - lo).days / 30.44
+    if span_months < MIN_SPAN_MONTHS:
+        return None, (f"history spans only {span_months:.1f} months; at least "
+                      f"{MIN_SPAN_MONTHS} are needed to separate a training window "
+                      f"from an outcome window")
+    label_months = max(6, min(12, span_months / 3))
+    cutoff = hi - pd.DateOffset(months=int(round(label_months)))
+    return {"cutoff": cutoff, "label_end": hi,
+            "span_months": round(span_months, 1),
+            "label_months": int(round(label_months))}, None
+
+
+def _build_training_labels(txns, cutoff, label_end):
+    lw = txns[(txns["due_date"] >= cutoff) & (txns["due_date"] <= label_end)]
+    rows = []
+    for did, g in lw.groupby("dealer_id"):
+        if len(g) < MIN_INVOICES:
+            continue
+        nb = g[g["cheque_bounced"] == False]
+        avg_late = nb["days_late"].mean() if len(nb) else 0
+        rows.append({
+            "dealer_id": did,
+            "is_high_risk": int(bool(g["cheque_bounced"].any())
+                                or avg_late > LATE_LABEL_THRESHOLD_DAYS),
+        })
+    return pd.DataFrame(rows)
+
+
+def _ks_statistic(y_true, y_prob):
+    d = pd.DataFrame({"y": y_true, "p": y_prob}).sort_values("p")
+    return float(np.max(np.abs(
+        (d["y"] == 1).cumsum() / max((d["y"] == 1).sum(), 1)
+        - (d["y"] == 0).cumsum() / max((d["y"] == 0).sum(), 1))))
+
+
+def try_train_on_uploaded_data(dealers, salesmen, txns, reference_artifact):
+    """Attempts a portfolio-specific model. Returns (artifact_or_None, report).
+    None means fall back to the pretrained model -- the report says why."""
+    feature_cols = reference_artifact["feature_columns"]
+    score_params = reference_artifact["score_params"]
+
+    windows, err = _resolve_training_windows(txns)
+    if err:
+        return None, {"attempted": True, "trained": False, "reason": err}
+
+    feat_df, _ = compute_features(dealers, salesmen, txns,
+                                  cutoff_date=windows["cutoff"])
+    if len(feat_df) == 0:
+        return None, {"attempted": True, "trained": False,
+                      "reason": "no dealers had enough history before the training cutoff"}
+
+    labels = _build_training_labels(txns, windows["cutoff"], windows["label_end"])
+    if len(labels) == 0:
+        return None, {"attempted": True, "trained": False,
+                      "reason": "no dealers had enough activity in the outcome window"}
+
+    pool = feat_df.merge(labels, on="dealer_id", how="inner")
+
+    if len(pool) < MIN_TRAINING_DEALERS:
+        return None, {"attempted": True, "trained": False,
+                      "reason": (f"only {len(pool)} dealers have both training and "
+                                 f"outcome history; at least {MIN_TRAINING_DEALERS} "
+                                 f"are needed to train without overfitting")}
+
+    counts = pool["is_high_risk"].value_counts()
+    minority = int(counts.min()) if len(counts) == 2 else 0
+    if minority < MIN_MINORITY_CLASS:
+        return None, {"attempted": True, "trained": False,
+                      "reason": (f"outcome classes too imbalanced ({dict(counts)}); "
+                                 f"need at least {MIN_MINORITY_CLASS} dealers in each "
+                                 f"of defaulted / did-not-default")}
+
+    X, y = pool[feature_cols], pool["is_high_risk"]
+    aucs, kss = [], []
+    for tr, te in StratifiedKFold(n_splits=5, shuffle=True,
+                                  random_state=42).split(X, y):
+        sc = StandardScaler().fit(X.iloc[tr])
+        m = LogisticRegression(max_iter=1000, class_weight="balanced").fit(
+            sc.transform(X.iloc[tr]), y.iloc[tr])
+        p = m.predict_proba(sc.transform(X.iloc[te]))[:, 1]
+        aucs.append(roc_auc_score(y.iloc[te], p))
+        kss.append(_ks_statistic(y.iloc[te].values, p))
+
+    auc_mean, auc_std = float(np.mean(aucs)), float(np.std(aucs))
+    if auc_mean < MIN_ACCEPTABLE_CV_AUC:
+        return None, {"attempted": True, "trained": False,
+                      "reason": (f"a model trained on this portfolio scored only "
+                                 f"AUC {auc_mean:.3f} in cross-validation, below the "
+                                 f"{MIN_ACCEPTABLE_CV_AUC} minimum -- it would be "
+                                 f"little better than guessing")}
+
+    scaler = StandardScaler().fit(X)
+    model = LogisticRegression(max_iter=1000, class_weight="balanced").fit(
+        scaler.transform(X), y)
+
+    metadata = {
+        "source": "trained at runtime on uploaded portfolio",
+        "training_pool_size": len(pool),
+        "base_rate": round(float(y.mean()), 3),
+        "cv_auc_mean": round(auc_mean, 3),
+        "cv_auc_std": round(auc_std, 3),
+        "cv_ks_mean": round(float(np.mean(kss)), 3),
+        "feature_window_ends": str(windows["cutoff"].date()),
+        "outcome_window_months": windows["label_months"],
+        "history_span_months": windows["span_months"],
+    }
+    artifact = {"model": model, "scaler": scaler,
+                "feature_columns": feature_cols, "score_params": score_params,
+                "metadata": metadata}
+    return artifact, {"attempted": True, "trained": True,
+                      "reason": "portfolio had sufficient history and outcome signal",
+                      **metadata}

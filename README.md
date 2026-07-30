@@ -1,40 +1,49 @@
 # Distributor Credit Risk — "The Ledger"
 
-A credit risk scorecard for Pakistani distributors, replacing salesman gut-feel
-with a defensible, explainable score built on 6 Pakistan-specific behavioral
-signals (PDC bounce history, Eid/Ramzan seasonality, salesman-vouch bias,
-territory risk, PKR-inflation-adjusted exposure, business continuity).
+A credit risk scorecard for distributors, replacing salesman gut-feel with a
+defensible, explainable score. Built around six Pakistan-specific behavioural
+signals: post-dated cheque bounce history, Eid/Ramzan seasonality,
+salesman-vouch bias, territory clustering, PKR-inflation-adjusted exposure, and
+business continuity.
 
-## Project Structure
+Every dealer receives a 300–900 score, a RED/AMBER/GREEN tier, and
+plain-language reason codes explaining the result.
+
+---
+
+## Project structure
 
 ```
 skillSYNC Project-2/
-  Day1/            # Source data: dealers.csv, salesmen.csv, transactions.csv
-  Day2/             # Stress-test, VIF, cold-start, calibration scripts (historical)
-  Day3/             # Model training, cross-validation, unified pipeline (historical)
-  Day4/             # Client presentation deck
+  Day1/                 Source data: dealers.csv, salesmen.csv, transactions.csv
+  Day2/  Day3/  Day4/   Development history (stress tests, model training, deck)
+  CHANGELOG.md          What changed at each stage
   webapp/
-    backend/        # FastAPI service — the live scoring API
+    backend/            FastAPI service — the live scoring API
       app/
-        main.py      # HTTP endpoints
-        pipeline.py   # Scoring logic (ingestion, features, model, docx generation)
+        main.py         HTTP endpoints
+        pipeline.py     All scoring logic (authoritative)
       model/
-        credit_risk_model.joblib   # Trained model artifact
-      tests/         # Regression test suite
+        credit_risk_model.joblib
+      tests/            63 tests
       requirements.txt
-    frontend/        # Next.js dashboard
-      app/
-      components/
-      lib/
+    frontend/           Next.js dashboard
 ```
+
+`webapp/backend/app/pipeline.py` is authoritative for all scoring logic. The
+Day2/Day3 CLI scripts are historical and may differ.
+
+---
 
 ## Prerequisites
 
-- Python 3.12+ (backend was built and tested against this version)
-- Node.js 18+ and npm
-- The 3 source CSVs in `Day1/`: `dealers.csv`, `salesmen.csv`, `transactions.csv`
+- Python 3.12+
+- Node.js 18+
+- The three source CSVs in `Day1/`
 
-## Backend Setup (FastAPI)
+---
+
+## Backend
 
 ```powershell
 cd webapp\backend
@@ -43,96 +52,177 @@ venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
-If PowerShell blocks the venv activation script, run once:
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-```
+If PowerShell blocks venv activation, run once:
+`Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
 
-### Verify the backend before running it
+### Verify before running
 
 ```powershell
-python -m pytest tests\test_regression.py -v
+python -m pytest tests\ -v
 ```
-All 6 tests should pass — these lock in known-correct values (D0080 = 418,
-220 dealers, 178 GREEN / 36 RED / 6 AMBER, the seasonal-window logic
-actually running, and `salesman_name` correctly populated) verified
-throughout this project's development.
 
-### Run the backend
+Expect **63 passing**: 6 regression tests pinning known-verified values
+(D0080 = 418, the 220 / 178 / 36 / 6 split), plus 57 hermetic tests covering
+portability and model adaptation. The hermetic ones need neither `Day1/` nor the
+model artifact, so they run anywhere including CI.
+
+### Run
 
 ```powershell
 uvicorn app.main:app --reload
 ```
-Runs at `http://127.0.0.1:8000`. Interactive API docs: `http://127.0.0.1:8000/docs`.
 
-### Backend environment variables (all optional, sensible defaults apply)
+Serves on `http://127.0.0.1:8000`; interactive docs at `/docs`.
+
+### Environment variables
+
+All optional — defaults preserve the original behaviour exactly.
 
 | Variable | Default | Purpose |
 |---|---|---|
-| `ALLOWED_ORIGINS` | `http://localhost:3000` | Comma-separated list of frontend origins allowed to call this API (CORS) |
-| `SESSION_TTL_SECONDS` | `3600` | How long a scored session stays in memory before expiring |
-| `MAX_SESSIONS` | `500` | Hard cap on concurrent stored sessions |
-| `MAX_FILE_SIZE_BYTES` | `20971520` (20MB) | Maximum size per uploaded file |
-| `MAX_TRANSACTION_ROWS` | `200000` | Maximum valid transaction rows per upload |
+| `ALLOWED_ORIGINS` | `http://localhost:3000` | Comma-separated frontend origins permitted by CORS. **Must be set in production.** |
+| `SESSION_TTL_SECONDS` | `3600` | How long a scored session survives in memory |
+| `MAX_SESSIONS` | `500` | Hard cap on stored sessions |
+| `MAX_FILE_SIZE_BYTES` | `20971520` (20 MB) | Per-file upload limit |
+| `MAX_TRANSACTION_ROWS` | `200000` | Maximum valid transaction rows |
+| `FEATURE_CUTOFF_DATE` | `2025-01-01` | Default boundary between feature history and later data. Overridden automatically when it falls outside the uploaded range. |
+| `RUNTIME_TRAINING_MODE` | `auto` | `never` / `auto` / `always`. `auto` trains a portfolio-specific model only when the shipped model is a poor fit. |
+| `ANNUAL_CURRENCY_EROSION` | `0.18` | Annual currency erosion for inflation-adjusted exposure. Wrong outside Pakistan; adjust per market. |
+| `LATE_PAYMENT_THRESHOLD_DAYS` | `15` | Days late that counts as a default when deriving training labels. A distributor on 60-day terms needs a higher value. |
 
-## Frontend Setup (Next.js)
+---
+
+## Frontend
 
 ```powershell
 cd webapp\frontend
 npm install
 ```
 
-Create `.env.local` (copy from `.env.local.example` if present):
+Create `.env.local`:
 ```
 NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
 ```
 
-### Run the frontend
+```powershell
+npm run dev          # http://localhost:3000
+npm run build        # verify a clean production build
+```
+
+If styling changes don't appear, delete `.next` and restart — Turbopack caches
+compiled CSS and will not always pick up newly added theme tokens.
+
+---
+
+## Working with any distributor's data
+
+Four behaviours make this usable beyond the dataset it was built on. Each is
+reported back in the API response rather than applied silently.
+
+**Flexible column names.** Common real-world headers are recognised
+automatically — `Party Code`, `Booker Code`, `Credit Limit (Rs)`,
+`Account Opened`, and many others — with casing, spacing and punctuation
+ignored. Only four columns are genuinely required: a dealer identifier, a
+salesman identifier, a credit limit, and an onboarding date. Anything else is
+substituted with a sensible default and reported in `input_notes`.
+
+**Any date range.** The feature/outcome boundary is derived from the uploaded
+data when the configured default falls outside its range, so recent or
+historical data both work. Reported in `cutoff_info`.
+
+**Eid/Ramzan for any year.** Seasonal windows are computed from the tabular
+Islamic calendar rather than a fixed table. Accurate to within about a day of
+observed dates, which the ±2-week window padding absorbs comfortably — and
+observed dates vary by country anyway.
+
+**Model applicability, reported honestly.** Every response includes a
+`reliability` block:
+
+- `scores_reliable` — the portfolio resembles the training data
+- `scores_indicative` — somewhat different; rankings hold, treat numbers loosely
+- `use_ranking_only` — substantially different; use the tier, not the number
+
+When the fit is poor and the data supports it, a portfolio-specific model is
+trained at runtime and cross-validated. It is only used if it clears an AUC
+floor of 0.65 — otherwise the app declines and says why. Training requires at
+least 50 dealers, 18 months of history, and both outcomes present. Those gates
+exist because thin data trains "successfully" and produces confident noise,
+which is worse than an honest refusal.
+
+---
+
+## Known limitations
+
+- **The shipped model has never seen a real default.** Every reported metric
+  (cross-validated AUC 0.860 ± 0.098) comes from synthetic data. The runtime
+  training path addresses this per-portfolio; the shipped model itself remains
+  unvalidated against reality.
+- **Exact scores are directional, not calibrated.** Calibration was tested and
+  did not improve at this sample size. The RED/AMBER/GREEN tier is the reliable
+  signal.
+- **Scores are portfolio-relative.** Several features are computed within the
+  uploaded batch, so the same dealer in two different portfolios scores
+  differently. Appropriate for "who is riskiest in my book"; inappropriate for
+  absolute cross-company comparison.
+- **Sessions live in memory.** Fine for one instance; a multi-replica
+  deployment needs shared storage (Redis or a database), since sessions do not
+  sync across replicas.
+- **A single bounced cheque in the outcome window marks a dealer high-risk.**
+  Deliberately sensitive, but it means "high risk" means "showed any bad
+  signal," not "consistently bad."
+
+---
+
+## Deployment
+
+Backend on Render (or any Python host), frontend on Vercel. Vercel's Python
+serverless runtime is a poor fit for a pandas/scikit-learn service.
+
+### Before pushing
+
+Confirm the model artifact is **not** gitignored — if it is, the deployed
+backend crashes on startup with `FileNotFoundError`:
 
 ```powershell
-npm run dev
+git check-ignore -v webapp\backend\model\credit_risk_model.joblib
 ```
-Runs at `http://localhost:3000`. The backend must already be running.
 
-### Verify the frontend builds cleanly
+Any output means it is being excluded. Fix `.gitignore` first.
 
-```powershell
-Remove-Item -Recurse -Force .next
-npm run build
-```
-Should complete with zero TypeScript errors.
+### Backend (Render)
 
-## Using the App
+- **Root Directory:** `webapp/backend`
+- **Build Command:** `pip install -r requirements.txt`
+- **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+- **Environment:** set `ALLOWED_ORIGINS` (initially `http://localhost:3000`)
 
-1. Open `http://localhost:3000`
-2. Upload `dealers.csv`, `salesmen.csv`, and `transactions.csv` from `Day1/`
-   (or a messy real-world export — the ingestion pipeline is built to clean
-   mixed date formats, currency symbols, and inconsistent boolean encodings)
-3. Review the scored portfolio: the Spectrum visualization, the sortable
-   dealer table, and per-dealer detail panels with reason codes
-4. Download the full risk table as CSV, or an individual dealer's Risk Card
-   as a Word document
+`$PORT` is required — Render assigns the port dynamically, and a hardcoded
+`8000` fails to bind and reports as unhealthy.
 
-## Known Limitations (stated honestly, not hidden)
+Verify at `https://<your-service>.onrender.com/api/health`. On the free tier the
+service sleeps after ~15 minutes idle; the first request then takes 30–60
+seconds to wake. Warm it before any demo.
 
-- **Calibration precision**: the exact numeric score is directional, not
-  perfectly calibrated, given the current dataset size (~220 dealers).
-  The RED/AMBER/GREEN tier is the reliable signal; the precise number will
-  sharpen as more real historical data accumulates.
-- **In-memory sessions**: scored data lives in server memory with a TTL,
-  not a database. Fine for a single-instance deployment; a multi-instance
-  production deployment would need to move this to shared storage (Redis,
-  a database) since sessions don't currently sync across server replicas.
-- **Static model**: reflects one training run. There's no automated
-  retraining pipeline yet as new data accumulates.
+### Frontend (Vercel)
 
-## Deployment Notes
+- **Root Directory:** `webapp/frontend`
+- **Framework Preset:** `Next.js` — **verify this explicitly**
+- **Environment:** `NEXT_PUBLIC_API_URL` = the Render URL
 
-- **Backend**: deploy to a Python-capable host (Render, Railway, Fly.io —
-  not Vercel, whose Python serverless support doesn't suit a
-  pandas/scikit-learn-heavy service well). Set `ALLOWED_ORIGINS` to the
-  real frontend URL once known.
-- **Frontend**: deploy to Vercel. Set `NEXT_PUBLIC_API_URL` in the
-  project's environment variables to the deployed backend's URL — if this
-  is missing, the app fails loudly with a clear error rather than silently
-  trying to reach `localhost` on every visitor's machine.
+If the preset is left as `Other`, the build **succeeds** and then serves
+`404: NOT_FOUND` at `/`. Vercel looks for a static `public/` directory and never
+wires up the Next.js routes. Nothing in the build log looks wrong, which makes
+this easy to misdiagnose.
+
+Leave all Build / Output / Install overrides off — the correct preset fills them
+in.
+
+### Close the loop
+
+Update `ALLOWED_ORIGINS` on Render to the real Vercel URL and let it redeploy.
+It must match exactly, including `https://` and no trailing slash.
+
+### Verify end to end
+
+Upload the three CSVs from `Day1/` and confirm 220 dealers scored, D0080 at 418,
+a downloadable Risk Card, and CSV export.

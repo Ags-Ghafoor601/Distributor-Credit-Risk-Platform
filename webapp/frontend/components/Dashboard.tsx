@@ -6,6 +6,7 @@ import SummaryBar from "./SummaryBar";
 import RiskSpectrum from "./RiskSpectrum";
 import DealerTable from "./DealerTable";
 import DealerDetail from "./DealerDetail";
+import ReliabilityBanner from "./ReliabilityBanner";
 import type { Dealer } from "@/lib/api";
 
 export default function Dashboard({ data, onReset }: { data: ScoreResponse; onReset: () => void }) {
@@ -31,7 +32,11 @@ export default function Dashboard({ data, onReset }: { data: ScoreResponse; onRe
             Download full risk table (CSV)
           </a>
         </div>
-
+        <ReliabilityBanner
+          reliability={data.reliability}
+          cutoffInfo={data.cutoff_info}
+          inputNotes={data.input_notes}
+        />
         {q.retention_rate < 1 && (
           <div className="mb-6 border border-amber/30 bg-amber/5 rounded-sm px-5 py-3.5">
             <p className="font-body text-[13px] text-ink">
