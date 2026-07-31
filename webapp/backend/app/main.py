@@ -24,7 +24,7 @@ from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 
-from app.pipeline import compute_features, score_with_model, cold_start_score, clean_transactions, build_risk_card_docx, resolve_cutoff_date, normalize_dealers, normalize_salesmen, build_reliability_report, assess_distribution_shift, try_train_on_uploaded_data
+from app.pipeline import compute_features, score_with_model, cold_start_score, clean_transactions, build_risk_card_docx, resolve_cutoff_date, normalize_dealers, normalize_salesmen, build_reliability_report, assess_distribution_shift, try_train_on_uploaded_data, TRANSACTION_COLUMN_ALIASES, _canon
 
 app = FastAPI(title="Distributor Credit Risk API")
 
@@ -57,32 +57,26 @@ MAX_TRANSACTION_ROWS = int(os.environ.get("MAX_TRANSACTION_ROWS", 200_000))
 
 REQUIRED_SALESMAN_COLUMNS = ["salesman_id", "salesman_name"]
 
-# Used for a cheap header-only sanity check on the transactions file, before
-# running the full cleaning pipeline -- catches the wrong file being uploaded
-# entirely (e.g. dealers.csv renamed to transactions.csv), rather than
-# silently producing a near-empty cleaned result.
-TRANSACTION_DEALER_COLUMN_ALIASES = {"dealer_id", "dealer code"}
-TRANSACTION_DATE_OR_AMOUNT_ALIASES = {
-    "invoice_date", "invoice dt", "due_date", "due date",
-    "payment_date", "paid on", "amount_pkr", "amount (rs)",
-}
-
-
 def looks_like_transactions_file(raw_bytes: bytes) -> bool:
-    """Reads only the header row (not the full file) to check for at least
-    one dealer-identifier column and one date/amount column. Verified to
-    accept both the clean schema and the messy real-world header variants
-    this system is specifically built to clean, while rejecting an
-    obviously wrong file (e.g. a dealers or salesmen file uploaded here
-    by mistake)."""
+    """Header-only sanity check that catches an obviously wrong file (e.g. a
+    dealers file uploaded into the transactions slot).
+
+    Built on the SAME alias map the cleaner uses. The previous version had its
+    own narrow hardcoded list, so it rejected real headers like 'Customer Code'
+    that the pipeline could actually parse -- a gate stricter than the engine
+    behind it.
+    """
     try:
         header_df = pd.read_csv(io.BytesIO(raw_bytes), nrows=0)
     except Exception:
         return False
-    cols_lower = {c.strip().lower() for c in header_df.columns}
-    has_dealer_col = bool(cols_lower & TRANSACTION_DEALER_COLUMN_ALIASES)
-    has_date_or_amount_col = bool(cols_lower & TRANSACTION_DATE_OR_AMOUNT_ALIASES)
-    return has_dealer_col and has_date_or_amount_col
+    canon = {_canon(c) for c in header_df.columns}
+    has_dealer_col = bool(canon & TRANSACTION_COLUMN_ALIASES["dealer_id"])
+    date_or_amount = (TRANSACTION_COLUMN_ALIASES["invoice_date"]
+                      | TRANSACTION_COLUMN_ALIASES["due_date"]
+                      | TRANSACTION_COLUMN_ALIASES["payment_date"]
+                      | TRANSACTION_COLUMN_ALIASES["amount_pkr"])
+    return has_dealer_col and bool(canon & date_or_amount)
 
 # In-memory session store: uploaded/scored data keyed by a session id, each
 # entry tagged with its creation time. NOTE: still in-memory (fine for a

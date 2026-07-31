@@ -246,15 +246,7 @@ def clean_transactions(raw_bytes: bytes, valid_dealer_ids: set) -> tuple[pd.Data
     raw = pd.read_csv(io.BytesIO(raw_bytes), dtype=str)
     raw.columns = [c.strip() for c in raw.columns]
 
-    COLUMN_MAP = {
-        "Txn ID": "transaction_id", "Dealer Code": "dealer_id", "Invoice Dt": "invoice_date",
-        "Due Date": "due_date", "Paid On": "payment_date", "Amount (Rs)": "amount_pkr",
-        "Mode": "payment_method", "Bounced?": "cheque_bounced",
-        "transaction_id": "transaction_id", "dealer_id": "dealer_id",
-        "invoice_date": "invoice_date", "due_date": "due_date", "payment_date": "payment_date",
-        "amount_pkr": "amount_pkr", "payment_method": "payment_method", "cheque_bounced": "cheque_bounced",
-    }
-    df = raw.rename(columns=COLUMN_MAP)
+    df, _ = apply_column_aliases(raw, TRANSACTION_COLUMN_ALIASES, "transactions")
     df = df[[c for c in df.columns if not c.startswith("Unnamed") and c != "Notes"]]
 
     report = {"input_rows": len(df)}
@@ -757,6 +749,26 @@ SALESMAN_COLUMN_ALIASES = {
                       "booker_name", "full_name", "employee_name"},
 }
 
+TRANSACTION_COLUMN_ALIASES = {
+    "transaction_id": {"transaction_id", "txn_id", "txnid", "invoice_no", "invoice_number",
+                       "invoice_id", "bill_no", "bill_number", "voucher_no", "doc_no",
+                       "document_no", "ref_no", "reference_no"},
+    "dealer_id": {"dealer_id", "dealer_code", "dealerid", "customer_code", "customer_id",
+                  "party_code", "party_id", "account_code", "account_no", "code", "dealer",
+                  "customer", "party"},
+    "invoice_date": {"invoice_date", "invoice_dt", "bill_date", "doc_date", "document_date",
+                     "voucher_date", "issue_date", "date"},
+    "due_date": {"due_date", "due_dt", "due", "maturity_date", "payment_due",
+                 "payment_due_date"},
+    "payment_date": {"payment_date", "paid_on", "paid_date", "receipt_date", "settled_on",
+                     "clearing_date", "cleared_on", "recovery_date"},
+    "amount_pkr": {"amount_pkr", "amount_rs", "amount", "net_amount", "invoice_amount",
+                   "bill_amount", "gross_amount", "value", "total", "total_amount"},
+    "payment_method": {"payment_method", "payment_mode", "mode", "mode_of_payment",
+                       "pay_mode", "instrument", "instrument_type"},
+    "cheque_bounced": {"cheque_bounced", "cheque_returned", "bounced", "bounce", "returned",
+                       "dishonoured", "dishonored", "cheque_bounce", "is_bounced"},
+}
 
 def apply_column_aliases(df: pd.DataFrame, alias_map: dict, label: str):
     """Renames recognised header variants to canonical names. A column that
