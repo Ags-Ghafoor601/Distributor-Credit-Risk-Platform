@@ -929,12 +929,42 @@ def assess_score_saturation(scored_df: pd.DataFrame) -> dict:
 
 
 def build_reliability_report(feat_df: pd.DataFrame, scored_df: pd.DataFrame,
-                             artifact: dict) -> dict:
-    """Combines both checks into one verdict with plain-language guidance."""
+                             artifact: dict, model_source: str = "pretrained",
+                             training_report: dict | None = None) -> dict:
+    """Combines both checks into one verdict with plain-language guidance.
+
+    model_source matters more than it looks. When a model has been trained on
+    the uploaded portfolio, the distribution-shift check is measured against a
+    scaler fitted to that same portfolio -- so it is ~0 by construction and
+    tells you nothing. Reporting "this portfolio sits within the range the
+    model was trained on" in that case is circular. What actually matters
+    there is the new model's own cross-validated accuracy, plus whether the
+    scores still saturate.
+    """
     shift = assess_distribution_shift(feat_df, artifact)
     saturation = assess_score_saturation(scored_df)
+    trained_here = model_source == "trained_on_your_data"
 
-    if shift["severity"] == "high" or saturation["severity"] == "high":
+    if trained_here:
+        auc = (training_report or {}).get("cv_auc_mean")
+        auc_txt = (f" It scored AUC {auc:.3f} in cross-validation before being used."
+                   if isinstance(auc, (int, float)) else "")
+        if saturation["severity"] == "high":
+            verdict = "use_ranking_only"
+            guidance = (
+                "Scored with a model trained on this portfolio's own payment "
+                "history. A large share of dealers still sit at the extreme ends "
+                "of the scale, so the numeric scores cannot separate them -- use "
+                "the RED / AMBER / GREEN ranking instead." + auc_txt
+            )
+        else:
+            verdict = "scores_reliable"
+            guidance = (
+                "Scored with a model trained on this portfolio's own payment "
+                "history rather than the general model, because this portfolio "
+                "differs from the data that model was built on." + auc_txt
+            )
+    elif shift["severity"] == "high" or saturation["severity"] == "high":
         verdict = "use_ranking_only"
         guidance = (
             "This portfolio differs substantially from the data the model was "
@@ -961,6 +991,7 @@ def build_reliability_report(feat_df: pd.DataFrame, scored_df: pd.DataFrame,
         "guidance": guidance,
         "distribution_shift": shift,
         "score_saturation": saturation,
+        "shift_check_meaningful": not trained_here,
     }
 
 # --- Runtime training on the uploaded portfolio ----------------------------

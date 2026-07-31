@@ -246,9 +246,12 @@ async def score_portfolio(
     all_scored = pd.concat([scored_out, cold[combined_cols]], ignore_index=True)
     all_scored = all_scored.sort_values("credit_score").reset_index(drop=True)
 
-    reliability = build_reliability_report(feat_df, all_scored, active_artifact)
-    reliability["model_source"] = (
-        "trained_on_your_data" if training_report.get("trained") else "pretrained")
+    model_source = ("trained_on_your_data" if training_report.get("trained")
+                    else "pretrained")
+    reliability = build_reliability_report(feat_df, all_scored, active_artifact,
+                                           model_source=model_source,
+                                           training_report=training_report)
+    reliability["model_source"] = model_source
     reliability["training_report"] = training_report
     reliability["pretrained_fit_check"] = pre_shift
 
