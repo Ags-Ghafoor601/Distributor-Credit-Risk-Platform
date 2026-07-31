@@ -1,0 +1,141 @@
+dealer_id,dealer_name,city,sector,salesman_id,salesman_name,is_salesman_favorite,credit_limit_pkr,credit_score,risk_flag,risk_probability,scoring_method
+C-4124,Crescent Enterprises,Sargodha,Unspecified,SO-104,Saad Khan,False,250000.0,409.0,RED,0.9980795952693574,Statistical
+C-4024,Karim Traders,Sukkur,Unspecified,SO-107,Naveed Khan,False,600000.0,418.0,RED,0.9977402976971459,Statistical
+C-4093,Karim Traders,Karachi,Unspecified,SO-103,Owais Siddiqui,False,120000.0,466.0,RED,0.9949069342442721,Statistical
+C-4032,Ittefaq Agency,Karachi,Unspecified,SO-103,Owais Siddiqui,False,40000.0,469.0,RED,0.9946141943175119,Statistical
+C-4080,Haji Sons Enterprises,Sialkot,Unspecified,SO-107,Naveed Khan,False,40000.0,474.0,RED,0.9941333202794761,Statistical
+C-4133,Madni Store,Sukkur,Unspecified,SO-106,Junaid Hashmi,False,600000.0,480.0,RED,0.9934111526598922,Statistical
+C-4102,Bismillah Corporation,Gujrat,Unspecified,SO-107,Naveed Khan,False,120000.0,482.0,RED,0.993269912106962,Statistical
+C-4014,Haji Sons Distributors,Multan,Unspecified,SO-101,Usman Ahmed,False,120000.0,484.0,RED,0.9930165012534576,Statistical
+C-4025,Naya Store,Multan,Unspecified,SO-101,Usman Ahmed,False,75000.0,485.0,RED,0.9928822456862391,Statistical
+C-4108,Indus Brothers,Karachi,Unspecified,SO-104,Saad Khan,False,600000.0,486.0,RED,0.9927329602811805,Statistical
+C-4071,Haji Sons Corporation,Multan,Unspecified,SO-106,Junaid Hashmi,False,600000.0,489.0,RED,0.9923164600058919,Statistical
+C-4051,Shaheen Store,Sukkur,Unspecified,SO-102,Tariq Butt,False,250000.0,507.0,RED,0.9896575442863724,Statistical
+C-4083,New Sharif Distributors,Sukkur,Unspecified,SO-107,Naveed Khan,False,40000.0,508.0,RED,0.9895003022784098,Statistical
+C-4045,Madni Trading Co,Lahore,Unspecified,SO-102,Tariq Butt,False,400000.0,517.0,RED,0.9877563661111098,Statistical
+C-4041,Haji Sons Distributors,Multan,Unspecified,SO-103,Owais Siddiqui,False,400000.0,519.0,RED,0.9871456534656875,Statistical
+C-4135,Indus & Co,Gujrat,Unspecified,SO-104,Saad Khan,False,75000.0,521.0,RED,0.9868095348137831,Statistical
+C-4110,Usman Trading Co,Lahore,Unspecified,SO-105,Kashif Ali,False,250000.0,531.0,RED,0.9844550949436364,Statistical
+C-4125,New Sharif Agency,Lahore,Unspecified,SO-102,Tariq Butt,False,40000.0,538.0,RED,0.9823556472667869,Statistical
+C-4067,Farooq Store,Karachi,Unspecified,SO-102,Tariq Butt,False,600000.0,538.0,RED,0.9824001167988354,Statistical
+C-4113,Al-Noor Distributors,Gujrat,Unspecified,SO-106,Junaid Hashmi,False,250000.0,540.0,RED,0.9817618343059399,Statistical
+C-4046,Yousaf Distributors,Sialkot,Unspecified,SO-101,Usman Ahmed,False,75000.0,541.0,RED,0.9814813568605941,Statistical
+C-4100,Siddiqui Brothers,Bahawalpur,Unspecified,SO-106,Junaid Hashmi,False,75000.0,541.0,RED,0.9815262426741694,Statistical
+C-4062,Madni & Co,Bahawalpur,Unspecified,SO-104,Saad Khan,False,400000.0,545.0,RED,0.9799643025623138,Statistical
+C-4000,Mehran Medicos,Hyderabad,Unspecified,SO-101,Usman Ahmed,False,400000.0,548.0,RED,0.9791937697893173,Statistical
+C-4091,Tahir & Co,Multan,Unspecified,SO-103,Owais Siddiqui,False,250000.0,549.0,RED,0.9785905845186573,Statistical
+C-4040,Indus Trading Co,Karachi,Unspecified,SO-106,Junaid Hashmi,False,250000.0,550.0,RED,0.978405177811781,Statistical
+C-4081,Usman Medicos,Lahore,Unspecified,SO-101,Usman Ahmed,False,40000.0,550.0,RED,0.9782650716450072,Statistical
+C-4022,Siddiqui Enterprises,Sukkur,Unspecified,SO-102,Tariq Butt,False,600000.0,550.0,RED,0.9784713739222041,Statistical
+C-4064,Haji Sons Store,Karachi,Unspecified,SO-105,Kashif Ali,False,75000.0,552.0,RED,0.9775936623207879,Statistical
+C-4098,Iqbal Traders,Gujrat,Unspecified,SO-105,Kashif Ali,False,120000.0,557.0,RED,0.9757531636714828,Statistical
+C-4052,Shaheen Mart,Multan,Unspecified,SO-102,Tariq Butt,False,40000.0,558.0,RED,0.975337389458101,Statistical
+C-4053,Yousaf Brothers,Bahawalpur,Unspecified,SO-105,Kashif Ali,False,75000.0,558.0,RED,0.9753900764557171,Statistical
+C-4112,Bismillah Agency,Sargodha,Unspecified,SO-106,Junaid Hashmi,False,250000.0,560.0,RED,0.9745215104575794,Statistical
+C-4033,Iqbal Enterprises,Karachi,Unspecified,SO-105,Kashif Ali,False,250000.0,561.0,RED,0.9738307468091963,Statistical
+C-4105,Farooq Corporation,Sialkot,Unspecified,SO-103,Owais Siddiqui,False,75000.0,562.0,RED,0.9735788623411435,Statistical
+C-4065,Yousaf & Co,Faisalabad,Unspecified,SO-105,Kashif Ali,False,400000.0,562.0,RED,0.9732806037226729,Statistical
+C-4120,Madni Trading Co,Gujrat,Unspecified,SO-105,Kashif Ali,False,40000.0,569.0,RED,0.9704013387475485,Statistical
+C-4030,Indus Distributors,Bahawalpur,Unspecified,SO-105,Kashif Ali,False,40000.0,571.0,RED,0.9693739334456697,Statistical
+C-4130,Indus Corporation,Karachi,Unspecified,SO-102,Tariq Butt,False,75000.0,575.0,RED,0.9671565498920145,Statistical
+C-4073,Karim Corporation,Multan,Unspecified,SO-105,Kashif Ali,False,40000.0,577.0,RED,0.9657606626762153,Statistical
+C-4019,Zam Zam Medicos,Hyderabad,Unspecified,SO-102,Tariq Butt,False,120000.0,580.0,RED,0.9639967594813617,Statistical
+C-4006,Anwar Enterprises,Gujrat,Unspecified,SO-102,Tariq Butt,False,250000.0,580.0,RED,0.964071667121552,Statistical
+C-4058,Madni Mart,Faisalabad,Unspecified,SO-103,Owais Siddiqui,False,75000.0,584.0,AMBER,0.9617044962265793,Statistical
+C-4007,Shaheen Trading Co,Sukkur,Unspecified,SO-105,Kashif Ali,False,250000.0,585.0,AMBER,0.961072099304432,Statistical
+C-4114,Anwar Corporation,Faisalabad,Unspecified,SO-102,Tariq Butt,False,120000.0,593.0,AMBER,0.9555031783226013,Statistical
+C-4059,Yousaf Store,Karachi,Unspecified,SO-103,Owais Siddiqui,False,120000.0,599.0,AMBER,0.9507215383371821,Statistical
+C-4103,Chishtia Brothers,Multan,Unspecified,SO-106,Junaid Hashmi,False,40000.0,611.0,AMBER,0.9398657816556688,Statistical
+C-4066,Usman Mart,Lahore,Unspecified,SO-106,Junaid Hashmi,False,400000.0,613.0,AMBER,0.9382742721298456,Statistical
+C-4056,Al-Madina & Co,Gujrat,Unspecified,SO-106,Junaid Hashmi,False,40000.0,616.0,AMBER,0.9345551208427819,Statistical
+C-4034,Naya Distributors,Gujrat,Unspecified,SO-102,Tariq Butt,False,75000.0,650.0,AMBER,0.8894397838536898,Statistical
+C-4028,Usman Agency,Karachi,Unspecified,SO-105,Kashif Ali,False,75000.0,651.0,AMBER,0.8867749229049042,Statistical
+C-4039,Indus Distributors,Hyderabad,Unspecified,SO-101,Usman Ahmed,False,600000.0,723.0,GREEN,0.6930447403764703,Statistical
+C-4137,Crescent Store,Karachi,Unspecified,SO-107,Naveed Khan,False,600000.0,768.0,GREEN,0.5082086667475074,Statistical
+C-4036,Chishtia Store,Faisalabad,Unspecified,SO-107,Naveed Khan,False,250000.0,770.0,GREEN,0.4990926509548185,Statistical
+C-4027,Tahir Distributors,Karachi,Unspecified,SO-107,Naveed Khan,False,600000.0,770.0,GREEN,0.4993899536083617,Statistical
+C-4109,Al-Madina Store,Faisalabad,Unspecified,SO-107,Naveed Khan,False,75000.0,775.0,GREEN,0.47659217130154263,Statistical
+C-4026,Anwar Distributors,Sukkur,Unspecified,SO-107,Naveed Khan,False,600000.0,777.0,GREEN,0.4699884243125615,Statistical
+C-4094,Al-Noor Medicos,Gujrat,Unspecified,SO-107,Naveed Khan,False,120000.0,788.0,GREEN,0.42330192163296426,Statistical
+C-4078,Iqbal Agency,Faisalabad,Unspecified,SO-107,Naveed Khan,False,120000.0,789.0,GREEN,0.4161288929849785,Statistical
+C-4101,Waheed Mart,Sargodha,Unspecified,SO-107,Naveed Khan,False,250000.0,791.0,GREEN,0.4102739963505053,Statistical
+C-4138,Bismillah Trading Co,Lahore,Unspecified,SO-107,Naveed Khan,False,75000.0,793.0,GREEN,0.39972929310064237,Statistical
+C-4010,Tahir Trading Co,Sukkur,Unspecified,SO-101,Usman Ahmed,False,600000.0,796.0,GREEN,0.39011275796837297,Statistical
+C-4017,Shaheen Agency,Gujrat,Unspecified,SO-101,Usman Ahmed,False,600000.0,797.0,GREEN,0.38541619270819244,Statistical
+C-4136,Crescent Enterprises,Sialkot,Unspecified,SO-102,Tariq Butt,False,600000.0,797.0,GREEN,0.3842084883522428,Statistical
+C-4119,Indus Corporation,Sargodha,Unspecified,SO-104,Saad Khan,False,400000.0,798.0,GREEN,0.3789546545584252,Statistical
+C-4061,Chishtia Brothers,Karachi,Unspecified,SO-106,Junaid Hashmi,False,600000.0,801.0,GREEN,0.36937949492725203,Statistical
+C-4047,Chishtia Agency,Karachi,Unspecified,SO-107,Naveed Khan,False,400000.0,801.0,GREEN,0.36784573505593693,Statistical
+C-4001,New Sharif Distributors,Lahore,Unspecified,SO-101,Usman Ahmed,False,250000.0,805.0,GREEN,0.3516104034216173,Statistical
+C-4035,Chishtia Brothers,Hyderabad,Unspecified,SO-103,Owais Siddiqui,False,600000.0,806.0,GREEN,0.3491984402489019,Statistical
+C-4048,Mehran Distributors,Sargodha,Unspecified,SO-104,Saad Khan,False,250000.0,807.0,GREEN,0.34626109035569064,Statistical
+C-4021,Chishtia Store,Sukkur,Unspecified,SO-101,Usman Ahmed,False,120000.0,808.0,GREEN,0.34144900773313885,Statistical
+C-4055,Karim Trading Co,Hyderabad,Unspecified,SO-107,Naveed Khan,False,40000.0,808.0,GREEN,0.3412595362648421,Statistical
+C-4016,Indus Trading Co,Sargodha,Unspecified,SO-106,Junaid Hashmi,False,600000.0,809.0,GREEN,0.3377912446944783,Statistical
+C-4013,Ittefaq Enterprises,Sargodha,Unspecified,SO-106,Junaid Hashmi,False,250000.0,810.0,GREEN,0.3318098603249827,Statistical
+C-4088,Yousaf Traders,Multan,Unspecified,SO-101,Usman Ahmed,False,120000.0,813.0,GREEN,0.32252427900094904,Statistical
+C-4126,Chishtia Enterprises,Bahawalpur,Unspecified,SO-106,Junaid Hashmi,False,75000.0,815.0,GREEN,0.3154997923259143,Statistical
+C-4122,Bismillah Brothers,Karachi,Unspecified,SO-105,Kashif Ali,False,120000.0,815.0,GREEN,0.31500435931665016,Statistical
+C-4123,Farooq Medicos,Karachi,Unspecified,SO-107,Naveed Khan,False,40000.0,815.0,GREEN,0.3150661546469006,Statistical
+C-4115,Al-Habib Brothers,Sargodha,Unspecified,SO-101,Usman Ahmed,False,75000.0,816.0,GREEN,0.3096066419560506,Statistical
+C-4020,Usman Corporation,Sargodha,Unspecified,SO-104,Saad Khan,False,250000.0,817.0,GREEN,0.30715526279407784,Statistical
+C-4082,New Sharif Mart,Multan,Unspecified,SO-107,Naveed Khan,False,40000.0,819.0,GREEN,0.3004857822796672,Statistical
+C-4090,Chishtia Enterprises,Bahawalpur,Unspecified,SO-101,Usman Ahmed,False,400000.0,821.0,GREEN,0.29150584483051234,Statistical
+C-4087,Al-Habib Corporation,Multan,Unspecified,SO-105,Kashif Ali,False,600000.0,826.0,GREEN,0.2761005929509471,Statistical
+C-4131,Sabir Store,Hyderabad,Unspecified,SO-102,Tariq Butt,False,400000.0,826.0,GREEN,0.276015332422808,Statistical
+C-4077,Bismillah Medicos,Bahawalpur,Unspecified,SO-106,Junaid Hashmi,False,75000.0,826.0,GREEN,0.2755237202470809,Statistical
+C-4121,Bismillah Agency,Lahore,Unspecified,SO-106,Junaid Hashmi,False,40000.0,827.0,GREEN,0.27022685934718266,Statistical
+C-4009,Al-Madina Medicos,Sukkur,Unspecified,SO-103,Owais Siddiqui,False,250000.0,829.0,GREEN,0.2632951186202622,Statistical
+C-4043,Sabir Trading Co,Sialkot,Unspecified,SO-101,Usman Ahmed,False,250000.0,829.0,GREEN,0.26513573476322105,Statistical
+C-4069,Sabir Traders,Lahore,Unspecified,SO-102,Tariq Butt,False,600000.0,833.0,GREEN,0.2525715464333789,Statistical
+C-4005,Usman & Co,Multan,Unspecified,SO-106,Junaid Hashmi,False,250000.0,834.0,GREEN,0.24759243071539802,Statistical
+C-4037,Indus Mart,Gujrat,Unspecified,SO-103,Owais Siddiqui,False,40000.0,838.0,GREEN,0.2343110491594973,Statistical
+C-4031,New Sharif Enterprises,Faisalabad,Unspecified,SO-103,Owais Siddiqui,False,600000.0,839.0,GREEN,0.23187164128699703,Statistical
+C-4063,Haji Sons & Co,Sukkur,Unspecified,SO-106,Junaid Hashmi,False,75000.0,840.0,GREEN,0.2284004529265716,Statistical
+C-4042,Chishtia Brothers,Gujrat,Unspecified,SO-105,Kashif Ali,False,400000.0,841.0,GREEN,0.2268933302905463,Statistical
+C-4084,Karim Brothers,Gujrat,Unspecified,SO-102,Tariq Butt,False,400000.0,842.0,GREEN,0.22317988249471765,Statistical
+C-4134,Al-Noor Corporation,Lahore,Unspecified,SO-106,Junaid Hashmi,False,40000.0,844.0,GREEN,0.21635541700921515,Statistical
+C-4068,Kausar Traders,Sukkur,Unspecified,SO-105,Kashif Ali,False,400000.0,844.0,GREEN,0.21813085736154036,Statistical
+C-4128,Karim & Co,Bahawalpur,Unspecified,SO-104,Saad Khan,False,250000.0,845.0,GREEN,0.21380298353500976,Statistical
+C-4116,Bilal Store,Faisalabad,Unspecified,SO-104,Saad Khan,False,400000.0,848.0,GREEN,0.20465801241894543,Statistical
+C-4023,New Sharif Trading Co,Multan,Unspecified,SO-106,Junaid Hashmi,False,75000.0,848.0,GREEN,0.2041889686088471,Statistical
+C-4029,Mehran Mart,Gujrat,Unspecified,SO-102,Tariq Butt,False,75000.0,851.0,GREEN,0.19793756141425983,Statistical
+C-4038,Rehman & Agency,Sukkur,Unspecified,SO-105,Kashif Ali,False,400000.0,851.0,GREEN,0.19574584131458153,Statistical
+C-4097,Indus Trading Co,Sialkot,Unspecified,SO-104,Saad Khan,False,400000.0,851.0,GREEN,0.19820862273883363,Statistical
+C-4106,Usman Brothers,Multan,Unspecified,SO-103,Owais Siddiqui,False,120000.0,852.0,GREEN,0.1949683850907012,Statistical
+C-4107,Sabir Distributors,Hyderabad,Unspecified,SO-103,Owais Siddiqui,False,75000.0,855.0,GREEN,0.18534031759890854,Statistical
+C-4011,Usman Enterprises,Sargodha,Unspecified,SO-103,Owais Siddiqui,False,75000.0,856.0,GREEN,0.1835533277509956,Statistical
+C-4075,Sabir Store,Sukkur,Unspecified,SO-107,Naveed Khan,False,40000.0,856.0,GREEN,0.18390992083380112,Statistical
+C-4050,Zam Zam Mart,Gujrat,Unspecified,SO-102,Tariq Butt,False,250000.0,857.0,GREEN,0.17986536189443475,Statistical
+C-4076,Tahir Brothers,Sukkur,Unspecified,SO-101,Usman Ahmed,False,40000.0,858.0,GREEN,0.17945144828765866,Statistical
+C-4070,Tahir & Co,Multan,Unspecified,SO-101,Usman Ahmed,False,120000.0,858.0,GREEN,0.17918526949676916,Statistical
+C-4095,Yousaf Brothers,Sukkur,Unspecified,SO-105,Kashif Ali,False,400000.0,859.0,GREEN,0.1748509321123423,Statistical
+C-4089,Kausar Store,Multan,Unspecified,SO-105,Kashif Ali,False,120000.0,860.0,GREEN,0.1740452210564063,Statistical
+C-4085,Siddiqui Brothers,Karachi,Unspecified,SO-105,Kashif Ali,False,40000.0,862.0,GREEN,0.16757299583139218,Statistical
+C-4127,Usman Agency,Hyderabad,Unspecified,SO-105,Kashif Ali,False,600000.0,864.0,GREEN,0.16363373520388436,Statistical
+C-4008,Mehran Trading Co,Lahore,Unspecified,SO-105,Kashif Ali,False,75000.0,865.0,GREEN,0.16093564005668384,Statistical
+C-4044,Usman Traders,Hyderabad,Unspecified,SO-102,Tariq Butt,False,400000.0,867.0,GREEN,0.1557449553381996,Statistical
+C-4096,Bilal Distributors,Multan,Unspecified,SO-103,Owais Siddiqui,False,120000.0,867.0,GREEN,0.15792288589871245,Statistical
+C-4018,Bilal & Co,Bahawalpur,Unspecified,SO-105,Kashif Ali,False,40000.0,868.0,GREEN,0.15564530122447565,Statistical
+C-4079,Iqbal & Co,Multan,Unspecified,SO-103,Owais Siddiqui,False,120000.0,870.0,GREEN,0.14925211643416167,Statistical
+C-4117,Chishtia Mart,Bahawalpur,Unspecified,SO-104,Saad Khan,False,75000.0,871.0,GREEN,0.1473048294508857,Statistical
+C-4060,Bilal Trading Co,Sargodha,Unspecified,SO-106,Junaid Hashmi,False,400000.0,874.0,GREEN,0.14153325675242281,Statistical
+C-4049,Naya & Co,Sukkur,Unspecified,SO-102,Tariq Butt,False,120000.0,875.0,GREEN,0.13980390320716565,Statistical
+C-4002,Farooq Medicos,Bahawalpur,Unspecified,SO-103,Owais Siddiqui,False,600000.0,876.0,GREEN,0.1365383294736009,Statistical
+C-4057,Ittefaq Brothers,Gujrat,Unspecified,SO-103,Owais Siddiqui,False,400000.0,876.0,GREEN,0.13714480160361192,Statistical
+C-4092,Bilal Traders,Sialkot,Unspecified,SO-102,Tariq Butt,False,75000.0,877.0,GREEN,0.13426984389059418,Statistical
+C-4012,Sabir Distributors,Sukkur,Unspecified,SO-103,Owais Siddiqui,False,75000.0,878.0,GREEN,0.13239919747105713,Statistical
+C-4104,Shaheen Mart,Gujrat,Unspecified,SO-105,Kashif Ali,False,120000.0,879.0,GREEN,0.13212516970779487,Statistical
+C-4086,Shaheen Distributors,Multan,Unspecified,SO-106,Junaid Hashmi,False,75000.0,879.0,GREEN,0.13077266455636552,Statistical
+C-4072,Zam Zam Traders,Karachi,Unspecified,SO-101,Usman Ahmed,False,75000.0,882.0,GREEN,0.1254281048050383,Statistical
+C-4132,Al-Noor & Co,Sialkot,Unspecified,SO-103,Owais Siddiqui,False,40000.0,883.0,GREEN,0.12304884171635765,Statistical
+C-4074,Rehman & & Co,Sialkot,Unspecified,SO-102,Tariq Butt,False,250000.0,884.0,GREEN,0.12100492353406696,Statistical
+C-4004,Al-Madina Brothers,Hyderabad,Unspecified,SO-103,Owais Siddiqui,False,120000.0,885.0,GREEN,0.11942518455229377,Statistical
+C-4099,Mehran Traders,Gujrat,Unspecified,SO-105,Kashif Ali,False,120000.0,886.0,GREEN,0.11789188018819416,Statistical
+C-4111,Iqbal Traders,Bahawalpur,Unspecified,SO-103,Owais Siddiqui,False,75000.0,891.0,GREEN,0.10975117884701098,Statistical
+C-4054,Iqbal Store,Karachi,Unspecified,SO-104,Saad Khan,False,400000.0,895.0,GREEN,0.10232420580473581,Statistical
+C-4003,Al-Madina Store,Karachi,Unspecified,SO-102,Tariq Butt,False,75000.0,897.0,GREEN,0.10019903812783962,Statistical
+C-4129,New Sharif Brothers,Sialkot,Unspecified,SO-105,Kashif Ali,False,250000.0,900.0,GREEN,0.09130563272189272,Statistical
+C-4015,Siddiqui Brothers,Sargodha,Unspecified,SO-102,Tariq Butt,False,120000.0,900.0,GREEN,0.09069806211968962,Statistical
+C-4118,Haji Sons Mart,Gujrat,Unspecified,SO-101,Usman Ahmed,False,120000.0,900.0,GREEN,0.08165656686555466,Statistical
+C-4139,Crescent Brothers,Sialkot,Unspecified,SO-102,Tariq Butt,False,75000.0,900.0,GREEN,0.06208424143236222,Statistical

@@ -1093,7 +1093,8 @@ def try_train_on_uploaded_data(dealers, salesmen, txns, reference_artifact):
     minority = int(counts.min()) if len(counts) == 2 else 0
     if minority < MIN_MINORITY_CLASS:
         return None, {"attempted": True, "trained": False,
-                      "reason": (f"outcome classes too imbalanced ({dict(counts)}); "
+                      "reason": (f"outcome classes too imbalanced "
+                                 f"({ {int(k): int(v) for k, v in counts.items()} }); "
                                  f"need at least {MIN_MINORITY_CLASS} dealers in each "
                                  f"of defaulted / did-not-default")}
 
