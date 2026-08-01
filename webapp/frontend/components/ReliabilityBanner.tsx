@@ -104,6 +104,13 @@ export default function ReliabilityBanner({ reliability, cutoffInfo, inputNotes 
                     {typeof tr.outcome_window_months === "number" &&
                       ` · outcomes measured over the last ${tr.outcome_window_months} months`}
                   </p>
+                  {tr.late_threshold_basis && (
+                    <p className="font-body text-[12.5px] text-grey mt-1">
+                      Counted a dealer as late past{" "}
+                      <span className="font-mono">{tr.late_threshold_days}</span> days —{" "}
+                      {tr.late_threshold_basis}
+                    </p>
+                  )}
                 </div>
               )}
 

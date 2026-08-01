@@ -64,6 +64,8 @@ export interface TrainingReport {
   feature_window_ends?: string;
   outcome_window_months?: number;
   history_span_months?: number;
+  late_threshold_days?: number;
+  late_threshold_basis?: string;
 }
 
 export interface Reliability {

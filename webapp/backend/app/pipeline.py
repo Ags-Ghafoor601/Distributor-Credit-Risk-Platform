@@ -1036,9 +1036,51 @@ def _resolve_training_windows(txns: pd.DataFrame):
             "span_months": round(span_months, 1),
             "label_months": int(round(label_months))}, None
 
+def resolve_late_threshold(label_window_txns: pd.DataFrame) -> tuple[float, dict]:
+    """How many days late counts as a default -- derived per portfolio.
+
+    This is a property of the market, not a universal constant. A distributor
+    on 60-day terms has entirely different norms from one on 15-day terms; a
+    single fixed number either labels the whole book as defaulters or none of
+    it. In testing, a wholesale portfolio where every dealer paid 34-78 days
+    late was labelled 100% high-risk by a 15-day rule, and training correctly
+    refused to run on a degenerate target.
+
+    Derived as median + 2 x MAD of this portfolio's own average lateness,
+    floored at LATE_LABEL_THRESHOLD_DAYS. Median/MAD is robust to the very
+    outliers being detected, and unlike a percentile it does not assume a
+    fixed share of every book is bad: a tightly-clustered market flags few
+    dealers, a widely-spread one flags more. A normal fast-paying market
+    falls below the floor and keeps the conventional threshold.
+    """
+    floor = float(LATE_LABEL_THRESHOLD_DAYS)
+    nb = label_window_txns[label_window_txns["cheque_bounced"] == False]
+    if len(nb) == 0:
+        return floor, {"days": floor,
+                       "basis": "configured floor (no settled payments to measure)"}
+
+    per_dealer = nb.groupby("dealer_id")["days_late"].mean().dropna()
+    if len(per_dealer) < 5:
+        return floor, {"days": floor,
+                       "basis": "configured floor (too few dealers to infer a market norm)"}
+
+    vals = per_dealer.values
+    median = float(np.median(vals))
+    mad = float(np.median(np.abs(vals - median)))
+    derived = median + 2.0 * mad
+
+    if derived <= floor:
+        return floor, {"days": round(floor, 1),
+                       "basis": f"configured floor (this market's norm is {median:.0f} days, "
+                                f"below the {floor:.0f}-day floor)"}
+    return derived, {"days": round(derived, 1),
+                     "basis": f"derived from this portfolio (typical dealer pays {median:.0f} days "
+                              f"late, so {derived:.0f} days marks an outlier)"}
 
 def _build_training_labels(txns, cutoff, label_end):
+    """Returns (labels_df, late_threshold_info)."""
     lw = txns[(txns["due_date"] >= cutoff) & (txns["due_date"] <= label_end)]
+    threshold, late_info = resolve_late_threshold(lw)
     rows = []
     for did, g in lw.groupby("dealer_id"):
         if len(g) < MIN_INVOICES:
@@ -1048,9 +1090,9 @@ def _build_training_labels(txns, cutoff, label_end):
         rows.append({
             "dealer_id": did,
             "is_high_risk": int(bool(g["cheque_bounced"].any())
-                                or avg_late > LATE_LABEL_THRESHOLD_DAYS),
+                                or avg_late > threshold),
         })
-    return pd.DataFrame(rows)
+    return pd.DataFrame(rows), late_info
 
 
 def _ks_statistic(y_true, y_prob):
@@ -1076,7 +1118,7 @@ def try_train_on_uploaded_data(dealers, salesmen, txns, reference_artifact):
         return None, {"attempted": True, "trained": False,
                       "reason": "no dealers had enough history before the training cutoff"}
 
-    labels = _build_training_labels(txns, windows["cutoff"], windows["label_end"])
+    labels, late_info = _build_training_labels(txns, windows["cutoff"], windows["label_end"])
     if len(labels) == 0:
         return None, {"attempted": True, "trained": False,
                       "reason": "no dealers had enough activity in the outcome window"}
@@ -1131,6 +1173,8 @@ def try_train_on_uploaded_data(dealers, salesmen, txns, reference_artifact):
         "feature_window_ends": str(windows["cutoff"].date()),
         "outcome_window_months": windows["label_months"],
         "history_span_months": windows["span_months"],
+        "late_threshold_days": late_info["days"],
+        "late_threshold_basis": late_info["basis"],
     }
     artifact = {"model": model, "scaler": scaler,
                 "feature_columns": feature_cols, "score_params": score_params,
