@@ -1,0 +1,145 @@
+%==============================================================
+%  skillSYNC — Pair B — Project Portfolio Summary
+%  Compile with pdfLaTeX on Overleaf.
+%==============================================================
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage[scaled=0.92]{helvet}
+\usepackage[margin=1.5cm,top=1.2cm,bottom=1.2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+%---------------- palette ----------------
+\definecolor{navy}{HTML}{1E2761}
+\definecolor{navydeep}{HTML}{14193F}
+\definecolor{gold}{HTML}{C9A24B}
+\definecolor{ice}{HTML}{CADCFC}
+\definecolor{parch}{HTML}{F7F4EE}
+\definecolor{ink}{HTML}{1A1A2E}
+\definecolor{slate}{HTML}{5A5A72}
+\definecolor{rule}{HTML}{DDD6C8}
+
+\color{ink}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\renewcommand{\arraystretch}{1.25}
+
+%---------------- header band ----------------
+\newcommand{\headerband}{%
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[navydeep] (current page.north west) rectangle
+        ([yshift=-3.05cm]current page.north east);
+  \foreach \i in {1,...,5}{
+    \fill[gold,opacity=0.13]
+      ([yshift=-\i*0.52cm]current page.north west) rectangle
+      ([yshift=-\i*0.52cm-0.035cm]current page.north east);}
+\end{tikzpicture}}
+
+%---------------- project title rule ----------------
+\newcommand{\projecthead}[3]{%
+\vspace{2pt}
+{\color{navy}\bfseries\large #1}\;%
+{\color{gold}\rule[2pt]{7pt}{7pt}}\;%
+{\color{slate}\small #2}\par\vspace{2pt}
+{\color{slate}\small\itshape\raggedright #3\par}\vspace{4pt}}
+
+%---------------- labelled row ----------------
+\newcommand{\lbl}[1]{{\color{navy}\bfseries\footnotesize #1}}
+
+\begin{document}
+\headerband
+
+%==============================================================
+% MASTHEAD
+%==============================================================
+\vspace{-0.35cm}
+{\color{white}\fontsize{19}{22}\selectfont\bfseries Project Portfolio Summary}\\[3pt]
+{\color{gold}\footnotesize\bfseries skillSYNC \;\textbar\; a skillit company \hfill}\\[2pt]
+{\color{ice}\footnotesize Pair B \;\textbar\; Abdul Ghafoor \;\textperiodcentered\; Ahmed Qureshi \hfill
+ \color{ice}\footnotesize AI/ML Engineering Track}
+
+\vspace{1.55cm}
+
+%==============================================================
+% PROJECT 01
+%==============================================================
+\projecthead{01\;\; The Ledger — Distributor Credit Risk Engine}
+{skillSYNC Problem 01}
+{A credit scorecard that reads a distributor's own payment ledger and returns a defensible 300--900 risk score for every dealer.}
+
+\begin{tabularx}{\textwidth}{@{}p{2.75cm}X@{}}
+\lbl{Product} &
+Web application (FastAPI + Next.js) that ingests three raw CSV exports --- dealers, salesmen, invoice history --- and returns a ranked risk table, per-dealer reason codes, and a downloadable Word risk memo for each account. Deployed and publicly accessible. \\[1pt]
+
+\lbl{Target audience} &
+Owners of Pakistani FMCG, pharmaceutical and textile distribution houses managing 50--500 dealers, together with the finance leads and 3--10 field salesmen operating under them. Deliberately built for businesses with \emph{no} ERP and no data team. \\[1pt]
+
+\lbl{Problem} &
+Trade credit is extended on a salesman's word --- \emph{``yaar, acha banda hai''} --- with no structured assessment. Distributors report 3--7\% of revenue lost to bad debt, PKR~1M+ in annual write-offs, and 100+ hours a year chasing payments. The salesman who vouches carries none of the downside risk. \\[1pt]
+
+\lbl{How it works} &
+Six locally-grounded behavioural signals are engineered from raw invoice history: post-dated cheque bounce rate, Eid/Ramzan-adjusted lateness, salesman-vouch bias (leave-one-out), territory clustering, PKR-inflation-adjusted exposure, and order-frequency trend. A Weight-of-Evidence logistic scorecard converts these to a 300--900 score with plain-language reason codes. Features and outcomes are split temporally, so the model predicts future behaviour rather than restating the past. \\
+\end{tabularx}
+
+\vspace{3pt}
+\begin{tcolorbox}[colback=parch,colframe=rule,boxrule=0.4pt,arc=1.5pt,
+                  left=6pt,right=6pt,top=4pt,bottom=4pt]
+{\color{navy}\bfseries\footnotesize ADVANTAGE OVER ALTERNATIVES}\\[2pt]
+\footnotesize
+\textbf{vs.\ salesman judgement:} surfaces risk in accounts the sales team personally vouches for --- five such dealers were flagged in the reference portfolio.\;
+\textbf{vs.\ credit bureaus:} works where no bureau coverage exists for small retailers.\;
+\textbf{vs.\ black-box ML:} every score decomposes into named, auditable reasons an owner can challenge.\;
+\textbf{vs.\ generic scorecards:} adapts to each uploaded portfolio --- reads unfamiliar column names and date formats, derives its own feature window and market-specific late-payment threshold, and trains a portfolio-specific model when the general one is a poor fit.\;
+\textbf{Uniquely, it reports its own reliability} and declines to score rather than producing confident output on unsuitable data.\\[3pt]
+{\color{slate}\scriptsize \textbf{Limitation:} validated on constructed portfolios with known outcomes; no real-world default has been observed yet. The RED/AMBER/GREEN tier is the reliable signal, the exact score directional.}
+\end{tcolorbox}
+
+\vspace{7pt}
+
+%==============================================================
+% PROJECT 02
+%==============================================================
+\projecthead{02\;\; Law Firm RAG System — Legal Research Assistant}
+{skillSYNC Problem 07}
+{A retrieval-augmented assistant that answers questions from a firm's own case files and drafts legal memos with traceable citations.}
+
+\begin{tabularx}{\textwidth}{@{}p{2.75cm}X@{}}
+\lbl{Product} &
+A Retrieval-Augmented Generation pipeline over a law firm's private document corpus, served through a React interface. Supports natural-language querying of case files and automated generation of structured legal memos grounded in retrieved source passages. \\[1pt]
+
+\lbl{Target audience} &
+Small and mid-sized Pakistani law firms --- partners, associates and paralegals --- who hold years of case history in unindexed folders of PDFs and scanned documents. \\[1pt]
+
+\lbl{Problem} &
+Legal research inside a firm's own archive is manual, slow and dependent on whoever remembers the file. Junior associates spend hours locating precedent that already exists in-house, and knowledge leaves the firm when a lawyer does. \\[1pt]
+
+\lbl{How it works} &
+Documents are chunked and embedded using multilingual embeddings suited to English/Urdu legal text, then indexed in a ChromaDB vector store. A router query engine directs each question to the appropriate retrieval strategy, and the generation layer answers strictly from retrieved context --- with citations back to the source document, so no assertion is unverifiable. \\
+\end{tabularx}
+
+\vspace{3pt}
+\begin{tcolorbox}[colback=parch,colframe=rule,boxrule=0.4pt,arc=1.5pt,
+                  left=6pt,right=6pt,top=4pt,bottom=4pt]
+{\color{navy}\bfseries\footnotesize ADVANTAGE OVER ALTERNATIVES}\\[2pt]
+\footnotesize
+\textbf{vs.\ manual search:} reduces precedent-finding from hours to seconds across the firm's entire archive.\;
+\textbf{vs.\ general-purpose chatbots:} answers only from the firm's own documents, with citations --- eliminating the fabricated-case-law risk that has already drawn sanctions in foreign courts.\;
+\textbf{vs.\ foreign legal platforms:} handles Pakistani legal material and mixed English/Urdu text, which international products do not cover.\;
+\textbf{vs.\ cloud legal SaaS:} the corpus stays under the firm's control, preserving client confidentiality and privilege.\\[3pt]
+{\color{slate}\scriptsize \textbf{Limitation:} answer quality is bounded by the quality and coverage of the firm's own archive; the system retrieves and cites, it does not exercise legal judgement.}
+\end{tcolorbox}
+
+\vspace{6pt}
+{\color{slate}\scriptsize
+Both projects target Pakistani small and mid-sized businesses underserved by international software: sectors where the data is real but unstructured, and where an explainable, locally-grounded system is worth more than a technically sophisticated opaque one.}
+
+\end{document}

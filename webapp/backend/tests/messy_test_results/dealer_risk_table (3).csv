@@ -1,0 +1,131 @@
+dealer_id,dealer_name,city,sector,salesman_id,salesman_name,is_salesman_favorite,credit_limit_pkr,credit_score,risk_flag,risk_probability,scoring_method
+DLR5096,Jinnah Traders,Karachi,Pharma,SM-22,Sohail Awan,False,500000.0,424.0,RED,0.9974978679440101,Statistical
+DLR5071,Royal Corporation,Quetta,FMCG,SM-27,Yasir Zafar,False,180000.0,446.0,RED,0.9963806550500472,Statistical
+DLR5039,Sitara Depot,Rawalpindi,Textile,SM-23,Asif Sultan,False,60000.0,455.0,RED,0.9957725880526946,Statistical
+DLR5111,Pak Traders,Quetta,FMCG,SM-25,Amir Mirza,False,500000.0,459.0,RED,0.9954836644206315,Statistical
+DLR5102,Chenab Enterprises,Lahore,Textile,SM-26,Danish Haider,False,60000.0,476.0,RED,0.9938997612059841,Statistical
+DLR5100,Jinnah & Sons,Peshawar,Pharma,SM-23,Asif Sultan,True,110000.0,484.0,RED,0.9930438260435959,Statistical
+DLR5112,Royal Store,Multan,Textile,SM-23,Asif Sultan,False,500000.0,487.0,RED,0.9925991442450399,Statistical
+DLR5047,Jinnah Agency,Rawalpindi,Textile,SM-25,Amir Mirza,False,500000.0,490.0,RED,0.9922047436990183,Statistical
+DLR5050,Pak Enterprises,Quetta,Pharma,SM-22,Sohail Awan,False,110000.0,490.0,RED,0.9921731380676014,Statistical
+DLR5006,Sahara Brothers,Rawalpindi,Textile,SM-24,Danish Bhatti,False,110000.0,496.0,RED,0.9913386011678947,Statistical
+DLR5015,Al-Rehman Enterprises,Peshawar,FMCG,SM-23,Asif Sultan,False,60000.0,499.0,RED,0.9909275082573559,Statistical
+DLR5085,Khyber Distributors,Quetta,Textile,SM-24,Danish Bhatti,False,350000.0,518.0,RED,0.9874452179614824,Statistical
+DLR5117,Pak Distributors,Peshawar,Textile,SM-22,Sohail Awan,False,110000.0,519.0,RED,0.9872645704420213,Statistical
+DLR5041,Al-Rehman Agency,Quetta,FMCG,SM-21,Salman Haider,False,110000.0,523.0,RED,0.98644423421615,Statistical
+DLR5079,Noor Traders,Quetta,Pharma,SM-27,Yasir Zafar,False,60000.0,526.0,RED,0.9856009283599095,Statistical
+DLR5056,Nishat Traders,Lahore,FMCG,SM-25,Amir Mirza,False,180000.0,532.0,RED,0.9839678393350626,Statistical
+DLR5089,Gulshan Depot,Quetta,Pharma,SM-24,Danish Bhatti,False,500000.0,534.0,RED,0.9833832341604958,Statistical
+DLR5055,Ittehad Brothers,Peshawar,FMCG,SM-25,Amir Mirza,False,110000.0,536.0,RED,0.9830317206072007,Statistical
+DLR5034,Falak Brothers,Quetta,Textile,SM-22,Sohail Awan,True,110000.0,537.0,RED,0.9825076843308258,Statistical
+DLR5121,Al-Rehman Depot,Peshawar,FMCG,SM-25,,False,180000.0,538.0,AMBER-CAUTION,,Provisional (Cold-Start)
+DLR5109,Noor Brothers,Multan,FMCG,SM-26,Danish Haider,False,180000.0,539.0,RED,0.9819571927942681,Statistical
+DLR5036,Sitara Store,Peshawar,Pharma,SM-26,Danish Haider,False,110000.0,542.0,RED,0.9809881296110003,Statistical
+DLR5081,Bolan Traders,Quetta,FMCG,SM-25,Amir Mirza,False,350000.0,546.0,RED,0.9798613810708229,Statistical
+DLR5037,Meezan Distributors,Rawalpindi,Textile,SM-27,Yasir Zafar,True,60000.0,550.0,RED,0.9783486248952843,Statistical
+DLR5002,Ittehad Corporation,Lahore,Pharma,SM-22,Sohail Awan,False,60000.0,551.0,RED,0.9779103279230863,Statistical
+DLR5038,Zamzam Agency,Multan,Textile,SM-23,Asif Sultan,True,60000.0,555.0,RED,0.9763595067864941,Statistical
+DLR5125,Gulshan Store,Karachi,FMCG,SM-27,,False,180000.0,556.0,AMBER-CAUTION,,Provisional (Cold-Start)
+DLR5052,Gulshan Depot,Karachi,Textile,SM-24,Danish Bhatti,False,500000.0,568.0,RED,0.9708740007054156,Statistical
+DLR5124,Falak Traders,Karachi,Textile,SM-25,,False,180000.0,577.0,AMBER-STANDARD,,Provisional (Cold-Start)
+DLR5023,Sunny Mart,Peshawar,FMCG,SM-26,Danish Haider,True,500000.0,578.0,RED,0.9653910474097973,Statistical
+DLR5090,Khyber Traders,Karachi,FMCG,SM-23,Asif Sultan,True,350000.0,581.0,AMBER,0.9637623978756241,Statistical
+DLR5016,Gulshan Mart,Sahiwal,Pharma,SM-27,Yasir Zafar,False,350000.0,582.0,AMBER,0.962651858577172,Statistical
+DLR5076,Jinnah Store,Peshawar,Textile,SM-27,Yasir Zafar,False,500000.0,582.0,AMBER,0.9629467619459203,Statistical
+DLR5127,Jinnah Store,Quetta,Textile,SM-23,,False,500000.0,585.0,AMBER-STANDARD,,Provisional (Cold-Start)
+DLR5054,Iqra Trading Co,Karachi,Textile,SM-27,Yasir Zafar,False,110000.0,600.0,AMBER,0.9502067997619652,Statistical
+DLR5123,Falak Agency,Rawalpindi,FMCG,SM-24,,False,60000.0,611.0,AMBER-STANDARD,,Provisional (Cold-Start)
+DLR5119,Meezan Depot,Karachi,FMCG,SM-22,,False,110000.0,638.0,AMBER-STANDARD,,Provisional (Cold-Start)
+DLR5122,Royal Mart,Multan,FMCG,SM-23,,False,180000.0,643.0,AMBER-STANDARD,,Provisional (Cold-Start)
+DLR5128,Chenab Distributors,Multan,FMCG,SM-23,,True,110000.0,643.0,AMBER-STANDARD,,Provisional (Cold-Start)
+DLR5118,Sunny Brothers,Karachi,Pharma,SM-26,,False,60000.0,650.0,AMBER-STANDARD,,Provisional (Cold-Start)
+DLR5120,Nishat Mart,Multan,Pharma,SM-23,,False,60000.0,652.0,AMBER-STANDARD,,Provisional (Cold-Start)
+DLR5126,Khyber Brothers,Sahiwal,FMCG,SM-23,,False,110000.0,657.0,AMBER-STANDARD,,Provisional (Cold-Start)
+DLR5129,Iqra Traders,Multan,Textile,SM-21,,True,350000.0,680.0,AMBER-STANDARD,,Provisional (Cold-Start)
+DLR5110,Al-Rehman Corporation,Rawalpindi,FMCG,SM-21,Salman Haider,False,110000.0,741.0,GREEN,0.623125918787648,Statistical
+DLR5048,Sunny Depot,Quetta,Textile,SM-21,Salman Haider,False,500000.0,764.0,GREEN,0.5247678995117571,Statistical
+DLR5035,Ravi Depot,Peshawar,Textile,SM-21,Salman Haider,False,110000.0,783.0,GREEN,0.44369091190934146,Statistical
+DLR5115,Sadaf Traders,Quetta,FMCG,SM-26,Danish Haider,True,500000.0,785.0,GREEN,0.4342663811333831,Statistical
+DLR5029,Pak Enterprises,Peshawar,Textile,SM-21,Salman Haider,False,60000.0,785.0,GREEN,0.43410615123299395,Statistical
+DLR5025,Ravi Corporation,Multan,Textile,SM-21,Salman Haider,False,60000.0,786.0,GREEN,0.43035379642505467,Statistical
+DLR5106,Noor Traders,Peshawar,Textile,SM-22,Sohail Awan,False,350000.0,792.0,GREEN,0.4040005390735965,Statistical
+DLR5103,Ittehad Brothers,Quetta,Textile,SM-26,Danish Haider,False,350000.0,792.0,GREEN,0.4058590216156661,Statistical
+DLR5072,Sunny Enterprises,Quetta,Textile,SM-23,Asif Sultan,True,60000.0,794.0,GREEN,0.3962727879533029,Statistical
+DLR5003,Sahara Enterprises,Peshawar,Pharma,SM-26,Danish Haider,False,60000.0,796.0,GREEN,0.3885782268912428,Statistical
+DLR5094,Khyber & Sons,Quetta,Textile,SM-25,Amir Mirza,False,110000.0,798.0,GREEN,0.3799869181490764,Statistical
+DLR5005,Pak Agency,Peshawar,FMCG,SM-21,Salman Haider,False,110000.0,802.0,GREEN,0.3664015489135465,Statistical
+DLR5099,Nishat Brothers,Quetta,FMCG,SM-21,Salman Haider,False,110000.0,802.0,GREEN,0.3639197988573688,Statistical
+DLR5022,Iqra Enterprises,Peshawar,Textile,SM-26,Danish Haider,True,110000.0,804.0,GREEN,0.3549725796125821,Statistical
+DLR5000,Meezan Brothers,Karachi,Pharma,SM-26,Danish Haider,False,500000.0,805.0,GREEN,0.3533392483983,Statistical
+DLR5049,Bolan Enterprises,Quetta,Pharma,SM-25,Amir Mirza,False,500000.0,805.0,GREEN,0.35193131893916363,Statistical
+DLR5040,Jinnah Depot,Karachi,FMCG,SM-26,Danish Haider,False,60000.0,806.0,GREEN,0.34807991460133547,Statistical
+DLR5013,Khyber Depot,Peshawar,FMCG,SM-25,Amir Mirza,False,500000.0,807.0,GREEN,0.34361340135670587,Statistical
+DLR5046,Noor Corporation,Peshawar,FMCG,SM-26,Danish Haider,False,180000.0,807.0,GREEN,0.3429648638247134,Statistical
+DLR5077,Sitara Depot,Sahiwal,Textile,SM-26,Danish Haider,False,500000.0,807.0,GREEN,0.34329529224538863,Statistical
+DLR5020,Chenab & Sons,Peshawar,Textile,SM-24,Danish Bhatti,False,350000.0,807.0,GREEN,0.3455040753907457,Statistical
+DLR5058,Pak Depot,Peshawar,Pharma,SM-22,Sohail Awan,False,60000.0,807.0,GREEN,0.34397662936910905,Statistical
+DLR5098,Bolan Agency,Karachi,FMCG,SM-22,Sohail Awan,False,500000.0,809.0,GREEN,0.3357135549917923,Statistical
+DLR5095,Hilal Agency,Peshawar,FMCG,SM-22,Sohail Awan,False,350000.0,809.0,GREEN,0.33527377175745454,Statistical
+DLR5101,Nishat Mart,Rawalpindi,Textile,SM-26,Danish Haider,True,350000.0,812.0,GREEN,0.32353863259170085,Statistical
+DLR5043,Gulshan Brothers,Karachi,FMCG,SM-25,Amir Mirza,False,500000.0,818.0,GREEN,0.3012305674678691,Statistical
+DLR5092,Sadaf Store,Quetta,FMCG,SM-26,Danish Haider,False,180000.0,818.0,GREEN,0.3042167154776632,Statistical
+DLR5061,Noor Store,Multan,FMCG,SM-23,Asif Sultan,False,350000.0,819.0,GREEN,0.30066766319834953,Statistical
+DLR5028,Falak Traders,Quetta,Pharma,SM-25,Amir Mirza,False,350000.0,820.0,GREEN,0.2975006959470523,Statistical
+DLR5068,Ravi Mart,Karachi,Textile,SM-27,Yasir Zafar,True,500000.0,821.0,GREEN,0.29294948740491955,Statistical
+DLR5031,Sadaf Distributors,Karachi,FMCG,SM-23,Asif Sultan,False,500000.0,822.0,GREEN,0.28963735906619553,Statistical
+DLR5017,Nishat & Sons,Multan,Textile,SM-22,Sohail Awan,False,180000.0,822.0,GREEN,0.2890272359470317,Statistical
+DLR5114,Bolan Traders,Karachi,FMCG,SM-23,Asif Sultan,False,180000.0,822.0,GREEN,0.29005167196352283,Statistical
+DLR5086,Jinnah Depot,Peshawar,Textile,SM-23,Asif Sultan,False,60000.0,822.0,GREEN,0.2885719029285214,Statistical
+DLR5067,Jinnah Enterprises,Quetta,FMCG,SM-23,Asif Sultan,False,110000.0,823.0,GREEN,0.286718020189308,Statistical
+DLR5007,Khyber Corporation,Lahore,Textile,SM-22,Sohail Awan,False,350000.0,824.0,GREEN,0.2808876268394958,Statistical
+DLR5010,Meezan & Sons,Multan,Textile,SM-22,Sohail Awan,True,350000.0,824.0,GREEN,0.2818296602320279,Statistical
+DLR5001,Sahara Corporation,Quetta,Pharma,SM-24,Danish Bhatti,False,180000.0,826.0,GREEN,0.27530148126950515,Statistical
+DLR5062,Sitara Mart,Quetta,Textile,SM-23,Asif Sultan,False,350000.0,826.0,GREEN,0.2740523611107415,Statistical
+DLR5045,Nishat Distributors,Quetta,FMCG,SM-23,Asif Sultan,False,110000.0,827.0,GREEN,0.272313697849156,Statistical
+DLR5064,Ravi Depot,Rawalpindi,Textile,SM-22,Sohail Awan,False,110000.0,828.0,GREEN,0.2688513640434752,Statistical
+DLR5012,Noor Distributors,Sahiwal,Textile,SM-24,Danish Bhatti,True,350000.0,828.0,GREEN,0.26634702763392554,Statistical
+DLR5008,Noor Agency,Peshawar,FMCG,SM-25,Amir Mirza,False,180000.0,828.0,GREEN,0.268106434474413,Statistical
+DLR5088,Pak Brothers,Rawalpindi,FMCG,SM-23,Asif Sultan,False,180000.0,828.0,GREEN,0.26804618309432465,Statistical
+DLR5116,Bolan Trading Co,Quetta,Pharma,SM-23,Asif Sultan,False,180000.0,828.0,GREEN,0.2688667825471323,Statistical
+DLR5084,Noor Corporation,Rawalpindi,Pharma,SM-26,Danish Haider,False,350000.0,829.0,GREEN,0.263731044063545,Statistical
+DLR5108,Khyber Agency,Quetta,Textile,SM-26,Danish Haider,True,350000.0,829.0,GREEN,0.26510811303103027,Statistical
+DLR5063,Iqra Trading Co,Quetta,Textile,SM-25,Amir Mirza,False,350000.0,831.0,GREEN,0.25596179939429303,Statistical
+DLR5082,Zamzam Trading Co,Rawalpindi,FMCG,SM-24,Danish Bhatti,False,180000.0,831.0,GREEN,0.25892692603263934,Statistical
+DLR5091,Sahara Distributors,Lahore,Textile,SM-22,Sohail Awan,False,350000.0,832.0,GREEN,0.25514728791982794,Statistical
+DLR5033,Ittehad Trading Co,Peshawar,FMCG,SM-23,Asif Sultan,True,180000.0,832.0,GREEN,0.2544803645943741,Statistical
+DLR5014,Royal Trading Co,Karachi,Pharma,SM-26,Danish Haider,False,350000.0,833.0,GREEN,0.25183637980380635,Statistical
+DLR5009,Zamzam Enterprises,Rawalpindi,FMCG,SM-24,Danish Bhatti,True,60000.0,835.0,GREEN,0.24351111822131646,Statistical
+DLR5104,Sadaf Brothers,Karachi,FMCG,SM-22,Sohail Awan,False,110000.0,835.0,GREEN,0.2450947170182845,Statistical
+DLR5105,Nishat Enterprises,Karachi,FMCG,SM-26,Danish Haider,False,110000.0,836.0,GREEN,0.24181202957194586,Statistical
+DLR5074,Zamzam Brothers,Lahore,Pharma,SM-24,Danish Bhatti,False,180000.0,836.0,GREEN,0.24269401118647638,Statistical
+DLR5011,Royal Enterprises,Rawalpindi,Pharma,SM-26,Danish Haider,False,110000.0,837.0,GREEN,0.2386925516055495,Statistical
+DLR5080,Nishat Mart,Karachi,Pharma,SM-24,Danish Bhatti,False,60000.0,839.0,GREEN,0.23054411555389626,Statistical
+DLR5065,Pak Brothers,Lahore,Pharma,SM-25,Amir Mirza,False,60000.0,839.0,GREEN,0.23104969049469398,Statistical
+DLR5087,Jinnah Distributors,Lahore,FMCG,SM-23,Asif Sultan,False,110000.0,840.0,GREEN,0.22900569787953243,Statistical
+DLR5026,Sadaf Distributors,Rawalpindi,Pharma,SM-24,Danish Bhatti,False,110000.0,840.0,GREEN,0.22874072345725263,Statistical
+DLR5027,Ittehad Traders,Multan,Pharma,SM-26,Danish Haider,False,180000.0,841.0,GREEN,0.2272320320620434,Statistical
+DLR5097,Falak & Sons,Sahiwal,FMCG,SM-23,Asif Sultan,False,500000.0,841.0,GREEN,0.2265066856234102,Statistical
+DLR5078,Iqra Store,Lahore,Textile,SM-21,Salman Haider,False,180000.0,841.0,GREEN,0.22712515801983468,Statistical
+DLR5059,Sahara Agency,Peshawar,Textile,SM-23,Asif Sultan,False,110000.0,842.0,GREEN,0.22249996862004925,Statistical
+DLR5004,Ravi Store,Lahore,FMCG,SM-25,Amir Mirza,False,500000.0,843.0,GREEN,0.22124768275414214,Statistical
+DLR5018,Iqra Traders,Lahore,Pharma,SM-25,Amir Mirza,False,350000.0,844.0,GREEN,0.21670823927636276,Statistical
+DLR5044,Zamzam Store,Lahore,Textile,SM-22,Sohail Awan,False,350000.0,845.0,GREEN,0.2143497419364524,Statistical
+DLR5030,Ravi Store,Sahiwal,FMCG,SM-27,Yasir Zafar,True,60000.0,846.0,GREEN,0.21001008803850751,Statistical
+DLR5060,Pak Mart,Quetta,Textile,SM-23,Asif Sultan,False,110000.0,847.0,GREEN,0.20912787905233546,Statistical
+DLR5024,Hilal Traders,Multan,FMCG,SM-23,Asif Sultan,False,500000.0,849.0,GREEN,0.20120209154150684,Statistical
+DLR5032,Royal Agency,Karachi,Pharma,SM-26,Danish Haider,False,110000.0,851.0,GREEN,0.1977900128214293,Statistical
+DLR5042,Khyber & Sons,Rawalpindi,FMCG,SM-23,Asif Sultan,False,500000.0,851.0,GREEN,0.1976406414395803,Statistical
+DLR5075,Jinnah Corporation,Peshawar,Pharma,SM-25,Amir Mirza,False,60000.0,853.0,GREEN,0.19137821153327908,Statistical
+DLR5113,Jinnah Traders,Sahiwal,Pharma,SM-25,Amir Mirza,False,180000.0,858.0,GREEN,0.1793231527822473,Statistical
+DLR5057,Sunny & Sons,Rawalpindi,FMCG,SM-27,Yasir Zafar,True,350000.0,858.0,GREEN,0.17863928029400356,Statistical
+DLR5021,Pak Corporation,Multan,FMCG,SM-24,Danish Bhatti,False,110000.0,863.0,GREEN,0.16501841575942192,Statistical
+DLR5066,Falak Agency,Sahiwal,FMCG,SM-27,Yasir Zafar,False,350000.0,865.0,GREEN,0.16053286224514188,Statistical
+DLR5073,Sunny Brothers,Sahiwal,Textile,SM-27,Yasir Zafar,False,180000.0,865.0,GREEN,0.16156819363727276,Statistical
+DLR5019,Royal Store,Lahore,Textile,SM-27,Yasir Zafar,False,350000.0,865.0,GREEN,0.16039675443741117,Statistical
+DLR5069,Bolan Traders,Quetta,FMCG,SM-27,Yasir Zafar,False,350000.0,869.0,GREEN,0.15281030882488708,Statistical
+DLR5083,Ittehad Agency,Multan,Textile,SM-27,Yasir Zafar,False,110000.0,871.0,GREEN,0.14863911164709803,Statistical
+DLR5053,Pak Agency,Lahore,FMCG,SM-25,Amir Mirza,True,60000.0,877.0,GREEN,0.13590509672461648,Statistical
+DLR5093,Al-Rehman Store,Sahiwal,Pharma,SM-27,Yasir Zafar,False,500000.0,880.0,GREEN,0.12837673174909867,Statistical
+DLR5070,Sadaf Mart,Karachi,FMCG,SM-27,Yasir Zafar,True,180000.0,883.0,GREEN,0.12333759543689275,Statistical
+DLR5051,Pak Depot,Lahore,Pharma,SM-27,Yasir Zafar,False,180000.0,892.0,GREEN,0.10783335315028163,Statistical
+DLR5107,Meezan Depot,Sahiwal,Pharma,SM-27,Yasir Zafar,False,350000.0,900.0,GREEN,0.0907302407742613,Statistical

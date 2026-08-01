@@ -1,0 +1,10 @@
+dealer_id,dealer_name,city,sector,salesman_id,salesman_name,is_salesman_favorite,credit_limit_pkr,credit_score,risk_flag,risk_probability,scoring_method
+C-4000,Bismillah Store,Bahawalpur,Unspecified,SO-102,Junaid Chaudhry,False,120000.0,619.0,AMBER,0.9322627588195944,Statistical
+C-4005,Anwar Traders,Faisalabad,Unspecified,SO-101,Adnan Butt,False,75000.0,644.0,AMBER,0.8980085281270178,Statistical
+C-4007,Indus Brothers,Sargodha,Unspecified,SO-101,Adnan Butt,False,75000.0,662.0,AMBER,0.8660092096214156,Statistical
+C-4008,Rehman & Brothers,Sialkot,Unspecified,SO-103,Zubair Hashmi,False,75000.0,696.0,AMBER,0.7825256257946945,Statistical
+C-4001,Iqbal Enterprises,Karachi,Unspecified,SO-101,Adnan Butt,False,400000.0,900.0,GREEN,0.04805396680283031,Statistical
+C-4002,Haji Sons Traders,Sialkot,Unspecified,SO-101,Adnan Butt,False,250000.0,900.0,GREEN,0.029457551919842284,Statistical
+C-4003,Sabir Distributors,Sargodha,Unspecified,SO-102,Junaid Chaudhry,False,400000.0,900.0,GREEN,0.04744377991164395,Statistical
+C-4004,Rehman & Distributors,Sialkot,Unspecified,SO-101,Adnan Butt,False,250000.0,900.0,GREEN,0.016423126491611664,Statistical
+C-4006,Haji Sons & Co,Faisalabad,Unspecified,SO-101,Adnan Butt,False,75000.0,900.0,GREEN,0.016605243067523357,Statistical

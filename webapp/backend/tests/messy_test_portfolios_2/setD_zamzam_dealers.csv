@@ -1,0 +1,131 @@
+Dealer Code,Dealer Name,City,Category,Salesman Code,Trusted,Credit Limit,Since
+DLR5000,Meezan Brothers,Karachi,Pharma,SM-26,0,"Rs. 500,000",30-Sep-21
+DLR5001,Sahara Corporation,Quetta,Pharma,SM-24,No,"180,000",44687
+DLR5002,Ittehad Corporation,Lahore,Pharma,SM-22,0,"60,000",2021-03-27
+DLR5003,Sahara Enterprises,Peshawar,Pharma,SM-26,N,"60,000",12/07/2021
+DLR5004,Ravi Store,Lahore,FMCG,SM-25,N,"  500,000 ",16/09/2020
+DLR5005,Pak Agency,Peshawar,FMCG,SM-21,FALSE,"Rs. 110,000",44200
+DLR5006,Sahara Brothers,Rawalpindi,Textile,SM-24,0,"110,000",2022-06-16
+DLR5007,Khyber Corporation,Lahore,Textile,SM-22,N,"350,000/-",2021-04-11
+DLR5008,Noor Agency,Peshawar,FMCG,SM-25,N,"Rs. 180,000",18/12/2021
+DLR5009,Zamzam Enterprises,Rawalpindi,FMCG,SM-24,TRUE,"  60,000 ",2021-08-05
+DLR5010,Meezan & Sons,Multan,Textile,SM-22,TRUE,"350,000/-",2021-05-02
+DLR5011,Royal Enterprises,Rawalpindi,Pharma,SM-26,No,"110,000/-",2022-11-23
+DLR5012,Noor Distributors,Sahiwal,Textile,SM-24,TRUE,"350,000",44743
+DLR5013,Khyber Depot,Peshawar,FMCG,SM-25,No,"500,000",2022-03-11
+DLR5014,Royal Trading Co,Karachi,Pharma,SM-26,0,"  350,000 ",27/01/2022
+DLR5015,Al-Rehman Enterprises,Peshawar,FMCG,SM-23,,"60,000/-",01/01/2022
+DLR5016,Gulshan Mart,Sahiwal,Pharma,SM-27,,"  350,000 ",44095
+DLR5017,Nishat & Sons,Multan,Textile,SM-22,,"Rs. 180,000",01-Jun-21
+DLR5018,Iqra Traders,Lahore,Pharma,SM-25,No,"  350,000 ",31/10/2021
+DLR5019,Royal Store,Lahore,Textile,SM-27,0,"350,000/-",2021-02-03
+DLR5020,Chenab & Sons,Peshawar,Textile,SM-24,N,"Rs. 350,000",44922
+DLR5021,Pak Corporation,Multan,FMCG,SM-24,N,"  110,000 ",44543
+DLR5022,Iqra Enterprises,Peshawar,Textile,SM-26,Yes,"110,000",2021-01-28
+DLR5023,Sunny Mart,Peshawar,FMCG,SM-26,TRUE,"500,000",13/02/2021
+DLR5024,Hilal Traders,Multan,FMCG,SM-23,N,"500,000",44388
+DLR5025,Ravi Corporation,Multan,Textile,SM-21,0,"Rs. 60,000",25-Dec-21
+DLR5026,Sadaf Distributors,Rawalpindi,Pharma,SM-24,,"Rs. 110,000",04/12/2020
+DLR5027,Ittehad Traders,Multan,Pharma,SM-26,FALSE,"  180,000 ",03/07/2022
+DLR5028,Falak Traders,Quetta,Pharma,SM-25,0,"Rs. 350,000",44326
+DLR5029,Pak Enterprises,Peshawar,Textile,SM-21,N,"  60,000 ",2022-11-14
+DLR5030,Ravi Store,Sahiwal,FMCG,SM-27,1,"Rs. 60,000",23/07/2022
+DLR5031,Sadaf Distributors,Karachi,FMCG,SM-23,No,"500,000",18/05/2022
+DLR5032,Royal Agency,Karachi,Pharma,SM-26,0,"Rs. 110,000",16/06/2021
+DLR5033,Ittehad Trading Co,Peshawar,FMCG,SM-23,1,"Rs. 180,000",22-Dec-21
+DLR5034,Falak Brothers,Quetta,Textile,SM-22,1,"Rs. 110,000",18-Oct-22
+DLR5035,Ravi Depot,Peshawar,Textile,SM-21,N,"110,000/-",15-Apr-21
+DLR5036,Sitara Store,Peshawar,Pharma,SM-26,,"110,000/-",13/05/2021
+DLR5037,Meezan Distributors,Rawalpindi,Textile,SM-27,Y,"  60,000 ",44184
+DLR5038,Zamzam Agency,Multan,Textile,SM-23,Yes,"Rs. 60,000",26-Apr-22
+DLR5039,Sitara Depot,Rawalpindi,Textile,SM-23,0,"Rs. 60,000",2022-02-01
+DLR5040,Jinnah Depot,Karachi,FMCG,SM-26,No,"60,000",2022-11-27
+DLR5041,Al-Rehman Agency,Quetta,FMCG,SM-21,,"  110,000 ",09/05/2022
+DLR5042,Khyber & Sons,Rawalpindi,FMCG,SM-23,N,"  500,000 ",2021-04-30
+DLR5043,Gulshan Brothers,Karachi,FMCG,SM-25,0,"500,000/-",26/10/2021
+DLR5044,Zamzam Store,Lahore,Textile,SM-22,FALSE,"  350,000 ",20-Aug-22
+DLR5045,Nishat Distributors,Quetta,FMCG,SM-23,,"  110,000 ",11/03/2022
+DLR5046,Noor Corporation,Peshawar,FMCG,SM-26,N,"  180,000 ",2020-10-30
+DLR5047,Jinnah Agency,Rawalpindi,Textile,SM-25,FALSE,"  500,000 ",05-Jul-22
+DLR5048,Sunny Depot,Quetta,Textile,SM-21,N,"500,000/-",22-Feb-21
+DLR5049,Bolan Enterprises,Quetta,Pharma,SM-25,0,"Rs. 500,000",2021-04-08
+DLR5050,Pak Enterprises,Quetta,Pharma,SM-22,FALSE,"Rs. 110,000",44118
+DLR5051,Pak Depot,Lahore,Pharma,SM-27,FALSE,"  180,000 ",44737
+DLR5052,Gulshan Depot,Karachi,Textile,SM-24,0,"  500,000 ",2022-06-14
+DLR5053,Pak Agency,Lahore,FMCG,SM-25,1,"60,000/-",26-Apr-21
+DLR5054,Iqra Trading Co,Karachi,Textile,SM-27,No,"110,000/-",14/02/2022
+DLR5055,Ittehad Brothers,Peshawar,FMCG,SM-25,N,"Rs. 110,000",05-Jul-21
+DLR5056,Nishat Traders,Lahore,FMCG,SM-25,,"180,000",26/10/2022
+DLR5057,Sunny & Sons,Rawalpindi,FMCG,SM-27,Yes,"Rs. 350,000",2022-05-01
+DLR5058,Pak Depot,Peshawar,Pharma,SM-22,FALSE,"60,000/-",08-Feb-21
+DLR5059,Sahara Agency,Peshawar,Textile,SM-23,No,"110,000",44246
+DLR5060,Pak Mart,Quetta,Textile,SM-23,,"110,000",20-Oct-20
+DLR5061,Noor Store,Multan,FMCG,SM-23,N,"350,000/-",44680
+DLR5062,Sitara Mart,Quetta,Textile,SM-23,,"Rs. 350,000",26-Dec-22
+DLR5063,Iqra Trading Co,Quetta,Textile,SM-25,FALSE,"350,000/-",2021-01-18
+DLR5064,Ravi Depot,Rawalpindi,Textile,SM-22,No,"Rs. 110,000",2021-09-09
+DLR5065,Pak Brothers,Lahore,Pharma,SM-25,0,"60,000/-",28/06/2021
+DLR5066,Falak Agency,Sahiwal,FMCG,SM-27,0,"350,000",16-Nov-21
+DLR5067,Jinnah Enterprises,Quetta,FMCG,SM-23,N,"110,000/-",2022-11-18
+DLR5068,Ravi Mart,Karachi,Textile,SM-27,1,"  500,000 ",01/01/2023
+DLR5069,Bolan Traders,Quetta,FMCG,SM-27,,"  350,000 ",2021-12-23
+DLR5070,Sadaf Mart,Karachi,FMCG,SM-27,Yes,"180,000",26-Jun-21
+DLR5071,Royal Corporation,Quetta,FMCG,SM-27,No,"  180,000 ",20-Aug-22
+DLR5072,Sunny Enterprises,Quetta,Textile,SM-23,1,"60,000",01-Dec-22
+DLR5073,Sunny Brothers,Sahiwal,Textile,SM-27,,"180,000/-",06/12/2021
+DLR5074,Zamzam Brothers,Lahore,Pharma,SM-24,,"180,000",15/09/2022
+DLR5075,Jinnah Corporation,Peshawar,Pharma,SM-25,N,"  60,000 ",23/12/2022
+DLR5076,Jinnah Store,Peshawar,Textile,SM-27,,"500,000/-",26-Aug-21
+DLR5077,Sitara Depot,Sahiwal,Textile,SM-26,FALSE,"500,000/-",2022-11-27
+DLR5078,Iqra Store,Lahore,Textile,SM-21,,"180,000/-",01-Feb-21
+DLR5079,Noor Traders,Quetta,Pharma,SM-27,N,"60,000/-",17/10/2021
+DLR5080,Nishat Mart,Karachi,Pharma,SM-24,0,"Rs. 60,000",2020-09-23
+DLR5081,Bolan Traders,Quetta,FMCG,SM-25,No,"350,000/-",2021-05-10
+DLR5082,Zamzam Trading Co,Rawalpindi,FMCG,SM-24,N,"  180,000 ",12/04/2021
+DLR5083,Ittehad Agency,Multan,Textile,SM-27,,"Rs. 110,000",2022-09-14
+DLR5084,Noor Corporation,Rawalpindi,Pharma,SM-26,No,"350,000",04/02/2023
+DLR5085,Khyber Distributors,Quetta,Textile,SM-24,0,"Rs. 350,000",30-Sep-21
+DLR5086,Jinnah Depot,Peshawar,Textile,SM-23,,"60,000",44708
+DLR5087,Jinnah Distributors,Lahore,FMCG,SM-23,,"110,000",12/05/2021
+DLR5088,Pak Brothers,Rawalpindi,FMCG,SM-23,N,"180,000/-",24-Mar-22
+DLR5089,Gulshan Depot,Quetta,Pharma,SM-24,FALSE,"500,000/-",17/01/2021
+DLR5090,Khyber Traders,Karachi,FMCG,SM-23,Yes,"350,000",2021-10-09
+DLR5091,Sahara Distributors,Lahore,Textile,SM-22,N,"Rs. 350,000",11-Jan-22
+DLR5092,Sadaf Store,Quetta,FMCG,SM-26,No,"180,000",10-Feb-22
+DLR5093,Al-Rehman Store,Sahiwal,Pharma,SM-27,N,"  500,000 ",44075
+DLR5094,Khyber & Sons,Quetta,Textile,SM-25,No,"  110,000 ",18/02/2021
+DLR5095,Hilal Agency,Peshawar,FMCG,SM-22,FALSE,"350,000",2020-09-12
+DLR5096,Jinnah Traders,Karachi,Pharma,SM-22,0,"  500,000 ",2021-10-15
+DLR5097,Falak & Sons,Sahiwal,FMCG,SM-23,,"500,000/-",04-Feb-21
+DLR5098,Bolan Agency,Karachi,FMCG,SM-22,No,"  500,000 ",04/06/2021
+DLR5099,Nishat Brothers,Quetta,FMCG,SM-21,,"110,000/-",03/04/2022
+DLR5100,Jinnah & Sons,Peshawar,Pharma,SM-23,Y,"Rs. 110,000",04-Dec-20
+DLR5101,Nishat Mart,Rawalpindi,Textile,SM-26,1,"350,000",2022-09-11
+DLR5102,Chenab Enterprises,Lahore,Textile,SM-26,,"  60,000 ",26/08/2021
+DLR5103,Ittehad Brothers,Quetta,Textile,SM-26,N,"350,000",44788
+DLR5104,Sadaf Brothers,Karachi,FMCG,SM-22,0,"Rs. 110,000",44232
+DLR5105,Nishat Enterprises,Karachi,FMCG,SM-26,N,"110,000",08-Nov-20
+DLR5106,Noor Traders,Peshawar,Textile,SM-22,,"  350,000 ",44954
+DLR5107,Meezan Depot,Sahiwal,Pharma,SM-27,0,"350,000/-",44919
+DLR5108,Khyber Agency,Quetta,Textile,SM-26,1,"Rs. 350,000",44607
+DLR5109,Noor Brothers,Multan,FMCG,SM-26,FALSE,"180,000/-",28/01/2022
+DLR5110,Al-Rehman Corporation,Rawalpindi,FMCG,SM-21,FALSE,"Rs. 110,000",2021-03-21
+DLR5111,Pak Traders,Quetta,FMCG,SM-25,,"Rs. 500,000",17/01/2021
+DLR5112,Royal Store,Multan,Textile,SM-23,FALSE,"Rs. 500,000",2022-10-24
+DLR5113,Jinnah Traders,Sahiwal,Pharma,SM-25,FALSE,"  180,000 ",31/07/2022
+DLR5114,Bolan Traders,Karachi,FMCG,SM-23,N,"180,000",44473
+DLR5115,Sadaf Traders,Quetta,FMCG,SM-26,Yes,"Rs. 500,000",21-Oct-22
+DLR5116,Bolan Trading Co,Quetta,Pharma,SM-23,N,"180,000",05/03/2022
+DLR5117,Pak Distributors,Peshawar,Textile,SM-22,N,"110,000",05-Jul-22
+DLR5118,Sunny Brothers,Karachi,Pharma,SM-26,N,"60,000/-",25/04/2022
+DLR5119,Meezan Depot,Karachi,FMCG,SM-22,0,"110,000",14/05/2021
+DLR5120,Nishat Mart,Multan,Pharma,SM-23,No,"60,000/-",28-Jan-21
+DLR5121,Al-Rehman Depot,Peshawar,FMCG,SM-25,,"180,000/-",28/07/2021
+DLR5122,Royal Mart,Multan,FMCG,SM-23,No,"Rs. 180,000",15/02/2021
+DLR5123,Falak Agency,Rawalpindi,FMCG,SM-24,0,"  60,000 ",21/11/2022
+DLR5124,Falak Traders,Karachi,Textile,SM-25,N,"  180,000 ",08-Mar-22
+DLR5125,Gulshan Store,Karachi,FMCG,SM-27,N,"  180,000 ",27-Sep-22
+DLR5126,Khyber Brothers,Sahiwal,FMCG,SM-23,0,"110,000",2022-03-02
+DLR5127,Jinnah Store,Quetta,Textile,SM-23,0,"500,000/-",29-Aug-21
+DLR5128,Chenab Distributors,Multan,FMCG,SM-23,Yes,"110,000",20/01/2021
+DLR5129,Iqra Traders,Multan,Textile,SM-21,1,"350,000/-",10/10/2021
