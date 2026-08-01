@@ -14,7 +14,9 @@ import pandas as pd
 import pytest
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR.parent.parent / "Day1"
+# Test fixtures live inside the backend so the test suite is self-contained
+# and does not reach outside webapp/ for data.
+DATA_DIR = BASE_DIR / "tests" / "fixtures"
 
 sys.path.insert(0, str(BASE_DIR))
 

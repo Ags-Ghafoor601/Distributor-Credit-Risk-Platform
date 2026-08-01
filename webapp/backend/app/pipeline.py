@@ -206,6 +206,12 @@ def parse_messy_date(val):
             return pd.to_datetime(s, format=fmt)
         except Exception:
             continue
+    # ISO-like strings are unambiguous; only apply dayfirst to genuinely
+    # ambiguous formats, which is what raises the pandas warning otherwise.
+    try:
+        return pd.to_datetime(s, format="ISO8601", errors="raise")
+    except Exception:
+        pass
     try:
         return pd.to_datetime(s, dayfirst=True, errors="raise")
     except Exception:

@@ -15,23 +15,30 @@ plain-language reason codes explaining the result.
 
 ```
 skillSYNC Project-2/
-  Day1/                 Source data: dealers.csv, salesmen.csv, transactions.csv
-  Day2/  Day3/  Day4/   Development history (stress tests, model training, deck)
+  Day1/ … Day4/         Development archive — problem framing, WOE/IV analysis,
+                        stress tests, original deck. Kept as the evidence trail
+                        behind the report; NOT required to run anything.
   CHANGELOG.md          What changed at each stage
-  webapp/
+  webapp/               Self-contained: runs, tests and retrains on its own
     backend/            FastAPI service — the live scoring API
       app/
         main.py         HTTP endpoints
         pipeline.py     All scoring logic (authoritative)
       model/
         credit_risk_model.joblib
-      tests/            63 tests
+      scripts/
+        train_and_save_model.py   Rebuilds the model artifact
+      tests/
+        fixtures/       Reference dataset (dealers, salesmen, transactions)
+        …               63 tests
       requirements.txt
     frontend/           Next.js dashboard
 ```
 
 `webapp/backend/app/pipeline.py` is authoritative for all scoring logic. The
-Day2/Day3 CLI scripts are historical and may differ.
+Day1–Day4 CLI scripts are historical and may differ. `webapp/` has no dependency
+on them — verified by renaming all four folders and confirming the full test
+suite, the API and end-to-end scoring still work.
 
 ---
 
@@ -39,7 +46,7 @@ Day2/Day3 CLI scripts are historical and may differ.
 
 - Python 3.12+
 - Node.js 18+
-- The three source CSVs in `Day1/`
+- Nothing else — the reference dataset ships in `webapp/backend/tests/fixtures/`
 
 ---
 
@@ -63,8 +70,8 @@ python -m pytest tests\ -v
 
 Expect **63 passing**: 6 regression tests pinning known-verified values
 (D0080 = 418, the 220 / 178 / 36 / 6 split), plus 57 hermetic tests covering
-portability and model adaptation. The hermetic ones need neither `Day1/` nor the
-model artifact, so they run anywhere including CI.
+portability and model adaptation. The hermetic ones need neither the reference
+dataset nor the model artifact, so they run anywhere including CI.
 
 ### Run
 
@@ -73,6 +80,17 @@ uvicorn app.main:app --reload
 ```
 
 Serves on `http://127.0.0.1:8000`; interactive docs at `/docs`.
+
+### Rebuilding the model artifact
+
+```powershell
+python scripts\train_and_save_model.py
+python -m pytest tests\ -v
+```
+
+Trains on the reference dataset and overwrites `model/credit_risk_model.joblib`.
+Back the artifact up first, and treat the 63 passing tests — D0080 at 418 in
+particular — as the check that the rebuilt model is equivalent.
 
 ### Environment variables
 
@@ -88,7 +106,7 @@ All optional — defaults preserve the original behaviour exactly.
 | `FEATURE_CUTOFF_DATE` | `2025-01-01` | Default boundary between feature history and later data. Overridden automatically when it falls outside the uploaded range. |
 | `RUNTIME_TRAINING_MODE` | `auto` | `never` / `auto` / `always`. `auto` trains a portfolio-specific model only when the shipped model is a poor fit. |
 | `ANNUAL_CURRENCY_EROSION` | `0.18` | Annual currency erosion for inflation-adjusted exposure. Wrong outside Pakistan; adjust per market. |
-| `LATE_PAYMENT_THRESHOLD_DAYS` | `15` | Days late that counts as a default when deriving training labels. A distributor on 60-day terms needs a higher value. |
+| `LATE_PAYMENT_THRESHOLD_DAYS` | `15` | **Floor** for the lateness threshold. The actual threshold is derived per portfolio (median + 2×MAD of its own average lateness); this value applies only when a market's own norm falls below it. Rarely needs changing. |
 
 ---
 
@@ -111,6 +129,22 @@ npm run build        # verify a clean production build
 
 If styling changes don't appear, delete `.next` and restart — Turbopack caches
 compiled CSS and will not always pick up newly added theme tokens.
+
+---
+
+## Using the app
+
+1. Start the backend, then the frontend, and open `http://localhost:3000`
+2. Upload `dealers.csv`, `salesmen.csv` and `transactions.csv` from
+   `webapp/backend/tests/fixtures/` — or a real distributor's export in whatever
+   format their system produces
+3. Review the scored portfolio: the risk spectrum, the sortable dealer table,
+   and per-dealer detail panels with reason codes
+4. Download the full risk table as CSV, or an individual dealer's Risk Card as a
+   Word document
+
+The reliability banner at the top states how far the numbers can be trusted and
+lists any columns that were substituted or dates that were reinterpreted.
 
 ---
 
@@ -224,5 +258,5 @@ It must match exactly, including `https://` and no trailing slash.
 
 ### Verify end to end
 
-Upload the three CSVs from `Day1/` and confirm 220 dealers scored, D0080 at 418,
-a downloadable Risk Card, and CSV export.
+Upload the three CSVs from `webapp/backend/tests/fixtures/` and confirm 220
+dealers scored, D0080 at 418, a downloadable Risk Card, and CSV export.

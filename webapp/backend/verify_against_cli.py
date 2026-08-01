@@ -16,7 +16,7 @@ import joblib
 import pandas as pd
 from app.pipeline import compute_features, score_with_model, cold_start_score
 
-DATA_DIR = BASE.parent.parent / "Day1"
+DATA_DIR = BASE / "tests" / "fixtures"
 
 dealers = pd.read_csv(DATA_DIR / "dealers.csv")
 salesmen = pd.read_csv(DATA_DIR / "salesmen.csv")
